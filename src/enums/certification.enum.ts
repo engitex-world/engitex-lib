@@ -1,0 +1,16 @@
+export enum CertificationType {
+  STEP = 'STEP',
+  GRS = 'GRS',
+  OCS = 'OCS',
+  OEKOTEX_1 = 'OEKOTEX_1',
+  OEKOTEX_2 = 'OEKOTEX_2',
+  ZDHC_1 = 'ZDHC_1',
+  ZDHC_2 = 'ZDHC_2',
+  ZDHC_3 = 'ZDHC_3',
+  THE_LIST_A = 'THE_LIST_A',
+  THE_LIST_B = 'THE_LIST_B',
+  THE_LIST_C = 'THE_LIST_C',
+  GOTS_7 = 'GOTS_7',
+  REACH = 'REACH',
+  RCS = 'RCS',
+}
