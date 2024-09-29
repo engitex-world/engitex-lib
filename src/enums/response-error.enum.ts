@@ -1,5 +1,6 @@
 export enum ResponseErrorType {
   BAD_REQUEST = 'Bad Request',
+  UNAUTHORIZED = 'Unauthorized',
   NOT_NULLABLE = 'NOT_NULLABLE',
   ER_ENTITY_NOT7FOUND = 'ER_ENTITY_NOT_FOUND',
   DUPLICATE_ENTRY = 'DUPLICATE_ENTRY',
