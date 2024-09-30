@@ -7,5 +7,7 @@ export * from './generate-product-code.utils';
 export * from './generate-random-password.utils';
 export * from './get-user-name.utils';
 export * from './id-formatter.utils';
+export * from './input-filter.utils';
 export * from './pantone-mask.utils';
 export * from './pagination.utils';
+export * from './product-alerts.utils';
