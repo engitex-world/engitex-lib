@@ -17,4 +17,5 @@ export const ProductDyeGroupAcronym: Record<ProductDyeGroupType, string> = {
   [ProductDyeGroupType.SULFUROUS]: 'SU',
   [ProductDyeGroupType.NATURAL]: 'NA',
   [ProductDyeGroupType.PIGMENT]: 'PG',
+  [ProductDyeGroupType.BASIC]: 'BA',
 };
