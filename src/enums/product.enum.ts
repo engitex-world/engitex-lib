@@ -37,6 +37,7 @@ export enum ProductDyeGroupType {
   PIGMENT = 'PIGMENT',
   REACTIVE = 'REACTIVE',
   SULFUROUS = 'SULFUROUS',
+  BASIC = 'BASIC'
 }
 
 export enum ProductAuxiliaryType {
