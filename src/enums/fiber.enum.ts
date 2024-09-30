@@ -1,3 +1,5 @@
+import { ProductDyeGroupType } from "./product.enum";
+
 export enum FiberType {
   CO = 'CO',
   WS = 'WS',
@@ -9,6 +11,8 @@ export enum FiberType {
   MD = 'MD',
   PA = 'PA',
   PES = 'PES',
+  PES_CAT = 'PES_CAT',
   SE = 'SE',
   CV = 'CV',
+  PAC = 'PAC'
 }
