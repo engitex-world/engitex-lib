@@ -14,19 +14,24 @@ export const dyeGroupToFibersMap: Record<
 
   // Corantes catiônicos são usados para tingir poliéster modificado catiônico
   [ProductDyeGroupType.CATIONIC]: [
-    FiberType.CO, // Poliéster catiônico
+    FiberType.PES_CAT, // Poliéster catiônico
   ],
 
   // Corantes do tipo "cuba" são usados para tingir poliéster catiônico com características específicas
   [ProductDyeGroupType.CUBA]: [
-    FiberType.PES_CAT, // Poliéster catiônico
+    FiberType.CO,  // Algodão
+    FiberType.HA,  // Cânhamo
+    FiberType.CLY, // Lyocell
+    FiberType.MD,  // Modal
+    FiberType.CV,  // Viscose
   ],
-
+  
   // Corantes diretos são aplicáveis a fibras celulósicas, proporcionando fácil aplicação e boa solidez em soluções aquosas
   [ProductDyeGroupType.DIRECT]: [
     FiberType.CO,  // Algodão
     FiberType.HA,  // Cânhamo
     FiberType.LI,  // Linho
+    FiberType.CLY, // Lyocell
     FiberType.MD,  // Modal
     FiberType.CV,  // Viscose
   ],
