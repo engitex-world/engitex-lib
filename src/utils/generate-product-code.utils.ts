@@ -1,4 +1,4 @@
-import { ProductType, ProductSubType } from "../enums";
+import { ProductType, ProductSubType } from '../enums';
 
 // Helper function to generate product code
 export function generateProductCode(
