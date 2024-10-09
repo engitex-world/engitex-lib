@@ -1,4 +1,4 @@
-import { ProductType, ProductDyeGroupType } from '../enums';
+import { ProductDyeGroupType, ProductType } from '../enums';
 
 export const ProductTypeAcronym = {
   [ProductType.COLORANT]: 'C',
