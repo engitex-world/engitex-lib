@@ -11,7 +11,7 @@ export enum RouteAPI {
   Product = '/products',
   DyeingProcess = '/dyeing-processes',
   SpecificationSheet = '/specification-sheets',
-  SysCodes = '/sys-codes',
+  SystemCodes = '/system-codes',
 }
 
 export enum MethodAPI {
