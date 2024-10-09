@@ -1,6 +1,6 @@
 export type PaginationOptions = {
-  page?: number;
-  pageSize?: number;
+  page: number;
+  pageSize: number;
   url: URL;
 };
 
@@ -9,9 +9,9 @@ export type SortOptions = {
   direction: 'ASC' | 'DESC';
 };
 
-type PaginateResponseProps = {
+type PaginateResponseProps<T> = {
   totalCount: number;
-  results: any[];
+  results: T[];
   paginationOpts: PaginationOptions;
   tabsInfo?: Record<string, number>;
 };
@@ -26,14 +26,12 @@ type ResponseInfo = {
   totalPages: number;
   page: number;
   pageSize: number;
-  prev: string;
-  next: string;
+  prev: string | null;
+  next: string | null;
   tabs?: Record<string, number>;
 };
 
-export function getDefaultPaginationOptions(
-  options: PaginationOptions
-): PaginationOptions {
+export function getDefaultPaginationOptions(options: PaginationOptions): PaginationOptions {
   return {
     page: options.page ? +options.page : 1,
     pageSize: options.pageSize ? +options.pageSize : 25,
@@ -41,9 +39,7 @@ export function getDefaultPaginationOptions(
   };
 }
 
-export function getQueryPaginationOpts(
-  options: PaginationOptions
-): QueryPaginationOpts {
+export function getQueryPaginationOpts(options: PaginationOptions): QueryPaginationOpts {
   const { page, pageSize } = options;
 
   return {
@@ -52,12 +48,12 @@ export function getQueryPaginationOpts(
   };
 }
 
-export function paginateResponse({
+export function paginateResponse<T>({
   totalCount,
   results,
   paginationOpts,
   tabsInfo,
-}: PaginateResponseProps): { info: ResponseInfo; results: any[] } {
+}: PaginateResponseProps<T>): { info: ResponseInfo; results: T[] } {
   const { page, pageSize, url } = paginationOpts;
 
   const totalPages = Math.ceil(totalCount / pageSize);

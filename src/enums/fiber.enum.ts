@@ -12,5 +12,5 @@ export enum FiberType {
   PES_CAT = 'PES_CAT',
   SE = 'SE',
   CV = 'CV',
-  PAC = 'PAC'
+  PAC = 'PAC',
 }

@@ -1,4 +1,4 @@
-import { ColorIntensityType, ColorToneType } from '@engitex-lib/enums';
+import { ColorIntensityType, ColorToneType } from '../enums';
 
 export function evaluateColor(hex: string) {
   let r = parseInt(hex.slice(1, 3), 16);

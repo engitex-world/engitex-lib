@@ -37,7 +37,7 @@ export enum ProductDyeGroupType {
   PIGMENT = 'PIGMENT',
   REACTIVE = 'REACTIVE',
   SULFUROUS = 'SULFUROUS',
-  BASIC = 'BASIC'
+  BASIC = 'BASIC',
 }
 
 export enum ProductAuxiliaryType {
@@ -97,5 +97,4 @@ export const ProductSubType = {
   ...ProductFinishingType,
 } as const;
 
-export type ProductSubType =
-  (typeof ProductSubType)[keyof typeof ProductSubType];
+export type ProductSubType = (typeof ProductSubType)[keyof typeof ProductSubType];

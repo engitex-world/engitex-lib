@@ -23,7 +23,9 @@ type SelectOptionsGroupBy<T extends string, U extends string> = {
   [key in T]: U[];
 };
 
-function enumToSelect<T extends Record<string, string | number>>(enumObject: T): { id: keyof T; name: T[keyof T] }[] {
+function enumToSelect<T extends Record<string, string | number>>(
+  enumObject: T
+): { id: keyof T; name: T[keyof T] }[] {
   return Object.keys(enumObject).map((key) => ({
     id: key as keyof T,
     name: enumObject[key as keyof T],
@@ -31,7 +33,7 @@ function enumToSelect<T extends Record<string, string | number>>(enumObject: T):
 }
 
 function enumToSelectGroupBy<T extends string, U extends string>(
-  mapping: SelectOptionsGroupBy<T, U>,
+  mapping: SelectOptionsGroupBy<T, U>
 ): { id: U; name: U; group: T }[] {
   const result: { id: U; name: U; group: T }[] = [];
 
