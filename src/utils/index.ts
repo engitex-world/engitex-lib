@@ -10,4 +10,3 @@ export * from './get-user-name.utils';
 export * from './id-formatter.utils';
 export * from './input-filter.utils';
 export * from './pagination.utils';
-export * from './phone-formatter.utils';
