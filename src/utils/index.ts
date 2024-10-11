@@ -9,4 +9,5 @@ export * from './generate-whatsapp-url.utils';
 export * from './get-user-name.utils';
 export * from './id-formatter.utils';
 export * from './input-filter.utils';
+export * from './open-document-tab.utils';
 export * from './pagination.utils';
