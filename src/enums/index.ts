@@ -1,3 +1,4 @@
+export * from './alert.enum';
 export * from './business.enum';
 export * from './certification.enum';
 export * from './color-request.enum';
