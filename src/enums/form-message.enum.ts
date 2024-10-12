@@ -8,4 +8,5 @@ export enum FormMessageType {
   ENUM = 'enum',
   WHITE_SPACE = 'whitespace',
   NO_MATCH_PASSWORD = 'nomatchpassword',
+  INVALID_PERCENTAGE = 'invalidpercentage',
 }
