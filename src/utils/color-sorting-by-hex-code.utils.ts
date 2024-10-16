@@ -1,6 +1,8 @@
+import { hexToHsl } from './hex-to-hsl-converter.utils';
+
 // Function to get the color priority based on tone
 export function getColorSortingByHexCode(hex: string): number {
-  const { h } = this.hexToHsl(hex);
+  const { h } = hexToHsl(hex);
 
   // Yellow (roughly 50-60 degrees), Red (0-30 or 330-360), Blue (200-250)
   if (h >= 50 && h <= 60) return 1; // Yellow
