@@ -99,7 +99,7 @@ export const ProductSubType = {
 
 export type ProductSubType = (typeof ProductSubType)[keyof typeof ProductSubType];
 
-enum HealthSafetyPhraseType {
+export enum HealthSafetyPhraseType {
   H200 = 'H200',
   H201 = 'H201',
   H202 = 'H202',
