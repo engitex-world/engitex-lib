@@ -9,6 +9,7 @@ import {
   CountryType,
   FabricTreatmentType,
   FiberType,
+  HealthSafetyPhraseType,
   ProductAuxiliaryType,
   ProductDyeGroupType,
   ProductFinishingType,
@@ -53,6 +54,7 @@ function enumToSelectGroupBy<T extends string, U extends string>(
 
 export const FIBER_LIST = enumToSelect(FiberType);
 export const CERTIFICATION_LIST = enumToSelect(CertificationType);
+export const HEALTH_SAFETY_PHRASES_LIST = enumToSelect(HealthSafetyPhraseType);
 export const PRODUCT_TYPE_LIST = enumToSelect(ProductType);
 export const PRODUCT_IONS_CLASSIFICATION_TYPE_LIST = enumToSelect(ProductIonsClassificationType);
 export const PRODUCT_DYE_GROUP_LIST = enumToSelect(ProductDyeGroupType);

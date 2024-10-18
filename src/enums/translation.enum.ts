@@ -19,4 +19,5 @@ export enum TranslatedEnums {
   PRODUCT = 'product',
   CALENDAR = 'calendar',
   SECTOR = 'sector',
+  HEALTH_SAFETY_PHRASES = 'healthSafetyPhrase',
 }
