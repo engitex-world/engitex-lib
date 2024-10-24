@@ -1,5 +1,6 @@
 export enum FiberType {
   CO = 'CO',
+  CO_ORG = 'CO_ORG',
   WS = 'WS',
   HA = 'HA',
   EL = 'EL',
@@ -9,6 +10,7 @@ export enum FiberType {
   MD = 'MD',
   PA = 'PA',
   PES = 'PES',
+  PES_REC = 'PES_REC',
   PES_CAT = 'PES_CAT',
   SE = 'SE',
   CV = 'CV',
