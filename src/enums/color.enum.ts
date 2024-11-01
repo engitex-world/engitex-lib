@@ -2,6 +2,7 @@ export enum ColorIntensityType {
   LIGHT = 'LIGHT',
   MEDIUM = 'MEDIUM',
   DARK = 'DARK',
+  FLUOR = 'FLUOR',
 }
 
 export enum ColorToneType {

@@ -13,37 +13,34 @@ export const COLOR_PRODUCT_PALETTE = [
 
 export const COLOR_TONES_PALETTE = [
   { type: ColorToneType.RED, shades: ['#FFCDD2', '#E57373', '#B71C1C'] }, // Light, Medium, Dark Red
-  { type: ColorToneType.ORANGE, shades: ['#FFE0B2', '#FFB74D', '#E65100'] }, // Light, Medium, Dark Orange
-  { type: ColorToneType.YELLOW, shades: ['#FFF9C4', '#FFF176', '#F57F17'] }, // Light, Medium, Dark Yellow
-  { type: ColorToneType.GREEN, shades: ['#C8E6C9', '#81C784', '#1B5E20'] }, // Light, Medium, Dark Green
+  { type: ColorToneType.ORANGE, shades: ['#FFE0B2', '#FFB74D', '#E65100', 'FF5F1F'] }, // Light, Medium, Dark Orange
+  { type: ColorToneType.YELLOW, shades: ['#FFF9C4', '#FFF176', '#F57F17', '#FFFF33'] }, // Light, Medium, Dark Yellow
+  { type: ColorToneType.GREEN, shades: ['#C8E6C9', '#81C784', '#1B5E20', '#74EE15'] }, // Light, Medium, Dark Green
   { type: ColorToneType.BLUE, shades: ['#BBDEFB', '#64B5F6', '#0D47A1'] }, // Light, Medium, Dark Blue
   { type: ColorToneType.PURPLE, shades: ['#E1BEE7', '#BA68C8', '#4A148C'] }, // Light, Medium, Dark Purple
   { type: ColorToneType.PINK, shades: ['#F8BBD0', '#F06292', '#880E4F'] }, // Light, Medium, Dark Pink
-  { type: ColorToneType.BROWN, shades: ['#D7CCC8', '#A1887F', '#3E2723'] }, // Light, Medium, Dark Brown
-  { type: ColorToneType.GRAY, shades: ['#F5F5F5', '#BDBDBD', '#212121'] }, // Light, Medium, Dark Gray
+  { type: ColorToneType.BROWN, shades: ['#BCA89F', '#765341', '#3D251E'] }, // Light, Medium, Dark Brown
+  { type: ColorToneType.GRAY, shades: ['#F5F5F5', '#BDBDBD', '#696969'] }, // Light, Medium, Dark Gray
   { type: ColorToneType.BLACK, shades: ['#000000'] }, // Single shade of Black
-  { type: ColorToneType.WHITE, shades: ['#FFFFFF', '#F3EFE0'] }, // Pure White and Ecru White
+  { type: ColorToneType.WHITE, shades: ['#FFFFFF', '#FFFFE6'] }, // Pure White and Ecru White
 ];
 
 export function getTonesPalette() {
   const darkShades: string[] = [];
   const mediumShades: string[] = [];
   const lightShades: string[] = [];
+  const fluorShades: string[] = [];
 
   COLOR_TONES_PALETTE.forEach((color) => {
-    if (color.shades.length === 3) {
-      darkShades.push(color.shades[2]);
-      mediumShades.push(color.shades[1]);
-      lightShades.push(color.shades[0]);
-    } else if (color.type === ColorToneType.BLACK) {
-      darkShades.push(color.shades[0]);
-    } else if (color.type === ColorToneType.WHITE) {
-      lightShades.push(color.shades[0]);
-      mediumShades.push(color.shades[1]);
-    }
+    const [light, medium, dark, fluor] = color.shades;
+
+    if (dark) darkShades.push(dark); // Adds the dark tone if it exists
+    if (medium) mediumShades.push(medium); // Adds the medium tone if it exists
+    if (light) lightShades.push(light); // Adds the light tone if it exists
+    if (fluor) fluorShades.push(fluor); // Adds the fluor tone if it exists
   });
 
-  return [...darkShades, ...mediumShades, ...lightShades];
+  return [...darkShades, ...mediumShades, ...lightShades, ...fluorShades];
 }
 
 export function getColorToneAndIntensity(hexCode: string) {
@@ -58,12 +55,14 @@ export function getColorToneAndIntensity(hexCode: string) {
           ? ColorIntensityType.LIGHT
           : shadeIndex === 1
           ? ColorIntensityType.MEDIUM
-          : ColorIntensityType.DARK;
+          : shadeIndex === 2
+          ? ColorIntensityType.DARK
+          : ColorIntensityType.FLUOR;
 
       return { tone: color.type, intensity };
     }
   }
 
-  // If hex code is not found, return null or an error message
+  // Return null or throw an error if hexCode is not found
   return null;
 }
