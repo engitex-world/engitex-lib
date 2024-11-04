@@ -1,3 +1,4 @@
 export enum SystemCodeContextType {
   PRODUCT_PLACE = 'PRODUCT_PLACE',
+  PATH_IMPORT_FORMULA_LAB = 'PATH_IMPORT_FORMULA_LAB',
 }
