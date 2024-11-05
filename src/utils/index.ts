@@ -13,3 +13,4 @@ export * from './id-formatter.utils';
 export * from './input-filter.utils';
 export * from './open-document-tab.utils';
 export * from './pagination.utils';
+export * from './parser-fabric.utils';
