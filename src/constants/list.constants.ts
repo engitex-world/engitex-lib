@@ -1,3 +1,3 @@
-export const LIMIT_LISTED_ITEMS = 3;
+export const DEFAULT_MAX_LISTED_ITEMS = 3;
 export const DEFAULT_PAGE_GET_REQUEST = 1;
 export const DEFAULT_PAGE_SIZE_GET_REQUEST = 20;
