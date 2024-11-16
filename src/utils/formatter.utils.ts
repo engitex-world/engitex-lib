@@ -9,3 +9,7 @@ export function formatIdDigits(id: number, numDigits: number): string {
 
   return idStr;
 }
+
+export function removeNonSignificantZeros(value: string | number | null | undefined) {
+  return value == null ? value : parseFloat(value.toString());
+}
