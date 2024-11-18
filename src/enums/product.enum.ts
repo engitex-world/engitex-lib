@@ -4,14 +4,17 @@ export enum ProductType {
   FINISHING = 'FINISHING',
 }
 
-export enum ProductFormulaUnitType {
+export enum ProductTrialFormulaUnitType {
   CENTILITER_PER_LITER = 'CENTILITER_PER_LITER',
   GRAM_PER_LITER = 'GRAM_PER_LITER',
+  PERCENTAGE = 'PERCENTAGE',
+}
+
+export enum ProductRecipeUnitType {
   GRAMS = 'GRAMS',
   KILOGRAM = 'KILOGRAM',
   LITER = 'LITER',
   MILLILITER = 'MILLILITER',
-  PERCENTAGE = 'PERCENTAGE',
 }
 
 export enum ProductPurchaseUnitType {

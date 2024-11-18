@@ -22,3 +22,8 @@ export enum MethodAPI {
   PATCH = 'PATCH',
   DELETE = 'DELETE',
 }
+
+export enum BooleanAPIParams {
+  TRUE = 'true',
+  FALSE = 'false',
+}
