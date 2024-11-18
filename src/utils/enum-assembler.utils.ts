@@ -13,9 +13,9 @@ import {
   ProductAuxiliaryType,
   ProductDyeGroupType,
   ProductFinishingType,
-  ProductFormulaUnitType,
   ProductIonsClassificationType,
   ProductPurchaseUnitType,
+  ProductTrialFormulaUnitType,
   ProductType,
   UserRoleType,
 } from '../enums';
@@ -60,7 +60,7 @@ export const PRODUCT_IONS_CLASSIFICATION_TYPE_LIST = enumToSelect(ProductIonsCla
 export const PRODUCT_DYE_GROUP_LIST = enumToSelect(ProductDyeGroupType);
 export const PRODUCT_AUXILIARY_LIST = enumToSelect(ProductAuxiliaryType);
 export const PRODUCT_FINISHING_LIST = enumToSelect(ProductFinishingType);
-export const PRODUCT_FORMULA_UNIT_LIST = enumToSelect(ProductFormulaUnitType);
+export const PRODUCT_FORMULA_UNIT_LIST = enumToSelect(ProductTrialFormulaUnitType);
 export const PRODUCT_PURCHASE_UNIT_LIST = enumToSelect(ProductPurchaseUnitType);
 export const FABRIC_TREATMENT_LIST = enumToSelect(FabricTreatmentType);
 export const BUSINESS_TYPE_LIST = enumToSelect(BusinessType);
