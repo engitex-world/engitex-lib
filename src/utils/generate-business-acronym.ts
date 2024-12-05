@@ -1,3 +1,5 @@
+import { ResponseErrorType } from '../enums/response-error.enum';
+
 // Logic to generate the acronym with retry variations
 export function generateAcronymFromName(name: string, attempt: number): string {
   const words = name.split(' ');
@@ -52,5 +54,5 @@ export function generateAcronymFromName(name: string, attempt: number): string {
   }
 
   // Fallback in case no other logic applies
-  throw new Error('Unable to generate acronym from the provided name');
+  throw new Error(ResponseErrorType.UNABLE_GENERATE_ACRONYM);
 }
