@@ -9,6 +9,7 @@ export enum RouteAPI {
   ColorRequest = '/color-requests',
   ColorTrial = '/color-trials',
   FabricColorRecipe = '/fabric-color-recipe',
+  Order = '/orders',
   Product = '/products',
   DyeingProcess = '/dyeing-processes',
   SpecificationSheet = '/specification-sheets',
