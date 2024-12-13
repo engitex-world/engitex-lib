@@ -1,6 +1,7 @@
 export enum RouteAPI {
   Auth = '/auth',
   Business = '/business',
+  ClientPortal = '/client-portal',
   User = '/users',
   Fabric = '/fabrics',
   FabricInventory = '/fabric-inventories',
