@@ -8,7 +8,6 @@ export enum CertificationType {
   ZDHC_2 = 'ZDHC_2',
   ZDHC_3 = 'ZDHC_3',
   THE_LIST_A = 'THE_LIST_A',
-  THE_LIST_B = 'THE_LIST_B',
   THE_LIST_C = 'THE_LIST_C',
   GOTS_7 = 'GOTS_7',
   REACH = 'REACH',
