@@ -1,4 +1,4 @@
-export enum CompanyNameType {
+export enum CompanySubDomainType {
   CARVITIN = 'carvitin',
   ETM = 'etm',
   DEMO = 'demo',
