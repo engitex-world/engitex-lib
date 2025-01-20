@@ -7,7 +7,7 @@ export function generateAcronymFromName(name: string, attempt: number): string {
   // Remove common words like "Lda", "S.A.", etc.
   const filteredWords = words.filter(
     (word) =>
-      !['lda', 's.a.', 'sociedade', 'unipessoal', 'confeções', 'confecção'].includes(
+      !['lda', 's.a.', 'sa', 'sociedade', 'unipessoal', 'confeções', 'confecção'].includes(
         word.toLowerCase()
       )
   );

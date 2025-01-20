@@ -12,11 +12,11 @@ export type SortOptions = {
 type PaginateResponseProps<T> = {
   totalCount: number;
   results: T[];
-  paginationOpts: PaginationOptions;
+  paginationOptions: PaginationOptions;
   tabsInfo?: Record<string, number>;
 };
 
-type QueryPaginationOpts = {
+type QueryPaginationOptions = {
   skip: number;
   take: number;
 };
@@ -39,7 +39,7 @@ export function getDefaultPaginationOptions(options: PaginationOptions): Paginat
   };
 }
 
-export function getQueryPaginationOpts(options: PaginationOptions): QueryPaginationOpts {
+export function getQueryPaginationOptions(options: PaginationOptions): QueryPaginationOptions {
   const { page, pageSize } = options;
 
   return {
@@ -51,10 +51,10 @@ export function getQueryPaginationOpts(options: PaginationOptions): QueryPaginat
 export function paginateResponse<T>({
   totalCount,
   results,
-  paginationOpts,
+  paginationOptions,
   tabsInfo,
 }: PaginateResponseProps<T>): { info: ResponseInfo; results: T[] } {
-  const { page, pageSize, url } = paginationOpts;
+  const { page, pageSize, url } = paginationOptions;
 
   const totalPages = Math.ceil(totalCount / pageSize);
   const info = {
