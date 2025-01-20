@@ -11,4 +11,5 @@ export enum FormMessageType {
   INVALID_PERCENTAGE = 'invalidpercentage',
   MISSING_DOC_DATE = 'missingdocdate',
   MISSING_DOC = 'missingdoc',
+  ONLY_FUTURE_DATE = 'onlyfuturedate',
 }
