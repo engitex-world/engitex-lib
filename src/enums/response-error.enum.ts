@@ -16,6 +16,7 @@ export enum ResponseErrorType {
   ER_DB_GENERIC = 'ER_DB_GENERIC',
   DB = 'DB',
   MESSAGE = 'MESSAGE',
+  DETAIL = 'DETAIL',
   // Specific errors
   USER_NOT_FOUND = 'USER_NOT_FOUND',
   WRONG_CREDENTIALS = 'WRONG_CREDENTIALS',
