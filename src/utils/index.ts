@@ -2,7 +2,7 @@ export * from './calendar-dates.utils';
 export * from './color-calculator.utils';
 export * from './color-palette.utils';
 export * from './color-sorting-by-hex-code.utils';
-export * from './date-formatter.utils';
+export * from './date-format.utils';
 export * from './enum-assembler.utils';
 export * from './formatter.utils';
 export * from './generate-product-code.utils';

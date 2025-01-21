@@ -7,7 +7,7 @@ export function formatDate(dateString: string, includeHourMin = false): string {
   const hours = date.getHours().toString().padStart(2, '0');
   const minutes = date.getMinutes().toString().padStart(2, '0');
 
-  const formattedDate = `${day}-${month}-${year}`;
+  const formattedDate = `${day}/${month}/${year}`;
 
   return includeHourMin ? `${formattedDate} ${hours}:${minutes}` : formattedDate;
 }
