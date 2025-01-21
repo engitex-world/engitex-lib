@@ -11,7 +11,7 @@ const pantonesList: Record<PantoneCodeType, PantoneEntry[]> = {
   TGX: [{ code: '1234-567 TGX', hex: '#F6EAC2' }],
 };
 
-export const findPantone = (code: string): PantoneEntry | undefined => {
+export const getPantone = (code: string): PantoneEntry | undefined => {
   // Extract the type from the code using a regular expression
   const typeMatch = code.match(/(TPX|TCX|TGX)$/);
 
@@ -24,5 +24,5 @@ export const findPantone = (code: string): PantoneEntry | undefined => {
   return pantonesList[type]?.find((entry) => entry.code === code);
 };
 
-console.log(findPantone('12-34567 TCX'));
+console.log(getPantone('12-34567 TCX'));
 // Output: { code: "PANTONE 123 TPX", hex: "#F6EAC2" }
