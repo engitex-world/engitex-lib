@@ -23,6 +23,3 @@ export const getPantone = (code: string): PantoneEntry | undefined => {
   const type = typeMatch[0] as PantoneCodeType; // Extracted type
   return pantonesList[type]?.find((entry) => entry.code === code);
 };
-
-console.log(getPantone('12-34567 TCX'));
-// Output: { code: "PANTONE 123 TPX", hex: "#F6EAC2" }

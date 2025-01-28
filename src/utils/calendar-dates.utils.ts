@@ -5,7 +5,7 @@ export function getYearDigits(): string {
 
 export function addBusinessDays(startDate: Date, days: number): Date {
   let dayCount = 0;
-  let currentDate = new Date(startDate);
+  const currentDate = new Date(startDate);
 
   while (dayCount < days) {
     currentDate.setDate(currentDate.getDate() + 1);
