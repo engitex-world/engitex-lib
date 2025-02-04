@@ -12,4 +12,5 @@ export enum FormMessageType {
   MISSING_DOC_DATE = 'missingdocdate',
   MISSING_DOC = 'missingdoc',
   ONLY_FUTURE_DATE = 'onlyfuturedate',
+  DUPLICATES = 'duplicates',
 }
