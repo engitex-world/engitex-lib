@@ -11,7 +11,7 @@ export * from './fiber.enum';
 export * from './form-message.enum';
 export * from './labdip.enum';
 export * from './locale.enum';
-export * from './notifications.enum';
+export * from './notification.enum';
 export * from './order.enum';
 export * from './product.enum';
 export * from './response-error.enum';

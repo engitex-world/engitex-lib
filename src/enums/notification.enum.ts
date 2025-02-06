@@ -1,4 +1,4 @@
-export enum NotificationsType {
+export enum NotificationType {
   ORDERS = 'ORDERS',
   LABORATORY = 'LABORATORY',
 }
