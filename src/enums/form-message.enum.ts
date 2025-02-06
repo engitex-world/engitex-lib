@@ -1,7 +1,8 @@
 export enum FormMessageType {
   REQUIRED = 'required',
   POSITIVE = 'positive',
-  CHARACTERS = 'characters',
+  MIN_CHARACTERS = 'mincharacters',
+  MAX_CHARACTERS = 'maxcharacters',
   MAX_EXCEEDED = 'maxexceeded',
   EMAIL = 'email',
   INTEGER = 'integer',
