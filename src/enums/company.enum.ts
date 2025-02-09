@@ -3,3 +3,8 @@ export enum CompanySubDomainType {
   ETM = 'etm',
   DEMO = 'demo',
 }
+
+export enum AuthorOrigin {
+  DYEING_HOUSE = 'DYEING_HOUSE',
+  CLIENT = 'CLIENT',
+}
