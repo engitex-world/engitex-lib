@@ -4,7 +4,7 @@ export enum CompanySubDomainType {
   DEMO = 'demo',
 }
 
-export enum AuthorOrigin {
+export enum UserOriginType {
   DYEING_HOUSE = 'DYEING_HOUSE',
   CLIENT = 'CLIENT',
 }

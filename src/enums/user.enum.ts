@@ -14,3 +14,8 @@ export enum UserRoleType {
   ACCOUNTING = 'ACCOUNTING',
   CLIENT = 'CLIENT',
 }
+
+export enum UserOriginType {
+  DYEING_HOUSE = 'DYEING_HOUSE',
+  CLIENT = 'CLIENT',
+}
