@@ -2,6 +2,7 @@ export enum ProductType {
   AUXILIARY = 'AUXILIARY',
   COLORANT = 'COLORANT',
   FINISHING = 'FINISHING',
+  BASIC = 'BASIC',
 }
 
 export enum ProductTrialFormulaUnitType {

@@ -1,13 +1,13 @@
 import { LocaleType } from '../../enums/locale.enum';
 import { OrderDeadlineStatusType } from '../../enums/order.enum';
 
-type OrderDeadlineStatusTranslationsType = {
+type OrderDeadlineStatusTranslations = {
   [key in LocaleType]: {
     [status in OrderDeadlineStatusType]: string;
   };
 };
 
-const OrderDeadlineStatusTranslations: OrderDeadlineStatusTranslationsType = {
+const OrderDeadlineStatusTranslations: OrderDeadlineStatusTranslations = {
   en: {
     APPROVED: 'Approved',
     AUTO_APPROVED: 'Auto Approved',
