@@ -4,7 +4,7 @@ export const ProductTypeAcronym = {
   [ProductType.COLORANT]: 'C',
   [ProductType.AUXILIARY]: 'A',
   [ProductType.FINISHING]: 'F',
-  [ProductType.BASIC]: 'B',
+  //[ProductType.BASIC]: 'B',
 };
 
 export const ProductDyeGroupAcronym: Record<ProductDyeGroupType, string> = {
