@@ -1,14 +1,25 @@
+import { ColorIntensityType, ColorToneType } from '../enums';
+
 export type PantoneCodeType = 'TPX' | 'TCX' | 'TGX';
 
-interface PantoneEntry {
+export interface PantoneEntry {
   code: string;
   hex: string;
+  intensity: ColorIntensityType;
+  tone: ColorToneType;
 }
 
 const pantonesList: Record<PantoneCodeType, PantoneEntry[]> = {
-  TPX: [{ code: '1234-567 TPX', hex: '#F6EAC2' }],
-  TCX: [{ code: '1234-567 TCX', hex: '#8FA6C7' }],
-  TGX: [{ code: '1234-567 TGX', hex: '#F6EAC2' }],
+  TCX: [
+    {
+      code: '19-40522 TCX',
+      hex: '#0F4C81',
+      intensity: ColorIntensityType.MEDIUM,
+      tone: ColorToneType.BLUE,
+    },
+  ],
+  TPX: [],
+  TGX: [],
 };
 
 export const getPantone = (code: string): PantoneEntry | undefined => {

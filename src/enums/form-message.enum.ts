@@ -4,6 +4,7 @@ export enum FormMessageType {
   MIN_CHARACTERS = 'mincharacters',
   MAX_CHARACTERS = 'maxcharacters',
   MAX_EXCEEDED = 'maxexceeded',
+  PANTONE_REGEX = 'pantoneregex',
   EMAIL = 'email',
   INTEGER = 'integer',
   ENUM = 'enum',
