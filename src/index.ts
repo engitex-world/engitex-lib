@@ -1,6 +1,5 @@
 export * from './constants';
 export * from './enums';
-export * from './interfaces';
 export * from './mappings';
 export * from './translations';
 export * from './types';
