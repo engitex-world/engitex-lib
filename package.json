@@ -1,0 +1,19 @@
+{
+  "name": "engitex-lib",
+  "version": "1.0.0",
+  "description": "Engitex Lib",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src --dts --format esm",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "Engitex",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}

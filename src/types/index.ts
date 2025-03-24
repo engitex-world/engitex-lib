@@ -1,2 +1,1 @@
-export * from './audit';
-export * from './product-alerts';
+export * from './auth';
