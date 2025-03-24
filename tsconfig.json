@@ -8,13 +8,12 @@
     "strict": true,
     "baseUrl": "./src",
     "paths": {
-      "@constants/*": ["./src/constants/*"],
-      "@enums/*": ["./src/enums/*"],
-      "@mappings/*": ["./src/mappings/*"],
-      "@translations/*": ["./src/translations/*"],
-      "@types/*": ["./src/types/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@/*": ["./src/*"]
+      "@constants": ["constants"],
+      "@enums": ["enums"],
+      "@mappings": ["mappings"],
+      "@translations": ["translations"],
+      "@types": ["types"],
+      "@utils": ["utils"],
     }
   },
   "include": ["src"]
