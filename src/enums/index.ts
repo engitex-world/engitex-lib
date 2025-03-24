@@ -14,6 +14,7 @@ export * from './locale.enum';
 export * from './notification.enum';
 export * from './order.enum';
 export * from './product.enum';
+export * from './quality-standard.enum';
 export * from './response-error.enum';
 export * from './route-api.enum';
 export * from './system-codes.enum';
