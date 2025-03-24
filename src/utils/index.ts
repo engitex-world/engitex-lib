@@ -5,6 +5,7 @@ export * from './color-sorting-by-hex-code.utils';
 export * from './date-format.utils';
 export * from './enum-to-select.utils';
 export * from './formatter.utils';
+export * from './generate-business-acronym';
 export * from './generate-product-code.utils';
 export * from './generate-random-password.utils';
 export * from './generate-whatsapp-url.utils';

@@ -1,3 +1,5 @@
+import { AlertPriorityType } from './alert.enum';
+
 export enum ProductType {
   AUXILIARY = 'AUXILIARY',
   COLORANT = 'COLORANT',
@@ -102,6 +104,15 @@ export const ProductSubType = {
 } as const;
 
 export type ProductSubType = (typeof ProductSubType)[keyof typeof ProductSubType];
+
+export type ProductAlertsType = {
+  priceAlert: AlertPriorityType;
+  technicalDocAlert: AlertPriorityType;
+  securityDocAlert: AlertPriorityType;
+  stockAlert: AlertPriorityType;
+  daysAlert: AlertPriorityType;
+  gotsApprovalLetterAlert: AlertPriorityType;
+};
 
 export enum HealthSafetyPhraseType {
   H200 = 'H200',
