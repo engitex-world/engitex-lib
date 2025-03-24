@@ -1,4 +1,4 @@
-import { UserRoleType } from '@enums';
+import { UserRoleType } from '@lib/enums';
 
 export type Auth = {
   user: AuthUser | null;

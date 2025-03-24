@@ -8,12 +8,12 @@
     "strict": true,
     "baseUrl": "./src",
     "paths": {
-      "@constants": ["constants"],
-      "@enums": ["enums"],
-      "@mappings": ["mappings"],
-      "@translations": ["translations"],
-      "@types": ["types"],
-      "@utils": ["utils"],
+      "@lib/constants": ["constants"],
+      "@lib/enums": ["enums"],
+      "@lib/mappings": ["mappings"],
+      "@lib/translations": ["translations"],
+      "@lib/types": ["types"],
+      "@lib/utils": ["utils"],
     }
   },
   "include": ["src"]
