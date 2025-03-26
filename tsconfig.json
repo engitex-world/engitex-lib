@@ -13,7 +13,7 @@
       "@lib/mappings": ["mappings"],
       "@lib/translations": ["translations"],
       "@lib/types": ["types"],
-      "@lib/utils": ["utils"],
+      "@lib/utils": ["utils"]
     }
   },
   "include": ["src"]

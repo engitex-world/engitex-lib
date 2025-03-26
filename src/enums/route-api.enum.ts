@@ -1,4 +1,4 @@
-export enum RouteAPI {
+export enum Modules {
   Auth = '/auth',
   Business = '/business',
   ClientPortal = '/client-portal',
@@ -16,6 +16,21 @@ export enum RouteAPI {
   SpecificationSheet = '/specification-sheets',
   SystemCodes = '/system-codes',
 }
+
+export const PathsAPI = {
+  Auth: {
+    Login: `${Modules.Auth}/login`,
+    Refresh: `${Modules.Auth}/refresh`,
+    Logout: `${Modules.Auth}/logout`,
+  },
+  System: {
+    Business: {
+      FindAll: `${Modules.Business}`,
+      ById: `${Modules.Business}`,
+      Options: `${Modules.Business}`,
+    },
+  },
+};
 
 export enum MethodAPI {
   POST = 'POST',
