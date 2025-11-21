@@ -1,0 +1,22 @@
+export enum AppModules {
+  //ACCOUNTING = 'accounting',
+  AUTH = 'auth',
+  /*
+  BUSINESS_ENTITIES = 'business-entities',
+  CHEMICALS = 'chemicals',
+  CLIENT_MANAGEMENT = 'client-management',
+  CLIENT_PORTAL = 'client-portal',
+  DASHBOARDS = 'dashboards',
+  FABRIC_CATALOG = 'fabric-catalog',
+  LABORATORY = 'laboratory',
+  MAINTENANCE = 'maintenance',
+  MACHINES = 'machines',
+  ORDERS = 'orders',
+  PRICING = 'pricing',
+  PRODUCTION = 'production',
+  QUALITY_CONTROL = 'quality-control',
+  RECIPES = 'recipes',
+  USERS = 'users',
+  WAREHOUSE = 'warehouse',
+  */
+}

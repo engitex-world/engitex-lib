@@ -1,13 +1,13 @@
-import { LocaleType } from '../../enums/locale.enum';
-import { OrderDeadlineStatusType } from '../../enums/order.enum';
+import { WorkOrderDeadlineStatusType } from '@lib/modules/work-orders/enums/work-order.enum';
+import { LocaleType } from '../../common/enums/locale.enum';
 
-type OrderDeadlineStatusTranslations = {
+type WorkOrderDeadlineStatusTranslations = {
   [key in LocaleType]: {
-    [status in OrderDeadlineStatusType]: string;
+    [status in WorkOrderDeadlineStatusType]: string;
   };
 };
 
-const OrderDeadlineStatusTranslations: OrderDeadlineStatusTranslations = {
+const WorkOrderDeadlineStatusTranslations: WorkOrderDeadlineStatusTranslations = {
   en: {
     APPROVED: 'Approved',
     AUTO_APPROVED: 'Auto Approved',
@@ -40,7 +40,7 @@ const OrderDeadlineStatusTranslations: OrderDeadlineStatusTranslations = {
 
 export const getTranslatedOrderDeadlineStatus = (
   locale: LocaleType,
-  status: OrderDeadlineStatusType
+  status: WorkOrderDeadlineStatusType
 ) => {
-  return OrderDeadlineStatusTranslations[locale][status] || status;
+  return WorkOrderDeadlineStatusTranslations[locale][status] || status;
 };

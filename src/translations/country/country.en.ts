@@ -1,4 +1,4 @@
-import { CountryType } from '../../enums';
+import { CountryType } from 'common/enums/country.enum';
 
 export const countries: Record<CountryType, string> = {
   [CountryType.PORTUGAL]: 'Portugal',

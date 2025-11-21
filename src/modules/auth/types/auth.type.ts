@@ -1,8 +1,8 @@
-import { UserRoleType } from '@lib/enums';
+import { UserRoleType } from '@lib/modules/users/enums/user.enum';
 
 export type Auth = {
   user: AuthUser | null;
-  session: Session | null;
+  session: AuthSession | null;
 };
 
 export type AuthUser = {
@@ -11,12 +11,12 @@ export type AuthUser = {
   username: string;
   email: string;
   isDefaultPassword: boolean;
-  roles?: UserRoleType[];
+  roles: UserRoleType[];
   isClient: boolean;
   businessId: number;
 };
 
-export type Session = {
+export type AuthSession = {
   aud?: string;
   exp: number;
   iat: number;

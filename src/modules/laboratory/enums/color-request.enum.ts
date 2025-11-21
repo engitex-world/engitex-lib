@@ -1,0 +1,13 @@
+export enum ColorRequestStatusType {
+  IN_PROGRESS = 'PENDING',
+  AWAITING_APPROVAL = 'AWAITING_APPROVAL',
+  COMPLETED = 'COMPLETED',
+}
+
+export enum ColorTrialStatusType {
+  STARTED = 'STARTED',
+  SENT = 'SENT',
+  DISCARDED = 'DISCARDED',
+  REJECTED = 'REJECTED',
+  APPROVED = 'APPROVED',
+}
