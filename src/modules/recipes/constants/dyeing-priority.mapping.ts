@@ -1,4 +1,4 @@
-import { ProductDyeGroupType } from '../enums';
+import { ProductDyeGroupType } from '@lib/modules/chemicals/products/enums/product.enum';
 
 export const DYEING_PRIORITY_MAP: Record<ProductDyeGroupType, number> = {
   [ProductDyeGroupType.DISPERSE]: 1, // High-temperature synthetic dyeing (e.g., polyester)

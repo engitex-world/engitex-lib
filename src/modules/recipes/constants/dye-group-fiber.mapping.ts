@@ -1,4 +1,5 @@
-import { FiberType, ProductDyeGroupType } from '../enums';
+import { ProductDyeGroupType } from '@lib/modules/chemicals/products/enums/product.enum';
+import { FiberType } from '@lib/modules/fabric-catalog/enums/fiber.enum';
 
 export const DYEGROUP_TO_FIBERS_MAP: Record<ProductDyeGroupType, FiberType[]> = {
   // Corantes ácidos são usados para tingir fibras proteicas e poliamidas
