@@ -1,4 +1,4 @@
-import { AuthUser } from '../types/auth.type';
+import { User } from '@lib/modules/users/types/user';
 
 export interface LoginRequest {
   username: string;
@@ -7,5 +7,5 @@ export interface LoginRequest {
 
 export interface LoginResponse {
   accessToken: string;
-  user: AuthUser;
+  user: User;
 }

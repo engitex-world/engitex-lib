@@ -1,7 +1,6 @@
 export enum AppModules {
-  //ACCOUNTING = 'accounting',
+  ACCOUNTING = 'accounting',
   AUTH = 'auth',
-  /*
   BUSINESS_ENTITIES = 'business-entities',
   CHEMICALS = 'chemicals',
   CLIENT_MANAGEMENT = 'client-management',
@@ -12,11 +11,10 @@ export enum AppModules {
   MAINTENANCE = 'maintenance',
   MACHINES = 'machines',
   ORDERS = 'orders',
-  PRICING = 'pricing',
   PRODUCTION = 'production',
   QUALITY_CONTROL = 'quality-control',
   RECIPES = 'recipes',
   USERS = 'users',
   WAREHOUSE = 'warehouse',
-  */
+  PRICING = 'pricing',
 }
