@@ -8,6 +8,7 @@ export enum AppModules {
   COLOR_CATALOG = 'color-catalog',
   DASHBOARDS = 'dashboards',
   FABRIC_CATALOG = 'fabric-catalog',
+  FABRIC_CATALOG_TMP_INVENTORY = 'fabric-catalog-tmp-inventory',
   LABORATORY = 'laboratory',
   MAINTENANCE = 'maintenance',
   MACHINES = 'machines',

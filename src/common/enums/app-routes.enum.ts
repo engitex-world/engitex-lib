@@ -32,6 +32,9 @@ export const AppRoutes: RoutesMap = {
   [AppModules.FABRIC_CATALOG]: {
     root: `/${AppModules.FABRIC_CATALOG}`,
   },
+  [AppModules.FABRIC_CATALOG_TMP_INVENTORY]: {
+    root: `/${AppModules.FABRIC_CATALOG_TMP_INVENTORY}`,
+  },
   [AppModules.LABORATORY]: {
     root: `/${AppModules.LABORATORY}`,
   },
