@@ -5,6 +5,7 @@ export enum AppModules {
   CHEMICALS = 'chemicals',
   CLIENT_MANAGEMENT = 'client-management',
   CLIENT_PORTAL = 'client-portal',
+  COLOR_CATALOG = 'color-catalog',
   DASHBOARDS = 'dashboards',
   FABRIC_CATALOG = 'fabric-catalog',
   LABORATORY = 'laboratory',
