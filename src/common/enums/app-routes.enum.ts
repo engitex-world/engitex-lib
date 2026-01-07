@@ -3,9 +3,9 @@ import { AppModules } from './app-modules.enum';
 export const AppRoutes: RoutesMap = {
   [AppModules.ACCOUNTING]: {},
   [AppModules.AUTH]: {
-    Login: `/${AppModules.AUTH}/login`,
-    Refresh: `/${AppModules.AUTH}/refresh`,
-    Logout: `/${AppModules.AUTH}/logout`,
+    login: `/${AppModules.AUTH}/login`,
+    refresh: `/${AppModules.AUTH}/refresh`,
+    logout: `/${AppModules.AUTH}/logout`,
   },
   [AppModules.BUSINESS_ENTITIES]: {},
   [AppModules.CHEMICALS]: {},
@@ -34,7 +34,6 @@ export enum APIMethod {
   PATCH = 'PATCH',
   DELETE = 'DELETE',
 }
-
 export enum APIParamsBoolean {
   TRUE = 'true',
   FALSE = 'false',
