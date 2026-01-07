@@ -53,6 +53,9 @@ export const AppRoutes: RoutesMap = {
   [AppModules.RECIPES]: {
     root: `/${AppModules.RECIPES}`,
   },
+  [AppModules.RECIPES_TMP_DYEING_PROCESS]: {
+    root: `/${AppModules.RECIPES_TMP_DYEING_PROCESS}`,
+  },
   [AppModules.USERS]: {
     root: `/${AppModules.USERS}`,
   },
