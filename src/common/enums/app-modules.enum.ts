@@ -15,6 +15,7 @@ export enum AppModules {
   PRODUCTION = 'production',
   QUALITY_CONTROL = 'quality-control',
   RECIPES = 'recipes',
+  RECIPES_TMP_DYEING_PROCESS = 'recipes-tmp-dyeing-process',
   USERS = 'users',
   WAREHOUSE = 'warehouse',
   PRICING = 'pricing',
