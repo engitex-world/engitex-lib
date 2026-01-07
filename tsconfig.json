@@ -8,13 +8,9 @@
     "strict": true,
     "baseUrl": "./src",
     "paths": {
-      "@lib/constants": ["constants"],
-      "@lib/enums": ["enums"],
-      "@lib/mappings": ["mappings"],
+      "@lib/common/*": ["common/*"],
       "@lib/modules/*": ["modules/*"],
       "@lib/translations": ["translations"],
-      "@lib/types": ["types"],
-      "@lib/utils": ["utils"]
     }
   },
   "include": ["src"]

@@ -1,4 +1,4 @@
-import { Common } from 'common/types/common';
+import { Common } from '@lib/common/types/common';
 import { UserRoleType } from '../enums/user.enum';
 
 export type User = {
