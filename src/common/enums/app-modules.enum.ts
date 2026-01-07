@@ -18,4 +18,5 @@ export enum AppModules {
   USERS = 'users',
   WAREHOUSE = 'warehouse',
   PRICING = 'pricing',
+  SYSTEM_MANAGEMENT = 'system-management',
 }
