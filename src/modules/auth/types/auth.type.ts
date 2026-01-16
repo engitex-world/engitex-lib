@@ -1,6 +1,6 @@
 import { UserRoleType } from '@lib/modules/users/enums/user.enum';
 
-export type Auth = {
+export type AuthTokenPayload = {
   user: AuthUser | null;
   session: AuthSession | null;
 };
