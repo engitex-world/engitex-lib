@@ -1,6 +1,6 @@
 import { UserRoleType } from '@lib/modules/users/enums/user.enum';
 
-export type AuthTokenPayload = {
+export type AuthContext = {
   user: AuthUser | null;
   session: AuthSession | null;
 };
@@ -17,11 +17,15 @@ export type AuthUser = {
 };
 
 export type AuthSession = {
-  aud?: string;
-  exp: number;
-  iat: number;
-  iss?: string;
-  nbf?: number;
   sub: string;
+  iat: number;
+  exp: number;
   token: string;
+};
+
+export type JwtAuthPayload = {
+  sub: number;
+  iat: number;
+  exp: number;
+  user: AuthUser;
 };
