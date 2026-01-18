@@ -17,7 +17,7 @@ export type AuthUser = {
 };
 
 export type AuthSession = {
-  sub: string;
+  sub: number;
   iat: number;
   exp: number;
   token: string;
