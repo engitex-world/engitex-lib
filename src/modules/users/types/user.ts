@@ -1,6 +1,6 @@
 import { Common } from '@lib/common/types/common';
 
-import { UserRoleType } from '../enums/user.enum';
+import { UserRole } from '../enums/user.enum';
 
 export type User = {
   name: string;
@@ -9,5 +9,5 @@ export type User = {
   password?: string;
   isDefaultPassword?: boolean;
   phone: string;
-  roles: UserRoleType[];
+  roles: UserRole[];
 } & Common;

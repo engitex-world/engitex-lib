@@ -1,4 +1,4 @@
-import { UserRoleType } from '@lib/modules/users/enums/user.enum';
+import { UserRole } from '@lib/modules/users/enums/user.enum';
 
 export type AuthContext = {
   user: AuthUser | null;
@@ -11,7 +11,7 @@ export type AuthUser = {
   username: string;
   email: string;
   isDefaultPassword: boolean;
-  roles: UserRoleType[];
+  roles: UserRole[];
   isClient: boolean;
   businessId: number;
 };
