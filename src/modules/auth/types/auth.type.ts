@@ -10,9 +10,9 @@ export type AuthUtilizador = {
   nome: string;
   nomeUtilizador: string;
   email: string;
-  resetPassword: boolean;
+  redefinirPassword: boolean;
   funcoes: UtilizadorFuncao[];
-  clienteId: number;
+  empresaId: number;
 };
 
 export type AuthSession = {
