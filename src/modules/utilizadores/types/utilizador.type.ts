@@ -8,6 +8,6 @@ export type Utilizador = {
   email?: string;
   telemovel?: string;
   funcoes: UtilizadorFuncao[];
-  redifinir_password: boolean;
+  redefinirPassword: boolean;
   empresaId?: number;
 } & Common;
