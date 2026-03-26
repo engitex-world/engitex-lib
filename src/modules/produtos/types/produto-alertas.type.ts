@@ -1,5 +1,5 @@
 export type ProdutoAlertas = {
-  price: ProdutoAlertaPrioridade;
+  preco: ProdutoAlertaPrioridade;
   fichaTecnica: ProdutoAlertaPrioridade;
   fichaSeguranca: ProdutoAlertaPrioridade;
   gotsApprovalLetter: ProdutoAlertaPrioridade;
