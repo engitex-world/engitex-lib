@@ -94,7 +94,7 @@ export enum ProdutoAcabamentoTipo {
   FINISHING_RESIN = 'FINISHING_RESIN',
 }
 
-const ProdutoSubTipo = {
+export const ProdutoSubTipo = {
   ...GrupoCorantes,
   ...ProdutoAuxiliarTipo,
   ...ProdutoAcabamentoTipo,
