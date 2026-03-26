@@ -1,0 +1,6 @@
+export enum EmpresaRelacao {
+  CLIENT = 'CLIENT',
+  SUPPLIER = 'SUPPLIER',
+  MANUFACTURER = 'MANUFACTURER',
+  CONTRACTOR = 'CONTRACTOR',
+}

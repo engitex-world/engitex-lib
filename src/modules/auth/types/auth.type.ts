@@ -1,19 +1,18 @@
-import { UserRole } from '@lib/modules/users/enums/user.enum';
+import { UtilizadorFuncao } from '@lib/modules/utilizadores/enums/utilizador.enum';
 
 export type AuthContext = {
-  user: AuthUser | null;
-  session: AuthSession | null;
+  utilizador: AuthUtilizador | null;
+  sessao: AuthSession | null;
 };
 
-export type AuthUser = {
+export type AuthUtilizador = {
   id: number;
-  name: string;
-  username: string;
+  nome: string;
+  nomeUtilizador: string;
   email: string;
-  isDefaultPassword: boolean;
-  roles: UserRole[];
-  isClient: boolean;
-  businessId: number;
+  resetPassword: boolean;
+  funcoes: UtilizadorFuncao[];
+  clienteId: number;
 };
 
 export type AuthSession = {
@@ -27,5 +26,5 @@ export type JwtAuthPayload = {
   sub: number;
   iat: number;
   exp: number;
-  user: AuthUser;
+  utilizador: AuthUtilizador;
 };

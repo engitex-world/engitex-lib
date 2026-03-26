@@ -1,11 +1,11 @@
-import { User } from '@lib/modules/users/types/user';
+import { Utilizador } from '../../utilizadores/types';
 
 export interface LoginRequest {
-  username: string;
+  nomeUtilizador: string;
   password: string;
 }
 
 export interface LoginResponse {
   accessToken: string;
-  user: User;
+  utilizador: Utilizador;
 }

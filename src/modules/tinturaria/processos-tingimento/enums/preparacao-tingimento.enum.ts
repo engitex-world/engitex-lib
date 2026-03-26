@@ -1,0 +1,6 @@
+export enum PreparacaoTingimento {
+  SCOURING = 'SCOURING',
+  BLEACHING = 'BLEACHING',
+  BLEACHING_SODA = 'BLEACHING_SODA',
+  DESIZING = 'DESIZING',
+}
