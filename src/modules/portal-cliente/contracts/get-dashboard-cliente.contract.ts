@@ -1,6 +1,6 @@
 export interface GetDashboardClienteResponse {
   laboratorio: {
-    email: number;
+    email: string;
     numNovidades: string;
   };
 }
