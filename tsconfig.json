@@ -10,7 +10,7 @@
     "paths": {
       "@lib/common/*": ["common/*"],
       "@lib/modules/*": ["modules/*"],
-      "@lib/translations": ["translations"],
+      "@lib/translations": ["translations"]
     }
   },
   "include": ["src"]
