@@ -1,3 +1,3 @@
+export * from './api-routes';
 export * from './app-modules';
-export * from './app-routes-api';
-export * from './app-routes-web';
+export * from './web-routes';
