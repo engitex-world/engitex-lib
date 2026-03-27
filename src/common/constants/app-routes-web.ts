@@ -1,4 +1,4 @@
-export enum AppRoutesWeb {
+enum AppRoutes {
   Login = 'login',
 
   Utilizadores = 'utilizadores',
@@ -16,40 +16,40 @@ export enum AppRoutesWeb {
   NotFound = '*',
 }
 
-export const AppSubRoutesWeb = {
-  Login: `/${AppRoutesWeb.Login}`,
+export const AppRoutesWeb = {
+  Login: `/${AppRoutes.Login}`,
 
   Utilizadores: {
-    List: `/${AppRoutesWeb.Utilizadores}`,
-    Create: `/${AppRoutesWeb.Utilizadores}/criar`,
-    Edit: (id: number | string) => `/${AppRoutesWeb.Utilizadores}/${id}/editar`,
-    RedefinirPassword: `/${AppRoutesWeb.Utilizadores}/perfil/password`,
+    List: `/${AppRoutes.Utilizadores}`,
+    Create: `/${AppRoutes.Utilizadores}/criar`,
+    Edit: (id: number | string) => `/${AppRoutes.Utilizadores}/${id}/editar`,
+    RedefinirPassword: `/${AppRoutes.Utilizadores}/perfil/password`,
   },
 
   Empresas: {
-    List: `/${AppRoutesWeb.Empresas}`,
-    Create: `/${AppRoutesWeb.Empresas}/criar`,
-    Edit: (id: number | string) => `/${AppRoutesWeb.Empresas}/${id}/editar`,
+    List: `/${AppRoutes.Empresas}`,
+    Create: `/${AppRoutes.Empresas}/criar`,
+    Edit: (id: number | string) => `/${AppRoutes.Empresas}/${id}/editar`,
   },
 
   Produtos: {
-    List: `/${AppRoutesWeb.Produtos}`,
-    Create: `/${AppRoutesWeb.Produtos}/criar`,
-    Edit: (id: number | string) => `/${AppRoutesWeb.Produtos}/${id}/editar`,
+    List: `/${AppRoutes.Produtos}`,
+    Create: `/${AppRoutes.Produtos}/criar`,
+    Edit: (id: number | string) => `/${AppRoutes.Produtos}/${id}/editar`,
   },
 
   Laboratorio: {
     PedidosCor: {
-      List: `/${AppRoutesWeb.Laboratorio}/pedidos-cor`,
-      Create: `/${AppRoutesWeb.Laboratorio}/pedidos-cor/criar`,
-      Edit: (id: number | string) => `/${AppRoutesWeb.Laboratorio}/pedidos-cor/${id}/editar`,
-      Ensaios: (id: number | string) => `/${AppRoutesWeb.Laboratorio}/pedidos-cor/${id}/ensaios`,
+      List: `/${AppRoutes.Laboratorio}/pedidos-cor`,
+      Create: `/${AppRoutes.Laboratorio}/pedidos-cor/criar`,
+      Edit: (id: number | string) => `/${AppRoutes.Laboratorio}/pedidos-cor/${id}/editar`,
+      Ensaios: (id: number | string) => `/${AppRoutes.Laboratorio}/pedidos-cor/${id}/ensaios`,
       EnsaiosPDF: (id: number | string) =>
-        `/${AppRoutesWeb.Laboratorio}/pedidos-cor/${id}/ensaios/pdf`,
+        `/${AppRoutes.Laboratorio}/pedidos-cor/${id}/ensaios/pdf`,
       LabDipsPDF: (id: number | string) =>
-        `/${AppRoutesWeb.Laboratorio}/pedidos-cor/${id}/lab-dips/pdf`,
+        `/${AppRoutes.Laboratorio}/pedidos-cor/${id}/lab-dips/pdf`,
     },
   },
 
-  Dashboard: `/${AppRoutesWeb.Dashboard}`,
+  Dashboard: `/${AppRoutes.Dashboard}`,
 };
