@@ -9,7 +9,7 @@ export enum AppRoutesWeb {
   Dashboard = 'dashboard',
 
   Armazem = 'armazem',
-  QualityControl = 'controlo-qualidade',
+  ControloQualidade = 'controlo-qualidade',
   Manutencao = 'manutencao',
   Producao = 'producao',
 
