@@ -1,6 +1,6 @@
 import { AppModules } from './app-modules';
 
-export const AppRoutesAPI = {
+export const APIRoutes = {
   [AppModules.AUTH]: {
     login: `/${AppModules.AUTH}/login`,
     refresh: `/${AppModules.AUTH}/refresh`,

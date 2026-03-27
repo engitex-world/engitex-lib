@@ -16,7 +16,7 @@ enum AppRoutes {
   NotFound = '*',
 }
 
-export const AppRoutesWeb = {
+export const WebRoutes = {
   Login: `/${AppRoutes.Login}`,
 
   Utilizadores: {
