@@ -35,7 +35,7 @@ export const APIRoutes = {
   },
 
   [AppModules.CORES]: {
-    list: `/${AppModules.CORES}`,
+    getPantone: (pantone: string) => `/${AppModules.CORES}/${pantone}`,
   },
 
   [AppModules.ORGANIZACAO]: {
