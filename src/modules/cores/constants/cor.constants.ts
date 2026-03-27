@@ -1,5 +1,7 @@
 import { CorIntensidade, CorTom } from '../enums/cor.enum';
 
+export const PANTONE_LENGTH = 11;
+
 export const CorTomCodigo: CorTomCodigo = {
   [CorTom.RED]: { pt: 'VM', en: 'RD', es: 'RJ' },
   [CorTom.ORANGE]: { pt: 'LR', en: 'OR', es: 'NA' },
