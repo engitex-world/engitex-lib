@@ -17,7 +17,7 @@ export type Produto = {
   classificacaoIonica?: ProdutoClassificacaoIonica;
   fabricante?: string;
   numZdhc?: string;
-  zdhcExpiraEm?: Date;
+  numZdhcExpiraEm?: Date;
   numEinecs?: string;
   numCas?: string;
   certificacoes?: Certificacao[];
