@@ -1,4 +1,4 @@
-import { ProdutoFornecedor } from '../../../../../engitex-be/src/modules/produtos/domain/entities/produto-fornecedor.entity';
+import { ProdutoFornecedor } from '../types';
 
 export function getProdutoPrecoMaisAlto(fornecedores: ProdutoFornecedor[]): number {
   let highestPrice = 0;
