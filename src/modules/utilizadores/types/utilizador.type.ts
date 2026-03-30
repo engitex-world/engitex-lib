@@ -5,8 +5,8 @@ export type Utilizador = {
   nome: string;
   nomeUtilizador: string;
   password: string;
-  email?: string;
-  telemovel?: string;
+  email: string;
+  telemovel: string;
   funcoes: UtilizadorFuncao[];
   redefinirPassword: boolean;
   empresaId?: number;
