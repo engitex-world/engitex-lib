@@ -18,6 +18,7 @@ export type Empresa = {
 } & Common;
 
 export type EmpresaContacto = {
+  id: number;
   nome: string;
   funcao?: UtilizadorFuncao;
   email: string;
