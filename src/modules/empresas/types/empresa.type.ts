@@ -12,7 +12,7 @@ export type Empresa = {
   codigoPostal: string;
   morada: string;
   cidade: string;
-  nif: number;
+  nif: string;
   gestor?: Utilizador;
   contactos: EmpresaContacto[];
 } & Common;
