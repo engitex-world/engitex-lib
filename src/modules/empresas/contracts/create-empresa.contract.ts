@@ -13,7 +13,7 @@ export type CreateEmpresaContactoContract = {
 export type CreateEmpresaContract = {
   id?: number;
   nome: string;
-  relacao: EmpresaRelacao[];
+  relacao: EmpresaRelacao;
   pais: Pais;
   codigoPostal: string;
   morada: string;
