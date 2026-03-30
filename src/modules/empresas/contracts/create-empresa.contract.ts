@@ -6,8 +6,8 @@ export type CreateEmpresaContactoContract = {
   id?: number;
   nome: string;
   funcao?: UtilizadorFuncao;
-  email: string;
-  telemovel: string;
+  email?: string;
+  telemovel?: string;
 };
 
 export type CreateEmpresaContract = {
@@ -19,5 +19,5 @@ export type CreateEmpresaContract = {
   morada: string;
   cidade: string;
   nif: string;
-  contactos: CreateEmpresaContactoContract[];
+  contactos?: CreateEmpresaContactoContract[];
 };
