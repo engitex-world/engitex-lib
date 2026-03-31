@@ -5,7 +5,7 @@ export type LoginRequestContract = {
   password: string;
 };
 
-export interface LoginResponse {
+export interface LoginResponseContract {
   accessToken: string;
   utilizador: AuthUtilizador;
 }
