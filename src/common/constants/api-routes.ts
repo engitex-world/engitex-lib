@@ -57,6 +57,8 @@ export const APIRoutes = {
 
   [AppModules.LABORATORIO.PEDIDOS_COR]: {
     create: `/${AppModules.LABORATORIO.PEDIDOS_COR}`,
+    list: `/${AppModules.LABORATORIO.PEDIDOS_COR}`,
+    getById: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/${id}`,
   },
 
   [AppModules.TINTURARIA.PROCESSOS_TINGIMENTO]: {
