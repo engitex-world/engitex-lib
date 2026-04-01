@@ -3,23 +3,23 @@ import { CorIntensidade, CorTom } from '../enums/cor.enum';
 export const PANTONE_LENGTH = 11;
 
 export const CorTomCodigo: CorTomCodigo = {
-  [CorTom.RED]: { pt: 'VM', en: 'RD', es: 'RJ' },
-  [CorTom.ORANGE]: { pt: 'LR', en: 'OR', es: 'NA' },
-  [CorTom.YELLOW]: { pt: 'AM', en: 'YE', es: 'AM' },
-  [CorTom.GREEN]: { pt: 'VD', en: 'GR', es: 'VD' },
-  [CorTom.BLUE]: { pt: 'AZ', en: 'BL', es: 'AZ' },
-  [CorTom.PURPLE]: { pt: 'RX', en: 'PU', es: 'PU' },
-  [CorTom.PINK]: { pt: 'RS', en: 'PK', es: 'RS' },
-  [CorTom.BROWN]: { pt: 'CT', en: 'BR', es: 'MR' },
-  [CorTom.BLACK]: { pt: 'PR', en: 'BL', es: 'NG' },
-  [CorTom.WHITE]: { pt: 'BR', en: 'WH', es: 'BL' },
-  [CorTom.GRAY]: { pt: 'CZ', en: 'GY', es: 'GR' },
+  [CorTom.VERMELHO]: { pt: 'VM', en: 'RD', es: 'RJ' },
+  [CorTom.LARANJA]: { pt: 'LR', en: 'OR', es: 'NA' },
+  [CorTom.AMARELO]: { pt: 'AM', en: 'YE', es: 'AM' },
+  [CorTom.VERDE]: { pt: 'VD', en: 'GR', es: 'VD' },
+  [CorTom.AZUL]: { pt: 'AZ', en: 'BL', es: 'AZ' },
+  [CorTom.ROXO]: { pt: 'RX', en: 'PU', es: 'PU' },
+  [CorTom.ROSA]: { pt: 'RS', en: 'PK', es: 'RS' },
+  [CorTom.CASTANHO]: { pt: 'CT', en: 'BR', es: 'MR' },
+  [CorTom.PRETO]: { pt: 'PR', en: 'BL', es: 'NG' },
+  [CorTom.BRANCO]: { pt: 'BR', en: 'WH', es: 'BL' },
+  [CorTom.CINZA]: { pt: 'CZ', en: 'GY', es: 'GR' },
 };
 
 export const CorIntensidadeCodigo: CorIntensidadeCodigo = {
-  [CorIntensidade.LIGHT]: { pt: 'C', en: 'L', es: 'C' },
-  [CorIntensidade.MEDIUM]: { pt: 'M', en: 'M', es: 'M' },
-  [CorIntensidade.DARK]: { pt: 'E', en: 'D', es: 'E' },
+  [CorIntensidade.CLARA]: { pt: 'C', en: 'L', es: 'C' },
+  [CorIntensidade.MEDIA]: { pt: 'M', en: 'M', es: 'M' },
+  [CorIntensidade.ESCURA]: { pt: 'E', en: 'D', es: 'E' },
   [CorIntensidade.FLUOR]: { pt: 'F', en: 'F', es: 'F' },
 };
 

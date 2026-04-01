@@ -3,7 +3,7 @@ import { GrupoCorantes } from '@lib/modules/produtos/enums';
 
 export const GRUPO_CORANTES_FIBRAS_TINGIDAS: Record<GrupoCorantes, ArtigoFibra[]> = {
   // Corantes ácidos são usados para tingir fibras proteicas e poliamidas
-  [GrupoCorantes.ACID]: [
+  [GrupoCorantes.ACIDO]: [
     ArtigoFibra.WS, // Caxemira
     ArtigoFibra.WO, // Lã
     ArtigoFibra.PA, // Poliamida
@@ -11,7 +11,7 @@ export const GRUPO_CORANTES_FIBRAS_TINGIDAS: Record<GrupoCorantes, ArtigoFibra[]
   ],
 
   // Corantes catiônicos são usados para tingir poliéster modificado catiônico
-  [GrupoCorantes.CATIONIC]: [
+  [GrupoCorantes.CATIONICO]: [
     ArtigoFibra.PES_CAT, // Poliéster catiônico
   ],
 
@@ -25,7 +25,7 @@ export const GRUPO_CORANTES_FIBRAS_TINGIDAS: Record<GrupoCorantes, ArtigoFibra[]
   ],
 
   // Corantes diretos são aplicáveis a fibras celulósicas, proporcionando fácil aplicação e boa solidez em soluções aquosas
-  [GrupoCorantes.DIRECT]: [
+  [GrupoCorantes.DIRETO]: [
     ArtigoFibra.CO, // Algodão
     ArtigoFibra.HA, // Cânhamo
     ArtigoFibra.LI, // Linho
@@ -35,7 +35,7 @@ export const GRUPO_CORANTES_FIBRAS_TINGIDAS: Record<GrupoCorantes, ArtigoFibra[]
   ],
 
   // Corantes dispersos são usados para tingir fibras sintéticas hidrofóbicas, como o poliéster
-  [GrupoCorantes.DISPERSE]: [
+  [GrupoCorantes.DISPERSO]: [
     ArtigoFibra.PES, // Poliéster
   ],
 
@@ -50,7 +50,7 @@ export const GRUPO_CORANTES_FIBRAS_TINGIDAS: Record<GrupoCorantes, ArtigoFibra[]
   ],
 
   // Corantes ópticos são usados para melhorar o brilho e fornecer uma aparência branca a fibras naturais e sintéticas
-  [GrupoCorantes.OPTICAL]: [
+  [GrupoCorantes.OTICO]: [
     ArtigoFibra.CO, // Algodão
     ArtigoFibra.LI, // Linho
     ArtigoFibra.WO, // Lã
@@ -62,7 +62,7 @@ export const GRUPO_CORANTES_FIBRAS_TINGIDAS: Record<GrupoCorantes, ArtigoFibra[]
   ],
 
   // Pigmentos são amplamente utilizados em misturas de fibras naturais e sintéticas, não se fixam quimicamente na fibra
-  [GrupoCorantes.PIGMENT]: [
+  [GrupoCorantes.PIGMENTO]: [
     ArtigoFibra.CO, // Algodão
     ArtigoFibra.LI, // Linho
     ArtigoFibra.PES, // Poliéster
@@ -71,7 +71,7 @@ export const GRUPO_CORANTES_FIBRAS_TINGIDAS: Record<GrupoCorantes, ArtigoFibra[]
   ],
 
   // Corantes reativos se ligam quimicamente a fibras celulósicas e proporcionam boa solidez e vivacidade de cor
-  [GrupoCorantes.REACTIVE]: [
+  [GrupoCorantes.REATIVO]: [
     ArtigoFibra.CO, // Algodão
     ArtigoFibra.HA, // Cânhamo
     ArtigoFibra.LI, // Linho
@@ -82,10 +82,10 @@ export const GRUPO_CORANTES_FIBRAS_TINGIDAS: Record<GrupoCorantes, ArtigoFibra[]
   ],
 
   // Corantes sulfurosos são usados principalmente em fibras celulósicas para tingimentos de tons escuros e alta opacidade
-  [GrupoCorantes.SULFUROUS]: [
+  [GrupoCorantes.SULFUROSO]: [
     ArtigoFibra.CO, // Algodão
     ArtigoFibra.HA, // Cânhamo
     ArtigoFibra.LI, // Linho
   ],
-  [GrupoCorantes.BASIC]: [ArtigoFibra.PAC],
+  [GrupoCorantes.BASICO]: [ArtigoFibra.PAC],
 };

@@ -27,7 +27,7 @@ export enum ProdutoClassificacaoIonica {
 
 export enum GrupoCorantes {
   ACIDO = 'ACIDO',
-  CATIONICA = 'CATIONICA',
+  CATIONICO = 'CATIONICO',
   CUBA = 'CUBA',
   DIRETO = 'DIRETO',
   DISPERSO = 'DISPERSO',
