@@ -29,6 +29,7 @@ export type PedidoCor = {
 } & Common;
 
 export type PedidoCorAmostra = {
+  id: number;
   pedidoCorId: number;
   cor: Cor;
   artigo: Artigo;
