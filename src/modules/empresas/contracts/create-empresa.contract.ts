@@ -19,5 +19,6 @@ export type CreateEmpresaContract = {
   morada: string;
   cidade: string;
   nif: string;
+  ativo: boolean;
   contactos?: CreateEmpresaContactoContract[];
 };
