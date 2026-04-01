@@ -23,7 +23,7 @@ export const WebRoutes = {
     List: `${AppRoutes.Utilizadores}`,
     Create: `${AppRoutes.Utilizadores}/criar`,
     Edit: (id: number | string) => `${AppRoutes.Utilizadores}/${id}/editar`,
-    RedefinirPassword: `${AppRoutes.Utilizadores}/perfil/password`,
+    UpdatePassword: `${AppRoutes.Utilizadores}/perfil/password`,
   },
 
   Empresas: {

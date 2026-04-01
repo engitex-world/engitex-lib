@@ -73,8 +73,3 @@ export enum APIMethod {
   PATCH = 'PATCH',
   DELETE = 'DELETE',
 }
-
-export enum APIParamsBoolean {
-  TRUE = 'true',
-  FALSE = 'false',
-}

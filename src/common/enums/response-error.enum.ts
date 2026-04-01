@@ -1,4 +1,4 @@
-export enum ResponseErrorType {
+export enum ResponseError {
   // Generic errors or database erros
   BAD_REQUEST = 'BAD_REQUEST',
   UNAUTHORIZED = 'UNAUTHORIZED',

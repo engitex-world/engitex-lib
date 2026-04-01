@@ -6,7 +6,7 @@ export type ProdutoAlertas = {
 };
 
 enum ProdutoAlertaPrioridade {
+  NO_ALERT = 0,
   HIGH = 1,
   MEDIUM = 2,
-  NO_ALERT = 0,
 }
