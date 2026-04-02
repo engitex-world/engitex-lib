@@ -43,10 +43,10 @@ export const WebRoutes = {
       List: `${AppRoutes.Laboratorio}/pedidos-cor`,
       Create: `${AppRoutes.Laboratorio}/pedidos-cor/criar`,
       Edit: (id: number | string) => `${AppRoutes.Laboratorio}/pedidos-cor/${id}/editar`,
-      Ensaios: (id: number | string) => `${AppRoutes.Laboratorio}/pedidos-cor/${id}/ensaios`,
-      EnsaiosPDF: (id: number | string) => `${AppRoutes.Laboratorio}/pedidos-cor/${id}/ensaios/pdf`,
+      Ensaios: (id: number | string) => `${AppRoutes.Laboratorio}/pedidos-cor/ensaios/${id}`,
+      EnsaiosPDF: (id: number | string) => `${AppRoutes.Laboratorio}/pedidos-cor/ensaios/${id}/pdf`,
       LabDipsPDF: (id: number | string) =>
-        `${AppRoutes.Laboratorio}/pedidos-cor/${id}/lab-dips/pdf`,
+        `${AppRoutes.Laboratorio}/pedidos-cor/ensaios/${id}/lab-dips/pdf`,
     },
   },
 
