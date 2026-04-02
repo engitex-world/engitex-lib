@@ -1,3 +1,3 @@
 export type GetPedidosCorContract = {
-  empresaId?: number;
+  empresaId?: string;
 };
