@@ -46,7 +46,7 @@ export type PedidoCorAmostra = {
 type ProcessoTingimentoAmostra = {
   pedidoCorAmostraId: number;
   processoTingimento: ProcessoTingimento;
-  fibers: ArtigoFibra[];
+  fibras: ArtigoFibra[];
   ordem: number;
   pesoAmostra: number;
   quantidadeBanho: number;
