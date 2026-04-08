@@ -1,1 +1,4 @@
-export type { GetProcessosTingimentoCompativeisContract } from './get-processos-tingimento-compativeis.contract';
+export type {
+  GetProcessosTingimentoCompativeisContract,
+  GetProcessosTingimentoCompativeisResponse,
+} from './get-processos-tingimento-compativeis.contract';
