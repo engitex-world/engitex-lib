@@ -30,7 +30,7 @@ export type PedidoCor = {
 
 export type PedidoCorAmostra = {
   id: number;
-  pedidoCorId: number;
+  pedidoCor: PedidoCor;
   cor: Cor;
   artigo: Artigo;
   cliente: Empresa;
