@@ -63,7 +63,7 @@ export const APIRoutes = {
   },
 
   [AppModules.TINTURARIA.PROCESSOS_TINGIMENTO]: {
-    lookup: `/${AppModules.TINTURARIA.PROCESSOS_TINGIMENTO}/lookup`,
+    compativeis: `/${AppModules.TINTURARIA.PROCESSOS_TINGIMENTO}/compativeis`,
   },
 } as const;
 
