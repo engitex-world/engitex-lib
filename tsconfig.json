@@ -6,7 +6,6 @@
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "strict": true,
-    "ignoreDeprecations": "6.0",
     "baseUrl": "./src",
     "paths": {
       "@lib/common/*": ["common/*"],

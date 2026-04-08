@@ -1,5 +1,6 @@
-import { ArtigoFibra } from '@lib/modules/artigos/enums/artigo-fibra.enum';
 import { ArtigoEstrutura } from '../enums/artigo-estrutura.enum';
+
+import { ArtigoFibra } from '@lib/modules/artigos/enums/artigo-fibra.enum';
 
 export type Artigo = {
   id: number;

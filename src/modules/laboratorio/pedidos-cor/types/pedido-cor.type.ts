@@ -1,3 +1,11 @@
+import { Artigo } from '../../../artigos/types';
+import { CadernoEncargos } from '../../../controlo-qualidade/types';
+import { Cor } from '../../../cores/types';
+import { Empresa } from '../../../empresas/types';
+import { Produto } from '../../../produtos/types';
+
+import { LabDip } from './lab-dip.type';
+
 import { Common } from '@lib/common/types/base-entity.type';
 import { ArtigoFibra } from '@lib/modules/artigos/enums/artigo-fibra.enum';
 import {
@@ -8,12 +16,6 @@ import { Certificacao } from '@lib/modules/produtos/enums/certificacao.enum';
 import { ProdutoReceitaLaboratorioUnidade } from '@lib/modules/produtos/enums/produto.enum';
 import { PreparacaoTingimento } from '@lib/modules/tinturaria/processos-tingimento/enums';
 import { ProcessoTingimento } from '@lib/modules/tinturaria/processos-tingimento/types';
-import { Artigo } from '../../../artigos/types';
-import { CadernoEncargos } from '../../../controlo-qualidade/types';
-import { Cor } from '../../../cores/types';
-import { Empresa } from '../../../empresas/types';
-import { Produto } from '../../../produtos/types';
-import { LabDip } from './lab-dip.type';
 
 export type PedidoCor = {
   cliente: Empresa;

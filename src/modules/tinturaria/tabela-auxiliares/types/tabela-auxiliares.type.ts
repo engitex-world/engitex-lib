@@ -1,6 +1,7 @@
+import { ProcessoTingimento } from '../../processos-tingimento/types';
+
 import { ProdutoReceitaLaboratorioUnidade } from '@lib/modules/produtos/enums/produto.enum';
 import { Produto } from '@lib/modules/produtos/types';
-import { ProcessoTingimento } from '../../processos-tingimento/types';
 
 export type TabelaAuxiliaresIntervalo = {
   id: number;

@@ -9,5 +9,7 @@ export type ProcessoTingimento = {
   grupoCorantes: GrupoCorantes;
   fibrasCompativeis: ArtigoFibra[];
   temperatura: number;
+  prioridade: number;
   tabelaAuxiliares: TabelaAuxiliaresIntervalo[];
+  ativo: boolean;
 };
