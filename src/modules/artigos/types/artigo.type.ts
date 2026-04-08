@@ -5,7 +5,7 @@ export type Artigo = {
   id: number;
   nome: string;
   estrutura: ArtigoEstrutura;
-  composicao: ArtigoComposicao;
+  composicao: ArtigoComposicao[];
 };
 
 export type ArtigoComposicao = {
