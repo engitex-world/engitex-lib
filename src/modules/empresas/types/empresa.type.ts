@@ -22,6 +22,6 @@ export type EmpresaContacto = {
   id: number;
   nome: string;
   funcao?: UtilizadorFuncao;
-  email: string;
+  email?: string;
   telemovel?: string;
 };
