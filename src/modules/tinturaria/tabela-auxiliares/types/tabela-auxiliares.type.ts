@@ -12,7 +12,7 @@ export type TabelaAuxiliaresIntervalo = {
 
 export type TabelaAuxiliaresProduto = {
   id: number;
-  intervaloId: number;
+  intervalo: TabelaAuxiliaresIntervalo;
   produto: Produto;
   quantidade: number;
   unidade: ProdutoReceitaLaboratorioUnidade;
