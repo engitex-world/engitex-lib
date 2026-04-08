@@ -13,4 +13,5 @@ type ProcessoTingimentoAmostra = {
   pesoAmostra: number;
   quantidadeBanho: number;
   relacaoBanho: number;
+  ordem: number;
 };
