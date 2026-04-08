@@ -1,4 +1,5 @@
 import { Common } from '@lib/common/types/base-entity.type';
+import { Empresa } from '@lib/modules/empresas/types';
 import { Certificacao } from '@lib/modules/produtos/enums/certificacao.enum';
 import { FrasesSeguranca } from '@lib/modules/produtos/enums/frases-seguranca.enum';
 import {
@@ -22,18 +23,19 @@ export type Produto = {
   numCas?: string;
   certificacoes?: Certificacao[];
   frasesSeguranca?: FrasesSeguranca[];
+  fornecedores: ProdutoFornecedor[];
   fichaTecnica?: Buffer | string;
   fichaTecnicaData?: Date;
   fichaSeguranca?: Buffer | string;
   fichaSegurancaData?: Date;
   gotsApprovalLetter?: Buffer | string;
   gotsApprovalLetterData?: Date;
-  fornecedores: ProdutoFornecedor[];
 } & Common;
 
 export type ProdutoFornecedor = {
-  produtoId: number;
-  fornecedorId: number;
+  id: number;
+  produto: Produto;
+  fornecedor: Empresa;
   preco: number;
   historicoPreco: HistoricoPrecoFornecedor[];
 };
