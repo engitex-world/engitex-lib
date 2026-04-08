@@ -7,7 +7,7 @@ export type TabelaAuxiliaresIntervalo = {
   processoTingimento: ProcessoTingimento;
   min: number;
   max: number;
-  produtos: Produto[];
+  produtos: TabelaAuxiliaresProduto[];
 };
 
 export type TabelaAuxiliaresProduto = {
