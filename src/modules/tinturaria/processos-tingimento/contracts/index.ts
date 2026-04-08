@@ -1,1 +1,1 @@
-export type { LookupProcessosTingimentoContract } from './lookup-processos-tingimento.contract';
+export type { GetProcessosTingimentoCompativeisContract } from './get-processos-tingimento-compativeis.contract';
