@@ -7,7 +7,7 @@ export type GetAmostraPedidoCorRequest = {
   amostraId?: string;
 };
 
-export type PedidoCorAmostraResponse = PedidoCorAmostra & {
+export type GetAmostraPedidoCorResponse = PedidoCorAmostra & {
   ensaiosTable: AmostraEnsaiosTableDto;
 };
 
