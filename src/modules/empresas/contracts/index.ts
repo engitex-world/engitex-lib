@@ -1,6 +1,3 @@
-export type {
-  CreateEmpresaContactoRequest as CreateEmpresaContactoContract,
-  CreateEmpresaContract,
-} from './create-empresa.contract';
-export type { GetEmpresasFilterContract } from './get-empresas.contract';
-export type { LookupEmpresasContract } from './lookup-empresas.contract';
+export type { CreateEmpresaContactoRequest, CreateEmpresaRequest } from './create-empresa.contract';
+export type { GetEmpresasFilterRequest } from './get-empresas.contract';
+export type { LookupEmpresasRequest } from './lookup-empresas.contract';
