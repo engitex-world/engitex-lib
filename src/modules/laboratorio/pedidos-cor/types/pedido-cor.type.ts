@@ -56,6 +56,7 @@ export type ProcessoTingimentoAmostra = {
 };
 
 export type EnsaioAmostra = {
+  id: number;
   pedidoCorAmostraId: number;
   numeroEnsaio: number;
   estado: EnsaioEstado;
@@ -64,12 +65,14 @@ export type EnsaioAmostra = {
 };
 
 type FormulaTingimentoEnsaio = {
+  id: number;
   ensaioId: number;
   processoTingimento: ProcessoTingimentoAmostra;
   produtos: FormulaEnsaioProduto[];
 };
 
 type FormulaEnsaioProduto = {
+  id: number;
   formulaTingimentoEnsaioId: number;
   produto: Produto;
   quantidade: number;
