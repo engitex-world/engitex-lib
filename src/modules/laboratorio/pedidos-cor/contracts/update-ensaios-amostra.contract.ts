@@ -1,33 +1,19 @@
 import { ProdutoReceitaLaboratorioUnidade } from '@lib/modules/produtos/enums';
 
 export interface UpdateEnsaiosAmostraRequest {
-  ensaios: EnsaioUpdateDto[];
+  processos: ProcessoUpdateDto[];
 }
 
-export interface EnsaioUpdateDto {
-  id: number;
-  formulas: FormulaUpdateDto[];
+export interface ProcessoUpdateDto {
+  processoId: number;
+  produtos: ProdutoProcessoUpdateDto[];
 }
 
-export interface FormulaUpdateDto {
-  id: number;
-  produtos: ProdutoFormulaUpdateDto[];
-}
-
-export interface ProdutoFormulaUpdateDto {
-  id: number;
-  quantidade: number;
-  unidade: ProdutoReceitaLaboratorioUnidade;
-}
-
-export interface AddProdutoAFormulaDto {
-  formulaId: number;
+export interface ProdutoProcessoUpdateDto {
   produtoId: number;
-  quantidade?: number;
-  unidade?: ProdutoReceitaLaboratorioUnidade;
-}
-
-export interface RemoverProdutoFormulaDto {
-  formulaId: number;
-  produtoFormulaId: number;
+  nome: string;
+  tipo: string; // ProdutoTipo
+  unidade: ProdutoReceitaLaboratorioUnidade; // Global unit
+  quantidadesPorEnsaio: Record<string, number>; // Map<ensaioId, quantidade>
+  action: 'update' | 'add' | 'remove';
 }
