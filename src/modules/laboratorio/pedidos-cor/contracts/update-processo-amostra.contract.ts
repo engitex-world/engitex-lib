@@ -1,17 +1,8 @@
-import { ArtigoFibra } from '@lib/modules/artigos/enums';
+import { ProcessoTingimentoAmostra } from '../types';
+
 import { PreparacaoTingimento } from '@lib/modules/tinturaria/processos-tingimento/enums';
 
-export type UpdateProcessoTingimentoAmostraContract = {
+export type UpdateProcessoTingimentoAmostraRequest = {
   preparacaoTingimento: PreparacaoTingimento;
   processosTingimento: ProcessoTingimentoAmostra[];
-};
-
-type ProcessoTingimentoAmostra = {
-  id?: number;
-  processoTingimentoId: number;
-  fibras: ArtigoFibra[];
-  pesoAmostra: number;
-  quantidadeBanho: number;
-  relacaoBanho: number;
-  ordem: number;
 };

@@ -1,6 +1,6 @@
 import { Certificacao } from '@lib/modules/produtos/enums';
 
-export type CreateCadernoEncargosContract = {
+export type CreateCadernoEncargosRequest = {
   nome: string;
   clienteId: number;
   certificacoes?: Certificacao[];

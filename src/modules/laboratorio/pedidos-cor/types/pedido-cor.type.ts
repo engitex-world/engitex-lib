@@ -45,15 +45,15 @@ export type PedidoCorAmostra = {
   ensaios: EnsaioAmostra[];
 };
 
-type ProcessoTingimentoAmostra = {
-  pedidoCorAmostraId: number;
+export type ProcessoTingimentoAmostra = {
+  id: number;
   processoTingimento: ProcessoTingimento;
   fibras: ArtigoFibra[];
   ordem: number;
   pesoAmostra: number;
   quantidadeBanho: number;
   relacaoBanho: number;
-} & Common;
+};
 
 export type EnsaioAmostra = {
   pedidoCorAmostraId: number;

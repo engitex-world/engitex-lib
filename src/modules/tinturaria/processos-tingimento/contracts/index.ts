@@ -1,4 +1,4 @@
 export type {
-  GetProcessosTingimentoCompativeisContract,
+  GetProcessosTingimentoCompativeisRequest as GetProcessosTingimentoCompativeisContract,
   GetProcessosTingimentoCompativeisResponse,
 } from './get-processos-tingimento-compativeis.contract';

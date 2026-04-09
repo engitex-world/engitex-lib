@@ -1,6 +1,6 @@
 import { UtilizadorFuncao } from '@lib/modules/utilizadores/enums';
 
-export type CreateUtilizadorContract = {
+export type CreateUtilizadorRequest = {
   nome: string;
   nomeUtilizador: string;
   email: string;

@@ -1,3 +1,3 @@
-export type LookupCadernoEncargosContract = {
+export type LookupCadernoEncargosRequest = {
   clienteId?: number;
 };

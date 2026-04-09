@@ -2,7 +2,7 @@ import { Pais } from '@lib/common/enums';
 import { EmpresaRelacao } from '@lib/modules/empresas/enums';
 import { UtilizadorFuncao } from '@lib/modules/utilizadores/enums';
 
-export type CreateEmpresaContactoContract = {
+export type CreateEmpresaContactoRequest = {
   id?: number;
   nome: string;
   funcao?: UtilizadorFuncao;
@@ -10,7 +10,7 @@ export type CreateEmpresaContactoContract = {
   telemovel?: string;
 };
 
-export type CreateEmpresaContract = {
+export type CreateEmpresaRequest = {
   id?: number;
   nome: string;
   relacao: EmpresaRelacao;
@@ -20,5 +20,5 @@ export type CreateEmpresaContract = {
   cidade: string;
   nif: string;
   ativo?: boolean;
-  contactos?: CreateEmpresaContactoContract[];
+  contactos?: CreateEmpresaContactoRequest[];
 };

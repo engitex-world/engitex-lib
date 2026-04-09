@@ -1,3 +1,3 @@
-export type GetPedidosCorContract = {
+export type GetPedidosCorRequest = {
   empresaId?: string;
 };

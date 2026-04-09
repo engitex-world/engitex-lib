@@ -1,5 +1,5 @@
 import { EmpresaRelacao } from '@lib/modules/empresas/enums';
 
-export type LookupEmpresasContract = {
+export type LookupEmpresasRequest = {
   relacao?: EmpresaRelacao;
 };

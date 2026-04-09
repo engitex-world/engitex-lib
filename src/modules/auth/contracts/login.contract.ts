@@ -1,11 +1,11 @@
 import { AuthUtilizador } from '../types';
 
-export type LoginRequestContract = {
+export type LoginRequest = {
   nomeUtilizador: string;
   password: string;
 };
 
-export interface LoginResponseContract {
+export interface LoginResponse {
   accessToken: string;
   utilizador: AuthUtilizador;
 }

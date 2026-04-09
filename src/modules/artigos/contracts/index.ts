@@ -1,1 +1,1 @@
-export type { CreateArtigoContract } from './create-artigo.contract';
+export type { CreateArtigoRequest as CreateArtigoContract } from './create-artigo.contract';
