@@ -1,4 +1,5 @@
-import { PedidoCorAmostra } from '../types';
+import { EnsaioEstado } from '../enums';
+import { LabDip, PedidoCorAmostra } from '../types';
 
 import { ProdutoReceitaLaboratorioUnidade } from '@lib/modules/produtos/enums';
 import { Produto } from '@lib/modules/produtos/types';
@@ -19,6 +20,8 @@ export type AmostraEnsaiosTableDto = {
 type EnsaioTableDto = {
   id: number;
   numeroEnsaio: number;
+  estado: EnsaioEstado;
+  labDip?: LabDip;
 };
 
 export type ProcessoTableDto = {
