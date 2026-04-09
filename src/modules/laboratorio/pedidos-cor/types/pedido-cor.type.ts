@@ -23,7 +23,7 @@ export type PedidoCor = {
   referenciaPedido?: string;
   artigoGramagem?: number;
   certificacoes?: Certificacao[];
-  cadernoEncargos: CadernoEncargos;
+  cadernoEncargos?: CadernoEncargos;
   amostras: PedidoCorAmostra[];
   dataEntregaPrevista?: Date;
   estado: PedidoCorEstado;
