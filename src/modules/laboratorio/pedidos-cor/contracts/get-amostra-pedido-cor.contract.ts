@@ -12,23 +12,23 @@ export type PedidoCorAmostraResponse = PedidoCorAmostra & {
 };
 
 export type AmostraEnsaiosTableDto = {
-  ensaios: EnsaioTabelaDto[];
-  processos: ProcessoTabelaDto[];
+  ensaios: EnsaioTableDto[];
+  processos: ProcessoTableDto[];
 };
 
-type EnsaioTabelaDto = {
+type EnsaioTableDto = {
   id: number;
   numeroEnsaio: number;
 };
 
-export type ProcessoTabelaDto = {
+export type ProcessoTableDto = {
   id: number;
   nome: string;
   ordem: number;
-  produtos: ProdutoTabelaDto[];
+  produtos: ProdutoTableDto[];
 };
 
-type ProdutoTabelaDto = Produto & {
+type ProdutoTableDto = Produto & {
   unidade: ProdutoReceitaLaboratorioUnidade;
   quantidadesPorEnsaio: Record<number, string>; // ensaioId -> quantidade
 };
