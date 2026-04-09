@@ -21,7 +21,7 @@ type EnsaioTabelaDto = {
   numeroEnsaio: number;
 };
 
-type ProcessoTabelaDto = {
+export type ProcessoTabelaDto = {
   id: number;
   nome: string;
   ordem: number;
