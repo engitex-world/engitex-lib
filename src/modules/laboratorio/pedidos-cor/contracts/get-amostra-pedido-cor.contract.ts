@@ -30,5 +30,5 @@ export type ProcessoTableDto = {
 
 export type ProdutoTableDto = Produto & {
   unidade: ProdutoReceitaLaboratorioUnidade;
-  quantidadesPorEnsaio: Record<number, string>; // ensaioId -> quantidade
+  quantidadesPorEnsaio: Record<number, number>; // ensaioId -> quantidade
 };
