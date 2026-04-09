@@ -28,7 +28,7 @@ export type ProcessoTableDto = {
   produtos: ProdutoTableDto[];
 };
 
-type ProdutoTableDto = Produto & {
+export type ProdutoTableDto = Produto & {
   unidade: ProdutoReceitaLaboratorioUnidade;
   quantidadesPorEnsaio: Record<number, string>; // ensaioId -> quantidade
 };
