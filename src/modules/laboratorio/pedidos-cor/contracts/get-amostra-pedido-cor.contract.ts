@@ -11,7 +11,7 @@ export type PedidoCorAmostraResponse = PedidoCorAmostra & {
   ensaiosTable: AmostraEnsaiosTableDto;
 };
 
-type AmostraEnsaiosTableDto = {
+export type AmostraEnsaiosTableDto = {
   ensaios: EnsaioTabelaDto[];
   processos: ProcessoTabelaDto[];
 };
