@@ -1,3 +1,5 @@
+import { ProdutoReceitaLaboratorioUnidade } from '@lib/modules/produtos/enums';
+
 export interface UpdateEnsaiosAmostraRequest {
   ensaios: EnsaioUpdateDto[];
 }
@@ -14,15 +16,15 @@ export interface FormulaUpdateDto {
 
 export interface ProdutoFormulaUpdateDto {
   id: number;
-  quantidade: string;
-  unidade: string;
+  quantidade: number;
+  unidade: ProdutoReceitaLaboratorioUnidade;
 }
 
 export interface AddProdutoAFormulaDto {
   formulaId: number;
   produtoId: number;
-  quantidade?: string;
-  unidade?: string;
+  quantidade?: number;
+  unidade?: ProdutoReceitaLaboratorioUnidade;
 }
 
 export interface RemoverProdutoFormulaDto {
