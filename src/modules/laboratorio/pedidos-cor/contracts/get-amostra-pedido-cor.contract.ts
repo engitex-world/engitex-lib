@@ -1,6 +1,7 @@
 import { EnsaioEstado } from '../enums';
 import { LabDip, PedidoCorAmostra } from '../types';
 
+import { ArtigoFibra } from '@lib/modules/artigos/enums';
 import { ProdutoReceitaLaboratorioUnidade } from '@lib/modules/produtos/enums';
 import { Produto } from '@lib/modules/produtos/types';
 
@@ -27,6 +28,8 @@ type EnsaioTableDto = {
 export type ProcessoTableDto = {
   id: number;
   nome: string;
+  fibras: ArtigoFibra[];
+  relacaoBanho: number;
   ordem: number;
   produtos: ProdutoTableDto[];
 };
