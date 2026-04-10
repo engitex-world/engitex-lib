@@ -51,4 +51,9 @@ export const WebRoutes = {
   },
 
   Dashboard: `${AppRoutes.Dashboard}`,
+
+  PortalCliente: {
+    Inicio: `${AppRoutes.PortalCliente}`,
+    Laboratorio: `${AppRoutes.PortalCliente}/laboratorio`,
+  },
 };
