@@ -55,7 +55,6 @@ export type ProcessoTingimentoAmostra = {
 
 export type EnsaioAmostra = {
   id: number;
-  pedidoCorAmostraId: number;
   numeroEnsaio: number;
   labDip?: LabDip;
 };
