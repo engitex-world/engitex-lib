@@ -1,40 +1,7 @@
-import { EnsaioEstado } from '../enums';
-import { LabDip, PedidoCorAmostra } from '../types';
-
-import { ArtigoFibra } from '@lib/modules/artigos/enums';
-import { ProdutoReceitaLaboratorioUnidade } from '@lib/modules/produtos/enums';
-import { Produto } from '@lib/modules/produtos/types';
+import { PedidoCorAmostra } from '../types';
 
 export type GetAmostraPedidoCorRequest = {
   amostraId?: string;
 };
 
-export type GetAmostraPedidoCorResponse = PedidoCorAmostra & {
-  ensaiosTable: AmostraEnsaiosTableDto;
-};
-
-export type AmostraEnsaiosTableDto = {
-  ensaios: EnsaioTableDto[];
-  processos: ProcessoTableDto[];
-};
-
-type EnsaioTableDto = {
-  id: number;
-  numeroEnsaio: number;
-  estado: EnsaioEstado;
-  labDip?: LabDip;
-};
-
-export type ProcessoTableDto = {
-  id: number;
-  nome: string;
-  fibras: ArtigoFibra[];
-  relacaoBanho: number;
-  ordem: number;
-  produtos: ProdutoTableDto[];
-};
-
-export type ProdutoTableDto = Produto & {
-  unidade: ProdutoReceitaLaboratorioUnidade;
-  quantidadesPorEnsaio: Record<number, number>; // ensaioId -> quantidade
-};
+export type GetAmostraPedidoCorResponse = PedidoCorAmostra;

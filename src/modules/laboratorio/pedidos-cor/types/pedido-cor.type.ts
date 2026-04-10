@@ -8,10 +8,7 @@ import { LabDip } from './lab-dip.type';
 
 import { Common } from '@lib/common/types/base-entity.type';
 import { ArtigoFibra } from '@lib/modules/artigos/enums/artigo-fibra.enum';
-import {
-  EnsaioEstado,
-  PedidoCorEstado,
-} from '@lib/modules/laboratorio/pedidos-cor/enums/pedido-cor.enum';
+import { PedidoCorEstado } from '@lib/modules/laboratorio/pedidos-cor/enums/pedido-cor.enum';
 import { Certificacao } from '@lib/modules/produtos/enums/certificacao.enum';
 import { ProdutoReceitaLaboratorioUnidade } from '@lib/modules/produtos/enums/produto.enum';
 import { PreparacaoTingimento } from '@lib/modules/tinturaria/processos-tingimento/enums';
@@ -53,28 +50,20 @@ export type ProcessoTingimentoAmostra = {
   pesoAmostra: number;
   quantidadeBanho: number;
   relacaoBanho: number;
+  produtos: ProdutoProcessoEnsaio[];
 };
 
 export type EnsaioAmostra = {
   id: number;
   pedidoCorAmostraId: number;
   numeroEnsaio: number;
-  estado: EnsaioEstado;
-  formulas: FormulaTingimentoEnsaio[];
   labDip?: LabDip;
 };
 
-type FormulaTingimentoEnsaio = {
+export type ProdutoProcessoEnsaio = {
   id: number;
-  ensaioId: number;
-  processoTingimento: ProcessoTingimentoAmostra;
-  produtos: FormulaEnsaioProduto[];
-};
-
-type FormulaEnsaioProduto = {
-  id: number;
-  formulaTingimentoEnsaioId: number;
+  processoTingimentoAmostra: ProcessoTingimentoAmostra;
   produto: Produto;
-  quantidade: number;
   unidade: ProdutoReceitaLaboratorioUnidade;
+  quantidadesPorEnsaio: Record<number, number>;
 };
