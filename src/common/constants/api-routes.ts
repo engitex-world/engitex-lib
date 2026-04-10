@@ -66,6 +66,9 @@ export const APIRoutes = {
       updateEnsaios: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}/ensaios`,
       getCusto: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}/custo`,
     },
+    LabDips: {
+      create: `/${AppModules.LABORATORIO.PEDIDOS_COR}/lab-dips`,
+    },
   },
 
   [AppModules.TINTURARIA.PROCESSOS_TINGIMENTO]: {
