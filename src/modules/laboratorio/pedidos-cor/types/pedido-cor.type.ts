@@ -16,8 +16,8 @@ import { ProcessoTingimento } from '@lib/modules/tinturaria/processos-tingimento
 
 export type PedidoCor = {
   cliente: Empresa;
-  artigo: Artigo;
   referenciaPedido?: string;
+  artigo: Artigo;
   artigoGramagem?: number;
   certificacoes?: Certificacao[];
   cadernoEncargos?: CadernoEncargos;
@@ -31,12 +31,8 @@ export type PedidoCorAmostra = {
   id: number;
   pedidoCor: PedidoCor;
   cor: Cor;
-  artigo: Artigo;
-  cliente: Empresa;
   codigoCor: string;
   codigoCorCliente?: string;
-  certificacoes?: Certificacao[];
-  cadernoEncargos?: CadernoEncargos;
   preparacaoTingimento?: PreparacaoTingimento;
   processosTingimento: ProcessoTingimentoAmostra[];
   ensaios: EnsaioAmostra[];
