@@ -95,3 +95,8 @@ export const ProdutoSubTipo = {
 } as const;
 
 export type ProdutoSubTipo = (typeof ProdutoSubTipo)[keyof typeof ProdutoSubTipo];
+
+export enum ProdutoUnidadeCompra {
+  KILOGRAMAS = 'KILOGRAMAS',
+  LITROS = 'LITROS',
+}
