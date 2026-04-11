@@ -1,6 +1,7 @@
 import { LabDipEstado } from '../enums';
 
 export type LabDip = {
+  id: number;
   codigo: string;
   estado: LabDipEstado;
   historicoEstado: HistoricoEstado[];
