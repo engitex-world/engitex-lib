@@ -1,4 +1,4 @@
-import { ArtigoFibra } from '@lib/modules/artigos/enums/artigo-fibra.enum';
+import { ArtigoFibra } from '@lib/modules/artigos/enums';
 import { GrupoCorantes } from '@lib/modules/produtos/enums';
 
 export const GRUPO_CORANTES_FIBRAS_TINGIDAS: Record<GrupoCorantes, ArtigoFibra[]> = {
