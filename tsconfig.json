@@ -3,14 +3,13 @@
     "target": "ES2020",
     "module": "ESNext",
     "declaration": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "strict": true,
-    "baseUrl": "./src",
     "paths": {
-      "@lib/common/*": ["common/*"],
-      "@lib/modules/*": ["modules/*"],
-      "@lib/translations": ["translations"]
+      "@lib/common/*": ["./src/common/*"],
+      "@lib/modules/*": ["./src/modules/*"],
+      "@lib/translations": ["./src/translations"]
     }
   },
   "include": ["src"]
