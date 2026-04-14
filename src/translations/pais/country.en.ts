@@ -1,4 +1,4 @@
-import { Pais } from '@lib/common/enums/pais.enum';
+import { Pais } from '@lib/modules/organizacao/enums/pais.enum';
 
 export const countries: Record<Pais, string> = {
   [Pais.PORTUGAL]: 'Portugal',
