@@ -1,5 +1,5 @@
-import { Pais } from '@lib/common/enums';
 import { EmpresaRelacao } from '@lib/modules/empresas/enums';
+import { Pais } from '@lib/modules/organizacao/enums';
 import { UtilizadorFuncao } from '@lib/modules/utilizadores/enums';
 
 export type CreateEmpresaContactoRequest = {

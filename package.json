@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsup src --dts --format esm",
+    "checkup": "yarn lint && yarn format",
     "format": "prettier --write .",
     "lint": "eslint \"src/**/*.ts\" --fix"
   },
