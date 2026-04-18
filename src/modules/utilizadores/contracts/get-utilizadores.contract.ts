@@ -1,6 +1,6 @@
 import { UtilizadorFuncao } from '../enums/utilizador.enum';
 
-export type GetUtilizadoresFilterRequest = {
+export type GetUtilizadoresRequest = {
   search?: string;
   funcoes?: UtilizadorFuncao[];
 };
