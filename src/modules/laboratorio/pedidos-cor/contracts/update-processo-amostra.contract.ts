@@ -4,5 +4,7 @@ import { PreparacaoTingimento } from '@lib/modules/tinturaria/processos-tingimen
 
 export type UpdateProcessoTingimentoAmostraRequest = {
   preparacaoTingimento: PreparacaoTingimento;
-  processosTingimento: (ProcessoTingimentoAmostra & { processoTingimentoId: number })[];
+  processosTingimento: (Omit<ProcessoTingimentoAmostra, 'processoTingimento' | 'produtos'> & {
+    processoTingimentoId: number;
+  })[];
 };
