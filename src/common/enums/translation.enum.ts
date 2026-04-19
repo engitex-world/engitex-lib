@@ -5,7 +5,6 @@ export enum TranslatedEnums {
   CLASSIFICACAO_IONICA = 'classificacao-ionica-tipo',
   COR_INTENSIDADE = 'cor-intensidade-tipo',
   COR_TOM = 'cor-tom-tipo',
-  CORANTE_GRUPO = 'corante-grupo-tipo',
   CORANTE_LABORATORIO_UNIDADE = 'corante-laboratorio-unidade-tipo',
   CORANTE_TINTURARIA_UNIDADE = 'corante-tinturaria-unidade-tipo',
   EMPRESAS_RELACAO = 'empresa-relacao-tipo',
@@ -14,8 +13,7 @@ export enum TranslatedEnums {
   PAIS = 'pais-tipo',
   PEDIDO_COR_ESTADO = 'pedido-cor-estado-tipo',
   PREPARACAO_TINGIMENTO = 'preparacao-tingimento-tipo',
-  PRODUTO_ACABAMENTO = 'acabamento-tipo',
-  PRODUTO_AUXILIAR = 'auxiliar-tipo',
   PRODUTO_TIPO = 'produto-tipo',
+  PRODUTO_SUB_TIPO = 'produto-sub-tipo',
   UTILIZADOR_FUNCAO = 'utilizador-funcao-tipo',
 }
