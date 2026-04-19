@@ -1,0 +1,6 @@
+export enum PreparacaoTingimento {
+  FERVURA = 'FERVURA',
+  MEIO_BRANCO = 'MEIO_BRANCO',
+  MEIO_BRANCO_SODA = 'MEIO_BRANCO_SODA',
+  DESENCOLAGEM = 'DESENCOLAGEM',
+}

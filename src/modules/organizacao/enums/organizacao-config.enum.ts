@@ -1,0 +1,4 @@
+export enum OrganizacaoConfigContexto {
+  PATH_IMPORT_FORMULA_LAB = 'PATH_IMPORT_FORMULA_LAB',
+  EMAIL_LABORATORIO = 'EMAIL_LABORATORIO',
+}

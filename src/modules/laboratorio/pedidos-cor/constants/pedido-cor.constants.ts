@@ -1,0 +1,3 @@
+export const DEFAULT_RELACAO_BANHO = 10;
+export const DEFAULT_PESO_AMOSTRA = 5;
+export const DEFAULT_QUANTIDADE_BANHO = 50;

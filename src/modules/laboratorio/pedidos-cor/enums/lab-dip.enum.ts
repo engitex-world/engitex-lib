@@ -1,0 +1,6 @@
+export enum LabDipEstado {
+  ENVIADO = 'ENVIADO',
+  REJEITADO = 'REJEITADO',
+  APROVADO = 'APROVADO',
+  DESCARTADO = 'DESCARTADO',
+}
