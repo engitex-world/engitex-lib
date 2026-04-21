@@ -1,7 +1,11 @@
 import { LabDipEstado } from '../enums';
 
 export type UpdateLabDipsRequest = {
-  ensaiosIds: number[];
-  estado?: LabDipEstado;
+  labDips: UpdateLabDipItem[];
+};
+
+type UpdateLabDipItem = {
+  ensaioId: number;
+  estado: LabDipEstado;
   observacoes?: string;
 };
