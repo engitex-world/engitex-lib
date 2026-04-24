@@ -2,10 +2,18 @@
   "name": "engitex-lib",
   "version": "1.0.0",
   "description": "Engitex Lib",
-  "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsup src --dts --format esm",
+    "build": "tsup src --dts --format esm,cjs --outDir dist",
     "checkup": "yarn lint && yarn format",
     "format": "prettier --write .",
     "lint": "eslint \"src/**/*.ts\" --fix"
