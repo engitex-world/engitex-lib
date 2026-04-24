@@ -18,5 +18,3 @@ npm run build
 # Lint and format
 npm run checkup
 ```
-
-The library is built as an ESM module with TypeScript declarations included.
