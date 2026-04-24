@@ -1,7 +1,7 @@
 import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import importPlugin from 'eslint-plugin-import';
+import prettierRecommended from 'eslint-plugin-prettier/recommended';
+import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   // Base ESLint recommended rules
@@ -55,6 +55,19 @@ export default tseslint.config(
       'import/order': [
         'error',
         {
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+          pathGroups: [
+            {
+              pattern: 'src/common/**',
+              group: 'internal',
+              position: 'after',
+            },
+            {
+              pattern: 'src/modules/**',
+              group: 'internal',
+              position: 'after',
+            },
+          ],
           'newlines-between': 'always',
           alphabetize: {
             order: 'asc',

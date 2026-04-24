@@ -1,6 +1,6 @@
-import { ProcessoTingimento } from '../types';
-
 import { ArtigoFibra } from '@lib/modules/artigos/enums';
+
+import { ProcessoTingimento } from '../types';
 
 export type GetProcessosTingimentoCompativeisRequest = {
   fibras: ArtigoFibra[];
