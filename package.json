@@ -2,6 +2,7 @@
   "name": "engitex-lib",
   "version": "1.0.0",
   "description": "Engitex Lib",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "build": "tsup src --dts --format esm",
@@ -13,17 +14,16 @@
   "author": "Engitex",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "8.57.1",
     "@types/node": "22.19.17",
-    "@typescript-eslint/eslint-plugin": "5.62.0",
-    "@typescript-eslint/parser": "5.62.0",
     "eslint": "8.57.1",
-    "eslint-config-prettier": "8.10.0",
-    "eslint-import-resolver-typescript": "3.6.1",
-    "eslint-plugin-filenames": "1.3.2",
-    "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-prettier": "5.2.3",
-    "prettier": "3.5.3",
-    "tsup": "8.4.0",
-    "typescript": "5.8.2"
+    "eslint-config-prettier": "9.1.2",
+    "eslint-import-resolver-typescript": "3.10.1",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-prettier": "5.5.5",
+    "prettier": "3.8.3",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "7.18.0"
   }
 }
