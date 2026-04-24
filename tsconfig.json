@@ -6,6 +6,8 @@
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "strict": true,
+    "rootDir": "./src",
+    "types": ["node"],
     "paths": {
       "@lib/common/*": ["./src/common/*"],
       "@lib/modules/*": ["./src/modules/*"],
