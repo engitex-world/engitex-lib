@@ -36,6 +36,7 @@ export const APIRoutes = {
 
   [AppModules.CORES]: {
     getPantone: (pantone: string) => `/${AppModules.CORES}/${pantone}`,
+    getSemelhantes: (id: number) => `/${AppModules.CORES}/semelhantes/${id}`,
   },
 
   [AppModules.ORGANIZACAO]: {
@@ -72,6 +73,7 @@ export const APIRoutes = {
 
   [AppModules.TINTURARIA.PROCESSOS_TINGIMENTO]: {
     compativeis: `/${AppModules.TINTURARIA.PROCESSOS_TINGIMENTO}/compativeis`,
+    getById: (id: number) => `/${AppModules.TINTURARIA.PROCESSOS_TINGIMENTO}/${id}`,
   },
 } as const;
 
