@@ -36,7 +36,6 @@ export const APIRoutes = {
 
   [AppModules.CORES]: {
     getPantone: (pantone: string) => `/${AppModules.CORES}/${pantone}`,
-    getSemelhantes: (id: number) => `/${AppModules.CORES}/semelhantes/${id}`,
   },
 
   [AppModules.ORGANIZACAO]: {
@@ -68,6 +67,10 @@ export const APIRoutes = {
       getCusto: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}/custo`,
       updateLabDips: (id: number) =>
         `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}/lab-dips`,
+      getCoresSemelhantes: (amostraId: number) =>
+        `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${amostraId}/cores-semelhantes`,
+      cloneFrom: (amostraId: number, sourceAmostraId: number) =>
+        `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${amostraId}/clone-from/${sourceAmostraId}`,
     },
   },
 
