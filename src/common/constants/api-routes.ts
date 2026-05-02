@@ -70,7 +70,7 @@ export const APIRoutes = {
       getCoresSemelhantes: (amostraId: number) =>
         `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${amostraId}/cores-semelhantes`,
       cloneFrom: (amostraId: number, sourceAmostraId: number) =>
-        `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${amostraId}/clone-from/${sourceAmostraId}`,
+        `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${amostraId}/clonar-de/${sourceAmostraId}`,
     },
   },
 
