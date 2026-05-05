@@ -1,6 +1,15 @@
+import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
 import { EncomendaArtigoUnidade, EncomendaEstado } from '../enums';
+
+export type CreateEncomendaArtigoFaseRequest = {
+  nome: string;
+  ordem: number;
+  grupoMaquinas: MaquinaGrupo;
+  obrigatoria?: boolean;
+  observacoes?: string;
+};
 
 export type CreateEncomendaArtigoRequest = {
   artigoId: number;
@@ -13,6 +22,7 @@ export type CreateEncomendaArtigoRequest = {
   observacoes?: string;
   quantidade: number;
   unidade: EncomendaArtigoUnidade;
+  fases: CreateEncomendaArtigoFaseRequest[];
 };
 
 export type CreateEncomendaRequest = {

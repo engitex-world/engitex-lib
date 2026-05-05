@@ -1,0 +1,7 @@
+export enum ProcessoProducaoFaseEstado {
+  PENDENTE = 'PENDENTE',
+  EM_EXECUCAO = 'EM_EXECUCAO',
+  CONCLUIDA = 'CONCLUIDA',
+  CANCELADA = 'CANCELADA',
+  BLOQUEADA = 'BLOQUEADA',
+}
