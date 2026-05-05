@@ -55,6 +55,15 @@ export const APIRoutes = {
     dashboard: (empresaId: number) => `/${AppModules.PORTAL_CLIENTE}/dashboard/${empresaId}`,
   },
 
+  [AppModules.PROCESSOS_PRODUCAO]: {
+    list: `/${AppModules.PROCESSOS_PRODUCAO}`,
+    create: `/${AppModules.PROCESSOS_PRODUCAO}`,
+    lookup: `/${AppModules.PROCESSOS_PRODUCAO}/lookup`,
+    getById: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
+    update: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
+    delete: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
+  },
+
   [AppModules.PRODUTOS]: {
     list: `/${AppModules.PRODUTOS}`,
     create: `/${AppModules.PRODUTOS}`,
