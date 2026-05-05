@@ -3,6 +3,9 @@ enum AppRoutes {
 
   Utilizadores = '/utilizadores',
   Empresas = '/empresas',
+  Encomendas = '/encomendas',
+  Maquinas = '/maquinas',
+  ProcessosProducao = '/processos-producao',
   Produtos = '/produtos',
   Laboratorio = '/laboratorio',
   PortalCliente = '/portal-cliente',
@@ -30,6 +33,24 @@ export const WebRoutes = {
     List: `${AppRoutes.Empresas}`,
     Create: `${AppRoutes.Empresas}/criar`,
     Edit: (id: number | string) => `${AppRoutes.Empresas}/${id}/editar`,
+  },
+
+  Encomendas: {
+    List: `${AppRoutes.Encomendas}`,
+    Create: `${AppRoutes.Encomendas}/criar`,
+    Edit: (id: number | string) => `${AppRoutes.Encomendas}/${id}/editar`,
+  },
+
+  Maquinas: {
+    List: `${AppRoutes.Maquinas}`,
+    Create: `${AppRoutes.Maquinas}/criar`,
+    Edit: (id: number | string) => `${AppRoutes.Maquinas}/${id}/editar`,
+  },
+
+  ProcessosProducao: {
+    List: `${AppRoutes.ProcessosProducao}`,
+    Create: `${AppRoutes.ProcessosProducao}/criar`,
+    Edit: (id: number | string) => `${AppRoutes.ProcessosProducao}/${id}/editar`,
   },
 
   Produtos: {

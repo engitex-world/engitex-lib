@@ -38,12 +38,39 @@ export const APIRoutes = {
     getPantone: (pantone: string) => `/${AppModules.CORES}/${pantone}`,
   },
 
+  [AppModules.MAQUINAS]: {
+    list: `/${AppModules.MAQUINAS}`,
+    create: `/${AppModules.MAQUINAS}`,
+    lookup: `/${AppModules.MAQUINAS}/lookup`,
+    getById: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
+    update: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
+    delete: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
+  },
+
+  [AppModules.ENCOMENDAS]: {
+    list: `/${AppModules.ENCOMENDAS}`,
+    create: `/${AppModules.ENCOMENDAS}`,
+    lookup: `/${AppModules.ENCOMENDAS}/lookup`,
+    getById: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+    update: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+    delete: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+  },
+
   [AppModules.ORGANIZACAO]: {
     getConfig: `/${AppModules.ORGANIZACAO}`,
   },
 
   [AppModules.PORTAL_CLIENTE]: {
     dashboard: (empresaId: number) => `/${AppModules.PORTAL_CLIENTE}/dashboard/${empresaId}`,
+  },
+
+  [AppModules.PROCESSOS_PRODUCAO]: {
+    list: `/${AppModules.PROCESSOS_PRODUCAO}`,
+    create: `/${AppModules.PROCESSOS_PRODUCAO}`,
+    lookup: `/${AppModules.PROCESSOS_PRODUCAO}/lookup`,
+    getById: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
+    update: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
+    delete: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
   },
 
   [AppModules.PRODUTOS]: {
