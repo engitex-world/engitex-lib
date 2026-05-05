@@ -4,8 +4,7 @@ export enum EncomendaArtigoUnidade {
 }
 
 export enum EncomendaEstado {
-  RASCUNHO = 'RASCUNHO',
-  PENDENTE = 'PENDENTE',
+  INICIADA = 'INICIADA',
   EM_PRODUCAO = 'EM_PRODUCAO',
   CONCLUIDA = 'CONCLUIDA',
   CANCELADA = 'CANCELADA',
