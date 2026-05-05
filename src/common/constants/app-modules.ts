@@ -7,6 +7,7 @@ export const AppModules = {
   LABORATORIO: {
     PEDIDOS_COR: 'laboratorio/pedidos-cor',
   },
+  MAQUINAS: 'maquinas',
   ORGANIZACAO: 'organizacao',
   PORTAL_CLIENTE: 'portal-cliente',
   PRODUTOS: 'produtos',

@@ -38,6 +38,15 @@ export const APIRoutes = {
     getPantone: (pantone: string) => `/${AppModules.CORES}/${pantone}`,
   },
 
+  [AppModules.MAQUINAS]: {
+    list: `/${AppModules.MAQUINAS}`,
+    create: `/${AppModules.MAQUINAS}`,
+    lookup: `/${AppModules.MAQUINAS}/lookup`,
+    getById: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
+    update: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
+    delete: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
+  },
+
   [AppModules.ORGANIZACAO]: {
     getConfig: `/${AppModules.ORGANIZACAO}`,
   },

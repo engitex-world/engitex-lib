@@ -10,6 +10,7 @@ export enum TranslatedEnums {
   EMPRESAS_RELACAO = 'empresa-relacao-tipo',
   FRASES_RISCO = 'frases-de-risco-tipo',
   LAB_DIP_ESTADO = 'lab-dip-estado-tipo',
+  MAQUINA_GRUPO = 'maquina-grupo-tipo',
   PAIS = 'pais-tipo',
   PEDIDO_COR_ESTADO = 'pedido-cor-estado-tipo',
   PREPARACAO_TINGIMENTO = 'preparacao-tingimento-tipo',
