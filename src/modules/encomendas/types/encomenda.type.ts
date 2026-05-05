@@ -30,4 +30,5 @@ export type Encomenda = {
   isDevolucao: boolean;
   encomendaAnterior?: Encomenda;
   estado: EncomendaEstado;
+  dataEntregaPrevista?: Date;
 } & Common;

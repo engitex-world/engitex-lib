@@ -24,5 +24,6 @@ export type CreateEncomendaRequest = {
   encomendaAnteriorId?: number;
   observacoes?: string;
   estado?: EncomendaEstado;
+  dataEntregaPrevista?: Date;
   artigos: CreateEncomendaArtigoRequest[];
 };
