@@ -2,6 +2,7 @@ export enum TranslatedEnums {
   ARTIGO_ESTRUTURA = 'artigo-estrutura-tipo',
   ARTIGO_FIBRA = 'artigo-fibra-tipo',
   CERTIFICACAO = 'certificacao-tipo',
+  ENCOMENDA_ESTADO = 'encomenda-estado-tipo',
   CLASSIFICACAO_IONICA = 'classificacao-ionica-tipo',
   COR_INTENSIDADE = 'cor-intensidade-tipo',
   COR_TOM = 'cor-tom-tipo',

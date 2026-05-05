@@ -47,6 +47,15 @@ export const APIRoutes = {
     delete: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
   },
 
+  [AppModules.ENCOMENDAS]: {
+    list: `/${AppModules.ENCOMENDAS}`,
+    create: `/${AppModules.ENCOMENDAS}`,
+    lookup: `/${AppModules.ENCOMENDAS}/lookup`,
+    getById: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+    update: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+    delete: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+  },
+
   [AppModules.ORGANIZACAO]: {
     getConfig: `/${AppModules.ORGANIZACAO}`,
   },

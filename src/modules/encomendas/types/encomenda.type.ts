@@ -1,0 +1,33 @@
+import { Common } from '@lib/common/types/base-entity.type';
+import { Artigo } from '@lib/modules/artigos/types';
+import { Empresa } from '@lib/modules/empresas/types';
+import { ProcessoProducao } from '@lib/modules/processos-producao/types';
+import { Certificacao } from '@lib/modules/produtos/enums';
+
+import { EncomendaEstado } from '../enums/encomenda-estado.enum';
+
+export type EncomendaArtigo = {
+  id: number;
+  artigo: Artigo;
+  gramagemCru?: number;
+  gramagemFinal: number;
+  larguraCru?: number;
+  larguraFinal: number;
+  processoProducao: ProcessoProducao;
+  lugarArmazem?: string;
+  observacoes?: string;
+  quantidade: number;
+  unidade: string;
+};
+
+export type Encomenda = {
+  numeroEncomenda: string;
+  cliente: Empresa;
+  codigoCor: string;
+  certificacoes?: Certificacao[];
+  isDevolucao: boolean;
+  encomendaAnterior?: Encomenda;
+  observacoes?: string;
+  estado: EncomendaEstado;
+  artigos: EncomendaArtigo[];
+} & Common;
