@@ -4,7 +4,7 @@ import { Empresa } from '@lib/modules/empresas/types';
 import { ProcessoProducao } from '@lib/modules/processos-producao/types';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
-import { EncomendaEstado } from '../enums/encomenda-estado.enum';
+import { EncomendaArtigoUnidade, EncomendaEstado } from '../enums/encomenda.enum';
 
 export type EncomendaArtigo = {
   id: number;
@@ -17,7 +17,7 @@ export type EncomendaArtigo = {
   lugarArmazem?: string;
   observacoes?: string;
   quantidade: number;
-  unidade: string;
+  unidade: EncomendaArtigoUnidade;
 };
 
 export type Encomenda = {
@@ -25,9 +25,9 @@ export type Encomenda = {
   cliente: Empresa;
   codigoCor: string;
   certificacoes?: Certificacao[];
+  artigos: EncomendaArtigo[];
+  observacoes?: string;
   isDevolucao: boolean;
   encomendaAnterior?: Encomenda;
-  observacoes?: string;
   estado: EncomendaEstado;
-  artigos: EncomendaArtigo[];
 } & Common;

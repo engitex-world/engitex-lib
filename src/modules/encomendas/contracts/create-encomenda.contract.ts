@@ -1,6 +1,6 @@
 import { Certificacao } from '@lib/modules/produtos/enums';
 
-import { EncomendaEstado } from '../enums';
+import { EncomendaArtigoUnidade, EncomendaEstado } from '../enums';
 
 export type CreateEncomendaArtigoRequest = {
   artigoId: number;
@@ -12,7 +12,7 @@ export type CreateEncomendaArtigoRequest = {
   lugarArmazem?: string;
   observacoes?: string;
   quantidade: number;
-  unidade: string;
+  unidade: EncomendaArtigoUnidade;
 };
 
 export type CreateEncomendaRequest = {

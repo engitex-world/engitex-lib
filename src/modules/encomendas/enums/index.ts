@@ -1,1 +1,1 @@
-export * from './encomenda-estado.enum';
+export * from './encomenda.enum';

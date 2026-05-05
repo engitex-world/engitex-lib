@@ -1,3 +1,8 @@
+export enum EncomendaArtigoUnidade {
+  PECA = 'PEÇAS',
+  KG = 'KG',
+}
+
 export enum EncomendaEstado {
   RASCUNHO = 'RASCUNHO',
   PENDENTE = 'PENDENTE',
