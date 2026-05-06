@@ -3,12 +3,17 @@ import { Certificacao } from '@lib/modules/produtos/enums';
 
 import { EncomendaArtigoUnidade, EncomendaEstado } from '../enums';
 
-export type CreateEncomendaArtigoFaseRequest = {
-  nome: string;
-  ordem: number;
-  grupoMaquinas: MaquinaGrupo;
-  obrigatoria?: boolean;
+export type CreateEncomendaRequest = {
+  numeroEncomenda: string;
+  clienteId: number;
+  codigoCor: string;
+  certificacoes?: Certificacao[];
+  isDevolucao?: boolean;
+  encomendaAnteriorId?: number;
   observacoes?: string;
+  estado?: EncomendaEstado;
+  dataEntregaPrevista?: Date;
+  artigos: CreateEncomendaArtigoRequest[];
 };
 
 export type CreateEncomendaArtigoRequest = {
@@ -25,15 +30,10 @@ export type CreateEncomendaArtigoRequest = {
   fases: CreateEncomendaArtigoFaseRequest[];
 };
 
-export type CreateEncomendaRequest = {
-  numeroEncomenda: string;
-  clienteId: number;
-  codigoCor: string;
-  certificacoes?: Certificacao[];
-  isDevolucao?: boolean;
-  encomendaAnteriorId?: number;
+export type CreateEncomendaArtigoFaseRequest = {
+  nome: string;
+  ordem: number;
+  grupoMaquinas: MaquinaGrupo;
+  obrigatoria?: boolean;
   observacoes?: string;
-  estado?: EncomendaEstado;
-  dataEntregaPrevista?: Date;
-  artigos: CreateEncomendaArtigoRequest[];
 };

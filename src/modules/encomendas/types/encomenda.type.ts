@@ -15,7 +15,7 @@ export type EncomendaArtigoFase = {
   grupoMaquinas: MaquinaGrupo;
   obrigatoria: boolean;
   observacoes?: string;
-  status?: ProcessoProducaoFaseEstado;
+  estado?: ProcessoProducaoFaseEstado;
 };
 
 export type EncomendaArtigo = {
