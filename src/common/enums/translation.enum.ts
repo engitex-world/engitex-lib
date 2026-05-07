@@ -15,6 +15,7 @@ export enum TranslatedEnums {
   PAIS = 'pais-tipo',
   PEDIDO_COR_ESTADO = 'pedido-cor-estado-tipo',
   PREPARACAO_TINGIMENTO = 'preparacao-tingimento-tipo',
+  PROCESSO_PRODUCAO_FASE_ESTADO = 'processo-producao-fase-estado-tipo',
   PRODUTO_TIPO = 'produto-tipo',
   PRODUTO_SUB_TIPO = 'produto-sub-tipo',
   UTILIZADOR_FUNCAO = 'utilizador-funcao-tipo',
