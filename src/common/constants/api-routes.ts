@@ -104,12 +104,18 @@ export const APIRoutes = {
   [AppModules.PLANEAMENTO]: {
     board: `/${AppModules.PLANEAMENTO}/board`,
     porPlanear: `/${AppModules.PLANEAMENTO}/por-planear`,
+    atribuir: `/${AppModules.PLANEAMENTO}/atribuir`,
+    mover: `/${AppModules.PLANEAMENTO}/mover`,
     faseDetalhe: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}`,
+    removerFaseDoPlaneamento: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}/planeamento`,
+    updateObservacoes: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}/observacoes`,
+    updateDatasPrevistas: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}/datas-previstas`,
     execucao: {
       fila: `/${AppModules.PLANEAMENTO}/execucao/fila`,
       iniciar: `/${AppModules.PLANEAMENTO}/execucao/iniciar`,
       terminar: `/${AppModules.PLANEAMENTO}/execucao/terminar`,
-      comentario: (faseId: number) => `/${AppModules.PLANEAMENTO}/execucao/fase/${faseId}/comentario`,
+      comentario: (faseId: number) =>
+        `/${AppModules.PLANEAMENTO}/execucao/fase/${faseId}/comentario`,
     },
   },
 
