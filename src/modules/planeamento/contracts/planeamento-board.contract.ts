@@ -1,7 +1,7 @@
 import { EncomendaArtigoUnidade } from '@lib/modules/encomendas/enums';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 
-import { FaseExecucaoEstado, ProntidaoEstado } from '../enums';
+import { FaseExecucaoEstado, FaseProntidaoEstado } from '../enums';
 
 /**
  * Request para obter o quadro de planeamento filtrado por grupo de máquina.
@@ -41,7 +41,7 @@ export type PlaneamentoFaseCard = {
 
   // Estado e planeamento
   estadoFase: FaseExecucaoEstado;
-  semaforo: ProntidaoEstado;
+  semaforo: FaseProntidaoEstado;
   observacoesPlaneador?: string;
   dataPrevistaInicio?: string;
   dataPrevistaFim?: string;
