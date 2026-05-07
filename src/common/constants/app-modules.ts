@@ -10,6 +10,7 @@ export const AppModules = {
   },
   MAQUINAS: 'maquinas',
   ORGANIZACAO: 'organizacao',
+  PLANEAMENTO: 'planeamento',
   PORTAL_CLIENTE: 'portal-cliente',
   PROCESSOS_PRODUCAO: 'processos-producao',
   PRODUTOS: 'produtos',
