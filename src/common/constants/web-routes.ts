@@ -5,6 +5,7 @@ enum AppRoutes {
   Empresas = '/empresas',
   Encomendas = '/encomendas',
   Maquinas = '/maquinas',
+  Planeamento = '/planeamento',
   ProcessosProducao = '/processos-producao',
   Produtos = '/produtos',
   Laboratorio = '/laboratorio',
@@ -72,6 +73,11 @@ export const WebRoutes = {
   },
 
   Dashboard: `${AppRoutes.Dashboard}`,
+
+  Planeamento: {
+    Kanban: `${AppRoutes.Planeamento}/kanban`,
+    Execucao: `${AppRoutes.Planeamento}/execucao`,
+  },
 
   PortalCliente: {
     Inicio: `${AppRoutes.PortalCliente}`,
