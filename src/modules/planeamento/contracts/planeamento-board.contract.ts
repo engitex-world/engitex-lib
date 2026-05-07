@@ -18,7 +18,7 @@ export type GetPlaneamentoBoardRequest = {
  */
 export type PlaneamentoFaseCard = {
   encomendaArtigoFaseId: number;
-  planeamentoFaseId?: number;
+  planeamentoFaseId?: string;
 
   // Encomenda info
   encomendaId: number;
@@ -77,4 +77,45 @@ export type PlaneamentoBoardResponse = {
   totalCount: number;
   skip: number;
   take: number;
+};
+
+/**
+ * Informação de uma fase dependente (anterior ou seguinte).
+ */
+export type FaseDependenciaInfo = {
+  encomendaArtigoFaseId: number;
+  faseNome: string;
+  ordem: number;
+  estadoFase: FaseExecucaoEstado;
+  grupoMaquina: MaquinaGrupo;
+};
+
+/**
+ * Detalhes completos de uma fase de planeamento.
+ * Inclui dependências, comentários e histórico.
+ */
+export type PlaneamentoFaseDetalhe = PlaneamentoFaseCard & {
+  // Dependências
+  fasesAnteriores: FaseDependenciaInfo[];
+  fasesSeguintes: FaseDependenciaInfo[];
+
+  // Comentários de execução
+  comentarios: {
+    id: number;
+    utilizadorNome: string;
+    comentario: string;
+    dataHora: string;
+  }[];
+
+  // Informação adicional da encomenda
+  encomendaEstado: string;
+  encomendaObservacoes?: string;
+  artigoObservacoes?: string;
+  faseObservacoes?: string;
+
+  // Datas de execução (se iniciada/concluída)
+  dataInicioReal?: string;
+  utilizadorInicio?: string;
+  dataFimReal?: string;
+  utilizadorFim?: string;
 };
