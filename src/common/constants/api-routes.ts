@@ -101,6 +101,12 @@ export const APIRoutes = {
     },
   },
 
+  [AppModules.PLANEAMENTO]: {
+    board: `/${AppModules.PLANEAMENTO}/board`,
+    porPlanear: `/${AppModules.PLANEAMENTO}/por-planear`,
+    faseDetalhe: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}`,
+  },
+
   [AppModules.TINTURARIA.PROCESSOS_TINGIMENTO]: {
     compativeis: `/${AppModules.TINTURARIA.PROCESSOS_TINGIMENTO}/compativeis`,
     getById: (id: number) => `/${AppModules.TINTURARIA.PROCESSOS_TINGIMENTO}/${id}`,
