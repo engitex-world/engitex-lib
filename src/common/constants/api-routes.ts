@@ -105,6 +105,12 @@ export const APIRoutes = {
     board: `/${AppModules.PLANEAMENTO}/board`,
     porPlanear: `/${AppModules.PLANEAMENTO}/por-planear`,
     faseDetalhe: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}`,
+    execucao: {
+      fila: `/${AppModules.PLANEAMENTO}/execucao/fila`,
+      iniciar: `/${AppModules.PLANEAMENTO}/execucao/iniciar`,
+      terminar: `/${AppModules.PLANEAMENTO}/execucao/terminar`,
+      comentario: (faseId: number) => `/${AppModules.PLANEAMENTO}/execucao/fase/${faseId}/comentario`,
+    },
   },
 
   [AppModules.TINTURARIA.PROCESSOS_TINGIMENTO]: {
