@@ -26,18 +26,30 @@ export type TerminarFaseExecucaoRequest = {
 };
 
 /**
- * Request para adicionar um comentário/observação do operário a uma fase.
+ * Request para adicionar um comentário a uma fase.
  */
-export type AdicionarObservacaoOperarioRequest = {
+export type AdicionarComentarioFaseRequest = {
   encomendaArtigoFaseId: number;
   comentario: string;
 };
 
 /**
- * Representação de uma fase na fila do operador.
- * As observações do operário já estão incluídas em PlaneamentoFaseCard.observacoesOperario
+ * Representação de um comentário de execução.
  */
-export type OperadorFaseCard = PlaneamentoFaseCard;
+export type FaseExecucaoComentarioResponse = {
+  id: number;
+  encomendaArtigoFaseId: number;
+  utilizadorNome: string;
+  comentario: string;
+  dataHora: string;
+};
+
+/**
+ * Representação de uma fase na fila do operador (inclui comentários).
+ */
+export type OperadorFaseCard = PlaneamentoFaseCard & {
+  comentarios: FaseExecucaoComentarioResponse[];
+};
 
 /**
  * Representação de uma máquina na vista do operador.
