@@ -3,6 +3,10 @@ import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 
 import { FaseExecucaoEstado, FaseProntidaoEstado } from '../enums';
 
+// ============================================================================
+// TIPOS AUXILIARES AGRUPADOS
+// ============================================================================
+
 /**
  * Estrutura de uma observação feita pelo operário durante a execução.
  */
@@ -11,6 +15,69 @@ export type ObservacaoOperario = {
   dataHora: string;
   comentario: string;
 };
+
+/**
+ * Informação da encomenda para exibição no card.
+ */
+export type PlaneamentoEncomendaInfo = {
+  id: number;
+  numero: string;
+  cliente: string;
+  dataEntregaPrevista?: string;
+};
+
+/**
+ * Informação do artigo para exibição no card.
+ */
+export type PlaneamentoArtigoInfo = {
+  nome: string;
+  cor?: string;
+  quantidade: number;
+  unidade: EncomendaArtigoUnidade;
+};
+
+/**
+ * Informação da fase para exibição no card.
+ */
+export type PlaneamentoFaseInfo = {
+  nome: string;
+  ordem: number;
+  grupoMaquina: MaquinaGrupo;
+  processoProducao: string;
+  estado: FaseExecucaoEstado;
+  semaforo: FaseProntidaoEstado;
+};
+
+/**
+ * Informação de atribuição a máquina (quando planeada).
+ */
+export type PlaneamentoAtribuicaoInfo = {
+  maquinaId: number;
+  maquinaNome: string;
+  posicaoFila: number;
+  dataPrevistaInicio?: string;
+  dataPrevistaFim?: string;
+};
+
+/**
+ * Resumo das dependências entre fases.
+ */
+export type PlaneamentoDependenciasInfo = {
+  anterioresTotal: number;
+  anterioresConcluidas: number;
+};
+
+/**
+ * Observações da fase.
+ */
+export type PlaneamentoObservacoesInfo = {
+  planeamento?: string;
+  operario?: ObservacaoOperario[];
+};
+
+// ============================================================================
+// REQUEST/RESPONSE TYPES
+// ============================================================================
 
 /**
  * Request para obter o quadro de planeamento filtrado por grupo de máquina.
@@ -23,47 +90,31 @@ export type GetPlaneamentoBoardRequest = {
 
 /**
  * Representação de uma fase no card do Kanban.
- * Inclui todas as informações necessárias para exibição e ações.
+ * Estrutura agrupada para melhor organização e legibilidade.
  */
 export type PlaneamentoFaseCard = {
-  encomendaArtigoFaseId: number;
+  /** ID da fase do artigo da encomenda */
+  id: number;
+  /** ID do registo de planeamento (se planeada) */
   planeamentoFaseId?: number;
 
-  // Encomenda info
-  encomendaId: number;
-  encomendaNumero: string;
-  clienteNome: string;
-  deadlineEncomenda?: string;
-  dataPrevistaEntrega?: string;
+  /** Informação da encomenda */
+  encomenda: PlaneamentoEncomendaInfo;
 
-  // Artigo info
-  artigoNome: string;
-  corCodigo?: string;
-  quantidade: number;
-  unidade: EncomendaArtigoUnidade;
+  /** Informação do artigo */
+  artigo: PlaneamentoArtigoInfo;
 
-  // Fase info
-  faseNome: string;
-  ordemNoProcesso: number;
-  grupoMaquina: MaquinaGrupo;
-  processoProducaoNome: string;
+  /** Informação da fase */
+  fase: PlaneamentoFaseInfo;
 
-  // Estado e planeamento
-  estadoFase: FaseExecucaoEstado;
-  semaforo: FaseProntidaoEstado;
-  observacoesPlaneamento?: string;
-  observacoesOperario?: ObservacaoOperario[];
-  dataPrevistaInicio?: string;
-  dataPrevistaFim?: string;
+  /** Informação de atribuição a máquina (quando planeada) */
+  atribuicao?: PlaneamentoAtribuicaoInfo;
 
-  // Máquina atribuída (se planeada)
-  maquinaId?: number;
-  maquinaNome?: string;
-  posicaoFila?: number;
+  /** Resumo das dependências */
+  dependencias: PlaneamentoDependenciasInfo;
 
-  // Resumo de dependências
-  fasesAnterioresTotal: number;
-  fasesAnterioresConcluidas: number;
+  /** Observações */
+  observacoes?: PlaneamentoObservacoesInfo;
 };
 
 /**
@@ -93,32 +144,48 @@ export type PlaneamentoBoardResponse = {
  * Informação de uma fase dependente (anterior ou seguinte).
  */
 export type FaseDependenciaInfo = {
-  encomendaArtigoFaseId: number;
-  faseNome: string;
+  id: number;
+  nome: string;
   ordem: number;
-  estadoFase: FaseExecucaoEstado;
+  estado: FaseExecucaoEstado;
   grupoMaquina: MaquinaGrupo;
+};
+
+/**
+ * Informação adicional disponível apenas nos detalhes.
+ */
+export type PlaneamentoDetalheExtra = {
+  /** Estado atual da encomenda */
+  encomendaEstado: string;
+  /** Observações da encomenda */
+  encomendaObservacoes?: string;
+  /** Observações do artigo */
+  artigoObservacoes?: string;
+  /** Observações da fase */
+  faseObservacoes?: string;
+};
+
+/**
+ * Informação de execução (quando iniciada/concluída).
+ */
+export type PlaneamentoExecucaoInfo = {
+  dataInicio?: string;
+  utilizadorInicio?: string;
+  dataFim?: string;
+  utilizadorFim?: string;
 };
 
 /**
  * Detalhes completos de uma fase de planeamento.
  * Inclui dependências e histórico.
- * Observações de operário já estão incluídas via observacoesOperario de PlaneamentoFaseCard.
  */
 export type PlaneamentoFaseDetalhe = PlaneamentoFaseCard & {
-  // Dependências
+  /** Fases anteriores no processo */
   fasesAnteriores: FaseDependenciaInfo[];
+  /** Fases seguintes no processo */
   fasesSeguintes: FaseDependenciaInfo[];
-
-  // Informação adicional da encomenda
-  encomendaEstado: string;
-  encomendaObservacoes?: string;
-  artigoObservacoes?: string;
-  faseObservacoes?: string;
-
-  // Datas de execução (se iniciada/concluída)
-  dataInicioReal?: string;
-  utilizadorInicio?: string;
-  dataFimReal?: string;
-  utilizadorFim?: string;
+  /** Informação adicional */
+  extra: PlaneamentoDetalheExtra;
+  /** Informação de execução */
+  execucao?: PlaneamentoExecucaoInfo;
 };
