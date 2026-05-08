@@ -4,6 +4,15 @@ import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { FaseExecucaoEstado, FaseProntidaoEstado } from '../enums';
 
 /**
+ * Estrutura de uma observação feita pelo operário durante a execução.
+ */
+export type ObservacaoOperario = {
+  utilizadorNome: string;
+  dataHora: string;
+  comentario: string;
+};
+
+/**
  * Request para obter o quadro de planeamento filtrado por grupo de máquina.
  */
 export type GetPlaneamentoBoardRequest = {
@@ -42,7 +51,8 @@ export type PlaneamentoFaseCard = {
   // Estado e planeamento
   estadoFase: FaseExecucaoEstado;
   semaforo: FaseProntidaoEstado;
-  observacoesPlaneador?: string;
+  observacoesPlaneamento?: string;
+  observacoesOperario?: ObservacaoOperario[];
   dataPrevistaInicio?: string;
   dataPrevistaFim?: string;
 
@@ -100,12 +110,7 @@ export type PlaneamentoFaseDetalhe = PlaneamentoFaseCard & {
   fasesSeguintes: FaseDependenciaInfo[];
 
   // Comentários de execução
-  comentarios: {
-    id: number;
-    utilizadorNome: string;
-    comentario: string;
-    dataHora: string;
-  }[];
+  comentarios: ObservacaoOperario[];
 
   // Informação adicional da encomenda
   encomendaEstado: string;

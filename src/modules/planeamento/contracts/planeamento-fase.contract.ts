@@ -26,10 +26,10 @@ export type RemoverFasePlaneamentoRequest = {
 };
 
 /**
- * Request para atualizar observações do planeador numa fase.
+ * Request para atualizar observações do planeamento numa fase.
  */
-export type UpdateObservacoesPlaneadorRequest = {
-  observacoesPlaneador?: string;
+export type UpdateObservacoesPlaneamentoRequest = {
+  observacoesPlaneamento?: string;
 };
 
 /**
@@ -43,7 +43,7 @@ export type UpdateDatasPrevistasRequest = {
 /**
  * Request genérica de atualização de uma fase de planeamento.
  */
-export type UpdatePlaneamentoFaseRequest = UpdateObservacoesPlaneadorRequest &
+export type UpdatePlaneamentoFaseRequest = UpdateObservacoesPlaneamentoRequest &
   UpdateDatasPrevistasRequest;
 
 /**
