@@ -102,15 +102,13 @@ export type FaseDependenciaInfo = {
 
 /**
  * Detalhes completos de uma fase de planeamento.
- * Inclui dependências, comentários e histórico.
+ * Inclui dependências e histórico.
+ * Observações de operário já estão incluídas via observacoesOperario de PlaneamentoFaseCard.
  */
 export type PlaneamentoFaseDetalhe = PlaneamentoFaseCard & {
   // Dependências
   fasesAnteriores: FaseDependenciaInfo[];
   fasesSeguintes: FaseDependenciaInfo[];
-
-  // Comentários de execução
-  comentarios: ObservacaoOperario[];
 
   // Informação adicional da encomenda
   encomendaEstado: string;

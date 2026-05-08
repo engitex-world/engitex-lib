@@ -116,8 +116,8 @@ export const APIRoutes = {
       getPlaneamentoGrupoMaquinas: `/${AppModules.PLANEAMENTO}/execucao/fila`,
       iniciarFase: `/${AppModules.PLANEAMENTO}/execucao/iniciar`,
       terminarFase: `/${AppModules.PLANEAMENTO}/execucao/terminar`,
-      comentarioFase: (faseId: number) =>
-        `/${AppModules.PLANEAMENTO}/execucao/fase/${faseId}/comentario`,
+      observacaoFase: (faseId: number) =>
+        `/${AppModules.PLANEAMENTO}/execucao/fase/${faseId}/observacao`,
     },
   },
 
