@@ -34,21 +34,20 @@ export type AdicionarComentarioFaseRequest = {
 };
 
 /**
- * Representação de um comentário de execução.
+ * Comentário de um operário durante a execução de uma fase.
  */
-export type FaseExecucaoComentarioResponse = {
-  id: number;
-  encomendaArtigoFaseId: number;
+export type OperadorComentario = {
   utilizadorNome: string;
+  dataHora: string; // ISO 8601 format
   comentario: string;
-  dataHora: string;
 };
 
 /**
  * Representação de uma fase na fila do operador (inclui comentários).
+ * O campo observacoesOperario é um array JSON de comentários.
  */
 export type OperadorFaseCard = PlaneamentoFaseCard & {
-  comentarios: FaseExecucaoComentarioResponse[];
+  observacoesOperario?: OperadorComentario[];
 };
 
 /**
