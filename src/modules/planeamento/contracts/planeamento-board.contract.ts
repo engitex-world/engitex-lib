@@ -18,7 +18,7 @@ export type GetPlaneamentoBoardRequest = {
  */
 export type PlaneamentoFaseCard = {
   encomendaArtigoFaseId: number;
-  planeamentoFaseId?: string;
+  planeamentoFaseId?: number;
 
   // Encomenda info
   encomendaId: number;
