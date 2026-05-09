@@ -2,21 +2,26 @@ import { Common } from '@lib/common/types/base-entity.type';
 import { Artigo } from '@lib/modules/artigos/types';
 import { Empresa } from '@lib/modules/empresas/types';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
-import { ProcessoProducaoFaseEstado } from '@lib/modules/processos-producao/enums';
+import { Maquina } from '@lib/modules/maquinas/types';
+import { ObservacaoOperario } from '@lib/modules/planeamento/contracts';
+import { FaseExecucaoEstado } from '@lib/modules/planeamento/enums';
 import { ProcessoProducao } from '@lib/modules/processos-producao/types';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
 import { EncomendaArtigoUnidade, EncomendaEstado } from '../enums/encomenda.enum';
 
-export type EncomendaArtigoFase = {
-  id: number;
-  nome: string;
-  ordem: number;
-  grupoMaquinas: MaquinaGrupo;
-  obrigatoria: boolean;
+export type Encomenda = {
+  numeroEncomenda: string;
+  cliente: Empresa;
+  codigoCor: string;
+  certificacoes?: Certificacao[];
+  artigos: EncomendaArtigo[];
   observacoes?: string;
-  estado?: ProcessoProducaoFaseEstado;
-};
+  isDevolucao: boolean;
+  encomendaAnterior?: Encomenda;
+  estado: EncomendaEstado;
+  dataEntregaPrevista?: Date;
+} & Common;
 
 export type EncomendaArtigo = {
   id: number;
@@ -33,15 +38,18 @@ export type EncomendaArtigo = {
   fases: EncomendaArtigoFase[];
 };
 
-export type Encomenda = {
-  numeroEncomenda: string;
-  cliente: Empresa;
-  codigoCor: string;
-  certificacoes?: Certificacao[];
-  artigos: EncomendaArtigo[];
-  observacoes?: string;
-  isDevolucao: boolean;
-  encomendaAnterior?: Encomenda;
-  estado: EncomendaEstado;
-  dataEntregaPrevista?: Date;
-} & Common;
+export type EncomendaArtigoFase = {
+  id: number;
+  nome: string;
+  ordem: number;
+  grupoMaquinas: MaquinaGrupo;
+  obrigatoria: boolean;
+  observacoesPlaneamento?: string;
+  observacoesOperario: ObservacaoOperario[];
+  estado: FaseExecucaoEstado;
+  dataInicioReal?: Date;
+  utilizadorInicio?: string;
+  dataFimReal?: Date;
+  utilizadorFim?: string;
+  maquinaExecutada?: Maquina;
+};
