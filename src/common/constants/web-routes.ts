@@ -77,6 +77,7 @@ export const WebRoutes = {
   Planeamento: {
     Kanban: `${AppRoutes.Planeamento}/kanban`,
     Execucao: `${AppRoutes.Planeamento}/execucao`,
+    VistaGeral: `${AppRoutes.Planeamento}/vista-geral`,
   },
 
   PortalCliente: {
