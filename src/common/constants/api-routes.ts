@@ -104,6 +104,7 @@ export const APIRoutes = {
   [AppModules.PLANEAMENTO]: {
     getBoard: `/${AppModules.PLANEAMENTO}/board`,
     getEncomendasPorPlanear: `/${AppModules.PLANEAMENTO}/por-planear`,
+    vistaGeral: `/${AppModules.PLANEAMENTO}/vista-geral`,
     fase: {
       getDetalhes: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}`,
       atribuirMaquina: `/${AppModules.PLANEAMENTO}/atribuir`,
