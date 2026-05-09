@@ -34,26 +34,20 @@ export type AdicionarObservacaoOperarioRequest = {
 };
 
 /**
- * Representação de uma fase na fila do operador.
- * Utiliza o mesmo contrato que PlaneamentoFaseCard (observacoesOperario já incluído).
+ * Representação de uma máquina na vista do planeamento (operador executa a partir disto).
  */
-export type OperadorFaseCard = PlaneamentoFaseCard;
-
-/**
- * Representação de uma máquina na vista do operador.
- */
-export type OperadorMaquinaFila = {
+export type PlaneamentoMaquinaFila = {
   maquinaId: number;
   nome: string;
   codigo: string;
-  faseEmExecucao?: OperadorFaseCard;
+  faseEmExecucao?: PlaneamentoFaseCard;
   proximasFases: PlaneamentoFaseCard[];
 };
 
 /**
- * Response completa da fila do operador.
+ * Response completa da fila de planeamento.
  */
-export type OperadorFilaResponse = {
+export type PlaneamentoFilaResponse = {
   grupoMaquina: MaquinaGrupo;
-  maquinas: OperadorMaquinaFila[];
+  maquinas: PlaneamentoMaquinaFila[];
 };
