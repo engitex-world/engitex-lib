@@ -34,9 +34,9 @@ export type AdicionarObservacaoOperarioRequest = {
 };
 
 /**
- * Representação de uma máquina na vista do planeamento (operador executa a partir disto).
+ * Representação de uma máquina no planeamento (operador executa a partir disto).
  */
-export type PlaneamentoMaquinaFila = {
+export type PlaneamentoMaquina = {
   maquinaId: number;
   nome: string;
   codigo: string;
@@ -45,9 +45,9 @@ export type PlaneamentoMaquinaFila = {
 };
 
 /**
- * Response completa da fila de planeamento.
+ * Response completa do planeamento de máquinas.
  */
-export type PlaneamentoFilaResponse = {
+export type PlaneamentoMaquinaResponse = {
   grupoMaquina: MaquinaGrupo;
-  maquinas: PlaneamentoMaquinaFila[];
+  maquinas: PlaneamentoMaquina[];
 };
