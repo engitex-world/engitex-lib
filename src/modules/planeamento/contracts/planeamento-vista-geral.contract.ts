@@ -12,12 +12,14 @@ export type VistaGeralMaquina = {
   nome: string;
   codigo: string;
   grupo: MaquinaGrupo;
-  totalFasesPlaneadas: number;
-  contagemPorEstado: MaquinaFasesContagem;
-  faseEmExecucao?: FaseEmExecucaoInfo;
+  planeamento: {
+    emExecucao?: MaquinaFasePlaneadaInfo;
+    proxima?: MaquinaFasePlaneadaInfo;
+    totalFasesPlaneadas: number;
+  };
 };
 
-export type FaseEmExecucaoInfo = {
+export type MaquinaFasePlaneadaInfo = {
   encomendaNumero: string;
   cliente: string;
   artigoNome: string;
