@@ -2,31 +2,14 @@ import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 
 import { FaseExecucaoEstado } from '../enums';
 
-// ============================================================================
-// RESPONSE TYPES
-// ============================================================================
-
-/**
- * Contagem de fases por estado para uma máquina
- */
-export type MaquinaFasesContagem = {
-  [key in FaseExecucaoEstado]?: number;
+export type VistaGeralMaquinasResponse = {
+  grupo: MaquinaGrupo;
+  maquinas: VistaGeralMaquina[];
+  totalFases: number;
+  totalEmExecucao: number;
 };
 
-/**
- * Informação resumida sobre a fase em execução
- */
-export type FaseEmExecucaoInfo = {
-  encomendaNumero: string;
-  cliente: string;
-  artigoNome: string;
-  faseNome: string;
-};
-
-/**
- * Card de overview de uma máquina individual
- */
-export type MaquinaOverviewCard = {
+export type VistaGeralMaquina = {
   id: number;
   nome: string;
   codigo: string;
@@ -36,12 +19,13 @@ export type MaquinaOverviewCard = {
   faseEmExecucao?: FaseEmExecucaoInfo;
 };
 
-/**
- * Grupo de máquinas por tipo
- */
-export type MaquinaGrupoOverview = {
-  grupo: MaquinaGrupo;
-  maquinas: MaquinaOverviewCard[];
-  totalFases: number;
-  totalEmExecucao: number;
+export type FaseEmExecucaoInfo = {
+  encomendaNumero: string;
+  cliente: string;
+  artigoNome: string;
+  faseNome: string;
+};
+
+export type MaquinaFasesContagem = {
+  [key in FaseExecucaoEstado]?: number;
 };
