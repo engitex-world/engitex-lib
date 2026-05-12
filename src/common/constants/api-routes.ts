@@ -102,22 +102,27 @@ export const APIRoutes = {
   },
 
   [AppModules.PLANEAMENTO]: {
-    getBoard: `/${AppModules.PLANEAMENTO}/board`,
-    getEncomendasPorPlanear: `/${AppModules.PLANEAMENTO}/por-planear`,
-    vistaGeral: `/${AppModules.PLANEAMENTO}/vista-geral`,
-    fase: {
-      getDetalhes: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}`,
-      atribuirMaquina: `/${AppModules.PLANEAMENTO}/atribuir`,
+    // Consultas (Leitura/Visualizações)
+    consultas: {
+      vistaGeral: `/${AppModules.PLANEAMENTO}/vista-geral`,
+      getBoard: `/${AppModules.PLANEAMENTO}/board`,
+      listarFasesPendentes: `/${AppModules.PLANEAMENTO}/por-planear`,
+      getFaseDetalhe: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}`,
+    },
+    // Planeamento (Atribuição/Movimentação/Atualização)
+    planeamento: {
+      atribuirFaseMaquina: `/${AppModules.PLANEAMENTO}/atribuir`,
       moverFase: `/${AppModules.PLANEAMENTO}/mover`,
-      removePlaneamento: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}/planeamento`,
+      inactivarPlaneamento: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}/planeamento`,
       updateObservacoes: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}/observacoes`,
       updateDatasPrevistas: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}/datas-previstas`,
     },
+    // Execução (Operador)
     execucao: {
-      getPlaneamentoGrupoMaquinas: `/${AppModules.PLANEAMENTO}/execucao/fila`,
+      getFilaOperador: `/${AppModules.PLANEAMENTO}/execucao/fila`,
       iniciarFase: `/${AppModules.PLANEAMENTO}/execucao/iniciar`,
       terminarFase: `/${AppModules.PLANEAMENTO}/execucao/terminar`,
-      observacaoFase: (faseId: number) =>
+      adicionarObservacao: (faseId: number) =>
         `/${AppModules.PLANEAMENTO}/execucao/fase/${faseId}/observacao`,
     },
   },
