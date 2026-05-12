@@ -15,7 +15,7 @@ export type UpdateEncomendaRequest = {
   observacoes?: string;
   estado?: EncomendaEstado;
   dataEntregaPrevista?: Date;
-  artigos?: EncomendaArtigosOperations;
+  artigos?: UpdateEncomendaArtigoRequest[];
 };
 
 export type EncomendaArtigosOperations = {
@@ -39,7 +39,7 @@ export type UpdateEncomendaArtigoRequest = {
   observacoes?: string;
   quantidade?: number;
   unidade?: EncomendaArtigoUnidade;
-  fases?: EncomendaArtigoFasesOperations;
+  fases?: UpdateEncomendaArtigoFaseRequest[];
 };
 
 export type EncomendaArtigoFasesOperations = {

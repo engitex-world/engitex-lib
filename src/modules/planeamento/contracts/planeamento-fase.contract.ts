@@ -12,11 +12,11 @@ export type MoverFasePlaneamentoRequest = {
   posicaoDestino?: number;
 };
 
-export type RemoverFasePlaneamentoRequest = {
+export type InactivarFasePlaneamentoRequest = {
   encomendaArtigoFaseId: number;
 };
 
-export type UpdateObservacoesPlaneamentoRequest = {
+export type UpdateFaseObservacoesRequest = {
   observacoesPlaneamento?: string;
 };
 
@@ -25,7 +25,7 @@ export type UpdateDatasPrevistasRequest = {
   dataPrevistaFim?: string;
 };
 
-export type UpdatePlaneamentoFaseRequest = UpdateObservacoesPlaneamentoRequest &
+export type UpdatePlaneamentoFaseRequest = UpdateFaseObservacoesRequest &
   UpdateDatasPrevistasRequest;
 
 export type PlaneamentoFaseResponse = PlaneamentoFaseCard;

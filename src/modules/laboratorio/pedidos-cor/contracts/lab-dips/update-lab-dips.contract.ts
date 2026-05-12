@@ -1,4 +1,4 @@
-import { LabDipEstado } from '../enums';
+import { LabDipEstado } from '../../enums';
 
 export type UpdateLabDipsRequest = {
   labDips: UpdateLabDipItem[];

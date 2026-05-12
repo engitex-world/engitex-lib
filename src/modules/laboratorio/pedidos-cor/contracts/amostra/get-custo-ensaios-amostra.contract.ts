@@ -1,4 +1,4 @@
-import { EnsaioAmostra } from '../types';
+import { EnsaioAmostra } from '../../types';
 
 export type GetCustoEnsaiosAmostraResponse = CustoEnsaiosAmostra[];
 
