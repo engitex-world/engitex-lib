@@ -5,8 +5,6 @@ import { FaseExecucaoEstado } from '../enums';
 export type VistaGeralMaquinasResponse = {
   grupo: MaquinaGrupo;
   maquinas: VistaGeralMaquina[];
-  totalFases: number;
-  totalEmExecucao: number;
 };
 
 export type VistaGeralMaquina = {
