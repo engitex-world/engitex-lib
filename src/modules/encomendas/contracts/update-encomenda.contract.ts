@@ -3,8 +3,6 @@ import { Certificacao } from '@lib/modules/produtos/enums';
 
 import { EncomendaArtigoUnidade, EncomendaEstado } from '../enums';
 
-import { CreateEncomendaArtigoFaseRequest } from './create-encomenda.contract';
-
 export type UpdateEncomendaRequest = {
   numeroEncomenda?: string;
   clienteId?: number;
@@ -18,17 +16,8 @@ export type UpdateEncomendaRequest = {
   artigos?: UpdateEncomendaArtigoRequest[];
 };
 
-export type EncomendaArtigosOperations = {
-  add: Omit<UpdateEncomendaArtigoRequest, 'id' | 'fases'> &
-    {
-      fases: CreateEncomendaArtigoFaseRequest[];
-    }[];
-  update: UpdateEncomendaArtigoRequest[];
-  deleteIds: number[];
-};
-
 export type UpdateEncomendaArtigoRequest = {
-  id: number;
+  id?: number;
   artigoId?: number;
   gramagemCru?: number;
   gramagemFinal?: number;
@@ -40,12 +29,6 @@ export type UpdateEncomendaArtigoRequest = {
   quantidade?: number;
   unidade?: EncomendaArtigoUnidade;
   fases?: UpdateEncomendaArtigoFaseRequest[];
-};
-
-export type EncomendaArtigoFasesOperations = {
-  add: CreateEncomendaArtigoFaseRequest[];
-  update: UpdateEncomendaArtigoFaseRequest[];
-  deleteIds: number[];
 };
 
 export type UpdateEncomendaArtigoFaseRequest = {
