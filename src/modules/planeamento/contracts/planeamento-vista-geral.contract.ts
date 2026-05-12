@@ -45,15 +45,3 @@ export type MaquinaGrupoOverview = {
   totalFases: number;
   totalEmExecucao: number;
 };
-
-/**
- * Resposta completa da vista geral
- */
-export type VistaGeralMaquinasResponse = {
-  grupos: MaquinaGrupoOverview[];
-  totais: {
-    maquinas: number;
-    fasesPlaneadas: number;
-    fasesEmExecucao: number;
-  };
-};
