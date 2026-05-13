@@ -6,6 +6,7 @@ import { FaseExecucaoEstado, FaseProntidaoEstado } from '../enums';
 export type PlaneamentoEncomendaInfo = {
   id: number;
   numero: string;
+  ordermServico: string;
   cliente: string;
   dataEntregaPrevista?: string;
 };
