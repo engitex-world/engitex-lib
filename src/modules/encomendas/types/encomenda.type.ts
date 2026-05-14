@@ -3,12 +3,14 @@ import { Artigo } from '@lib/modules/artigos/types';
 import { Empresa } from '@lib/modules/empresas/types';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { Maquina } from '@lib/modules/maquinas/types';
-import { ObservacaoOperario } from '@lib/modules/planeamento/contracts';
-import { FaseExecucaoEstado } from '@lib/modules/planeamento/enums';
-import { ProcessoProducao } from '@lib/modules/processos-producao/types';
+import { ProcessoProducao } from '@lib/modules/producao/processos/types';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
-import { EncomendaArtigoUnidade, EncomendaEstado } from '../enums/encomenda.enum';
+import {
+  EncomendaArtigoFaseEstado,
+  EncomendaArtigoUnidade,
+  EncomendaEstado,
+} from '../enums/encomenda.enum';
 
 export type Encomenda = {
   numeroEncomenda: string;
@@ -44,12 +46,18 @@ export type EncomendaArtigoFase = {
   ordem: number;
   grupoMaquinas: MaquinaGrupo;
   obrigatoria: boolean;
+  estado: EncomendaArtigoFaseEstado;
   observacoesPlaneamento?: string;
-  observacoesOperario: ObservacaoOperario[];
-  estado: FaseExecucaoEstado;
+  observacoesOperario: FaseObservacaoOperario[];
   dataInicioReal?: Date;
   utilizadorInicio?: string;
   dataFimReal?: Date;
   utilizadorFim?: string;
   maquinaExecutada?: Maquina;
+};
+
+export type FaseObservacaoOperario = {
+  data: Date;
+  utilizador: string;
+  observacao: string;
 };

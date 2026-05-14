@@ -107,7 +107,6 @@ export const APIRoutes = {
       vistaGeral: `/${AppModules.PLANEAMENTO}/vista-geral`,
       getBoard: `/${AppModules.PLANEAMENTO}/board`,
       listarFasesPendentes: `/${AppModules.PLANEAMENTO}/por-planear`,
-      getFaseDetalhe: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}`,
     },
     // Planeamento (Atribuição/Movimentação/Atualização)
     planeamento: {

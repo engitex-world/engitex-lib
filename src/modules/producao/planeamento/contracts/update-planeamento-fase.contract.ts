@@ -1,4 +1,4 @@
-import { PlaneamentoFaseCard } from './planeamento-board.contract';
+import { PlaneamentoFaseCard } from './get-planeamento-by-grupo-maquinas.contract.';
 
 export type AtribuirFaseMaquinaRequest = {
   encomendaArtigoFaseId: number;
@@ -28,4 +28,15 @@ export type UpdateDatasPrevistasRequest = {
 export type UpdatePlaneamentoFaseRequest = UpdateFaseObservacoesRequest &
   UpdateDatasPrevistasRequest;
 
-export type PlaneamentoFaseResponse = PlaneamentoFaseCard;
+/**
+ * Request para criar ou atualizar um planeamento de fase.
+ * - Se não existe planeamento para a fase → cria novo
+ * - Se já existe → atualiza máquina e/ou posição
+ */
+export type UpsertPlaneamentoFaseRequest = {
+  encomendaArtigoFaseId: number;
+  maquinaId: number;
+  posicaoDestino?: number;
+};
+
+export type UpdatePlaneamentoFaseResponse = PlaneamentoFaseCard;

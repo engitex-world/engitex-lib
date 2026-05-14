@@ -11,13 +11,13 @@ export type DashboardPlaneamentoMaquina = {
   codigo: string;
   grupo: MaquinaGrupo;
   planeamento: {
-    emExecucao?: DashboardPlaneamentoMaquinaInfo;
-    proxima?: DashboardPlaneamentoMaquinaInfo;
+    faseEmExecucao?: DashboardPlaneamentoMaquinaEncomenda;
+    proximaFase?: DashboardPlaneamentoMaquinaEncomenda;
     totalFasesPlaneadas: number;
   };
 };
 
-export type DashboardPlaneamentoMaquinaInfo = {
+export type DashboardPlaneamentoMaquinaEncomenda = {
   encomendaNumero: string;
   ordemServico: string;
   cor: string;

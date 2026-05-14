@@ -40,7 +40,7 @@ export type ProdutoFornecedor = {
   historicoPreco: HistoricoPrecoFornecedor[];
 };
 
-interface HistoricoPrecoFornecedor {
+export interface HistoricoPrecoFornecedor {
   preco: number;
   data: Date;
 }
