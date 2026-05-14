@@ -1,5 +1,6 @@
 import { Common } from '@lib/common/types/base-entity.type';
 import { Artigo } from '@lib/modules/artigos/types';
+import { CadernoEncargos } from '@lib/modules/controlo-qualidade/types/caderno-encargos.type';
 import { Cor } from '@lib/modules/cores/types';
 import { Empresa } from '@lib/modules/empresas/types';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
@@ -19,6 +20,7 @@ export type Encomenda = {
   cliente: Empresa;
   cor: Cor;
   codigoCor: string;
+  cadernoEncargos?: CadernoEncargos;
   certificacoes?: Certificacao[];
   artigos: EncomendaArtigo[];
   observacoes?: string;
