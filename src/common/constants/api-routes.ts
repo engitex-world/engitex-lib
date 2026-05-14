@@ -36,6 +36,7 @@ export const APIRoutes = {
 
   [AppModules.CORES]: {
     getPantone: (pantone: string) => `/${AppModules.CORES}/${pantone}`,
+    getCorByCodigoCor: (codigoCor: string) => `/${AppModules.CORES}/${codigoCor}`,
   },
 
   [AppModules.MAQUINAS]: {
