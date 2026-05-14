@@ -36,7 +36,6 @@ export const APIRoutes = {
 
   [AppModules.CORES]: {
     getPantone: (pantone: string) => `/${AppModules.CORES}/${pantone}`,
-    getCorByCodigoCor: (codigoCor: string) => `/${AppModules.CORES}/${codigoCor}`,
   },
 
   [AppModules.MAQUINAS]: {
@@ -84,6 +83,8 @@ export const APIRoutes = {
     getById: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/${id}`,
     Amostra: {
       getById: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}`,
+      getByCodigoCor: (codigoCor: string) =>
+        `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/codigo-cor/${codigoCor}`,
       updateProcessosTingimento: (id: number) =>
         `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}/processos-tingimento`,
       updateEnsaios: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}/ensaios`,
