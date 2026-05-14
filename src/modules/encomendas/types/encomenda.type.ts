@@ -14,6 +14,7 @@ import {
 
 export type Encomenda = {
   numeroEncomenda: string;
+  ordemServico: string;
   cliente: Empresa;
   codigoCor: string;
   certificacoes?: Certificacao[];
