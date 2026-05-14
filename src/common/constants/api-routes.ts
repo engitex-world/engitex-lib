@@ -105,31 +105,21 @@ export const APIRoutes = {
     delete: (id: number) => `/${AppModules.PRODUCAO.PROCESSOS}/${id}`,
   },
 
-  [AppModules.PRODUCAO.EXECUCAO]: {},
+  [AppModules.PRODUCAO.EXECUCAO]: {
+    getFilaOperador: `/${AppModules.PRODUCAO.EXECUCAO}/fila`,
+    iniciarFase: `/${AppModules.PRODUCAO.EXECUCAO}/iniciar`,
+    terminarFase: `/${AppModules.PRODUCAO.EXECUCAO}/terminar`,
+    adicionarObservacao: (faseId: number) =>
+      `/${AppModules.PRODUCAO.EXECUCAO}/fase/${faseId}/observacao`,
+  },
 
   [AppModules.PRODUCAO.PLANEAMENTO]: {
     getPlaneamentoByGrupoMaquinas: `/${AppModules.PRODUCAO.PLANEAMENTO}`,
-    // Consultas (Leitura/Visualizações)
-    consultas: {
-      getBoard: `/${AppModules.PLANEAMENTO}/board`,
-      listarFasesPendentes: `/${AppModules.PLANEAMENTO}/por-planear`,
-    },
-    // Planeamento (Atribuição/Movimentação/Atualização)
-    planeamento: {
-      atribuirFaseMaquina: `/${AppModules.PLANEAMENTO}/atribuir`,
-      moverFase: `/${AppModules.PLANEAMENTO}/mover`,
-      inactivarPlaneamento: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}/planeamento`,
-      updateObservacoes: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}/observacoes`,
-      updateDatasPrevistas: (id: number) => `/${AppModules.PLANEAMENTO}/fase/${id}/datas-previstas`,
-    },
-    // Execução (Operador)
-    execucao: {
-      getFilaOperador: `/${AppModules.PLANEAMENTO}/execucao/fila`,
-      iniciarFase: `/${AppModules.PLANEAMENTO}/execucao/iniciar`,
-      terminarFase: `/${AppModules.PLANEAMENTO}/execucao/terminar`,
-      adicionarObservacao: (faseId: number) =>
-        `/${AppModules.PLANEAMENTO}/execucao/fase/${faseId}/observacao`,
-    },
+    updatePlaneamentoFase: (id: number) => `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}`,
+    inactivarPlaneamento: (id: number) => `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}`,
+    updateObservacoes: (id: number) => `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}/observacoes`,
+    updateDatasPrevistas: (id: number) =>
+      `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}/datas-previstas`,
   },
 
   [AppModules.TINTURARIA.PROCESSOS_TINGIMENTO]: {
