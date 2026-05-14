@@ -28,11 +28,6 @@ export type UpdateDatasPrevistasRequest = {
 export type UpdatePlaneamentoFaseRequest = UpdateFaseObservacoesRequest &
   UpdateDatasPrevistasRequest;
 
-/**
- * Request para criar ou atualizar um planeamento de fase.
- * - Se não existe planeamento para a fase → cria novo
- * - Se já existe → atualiza máquina e/ou posição
- */
 export type UpsertPlaneamentoFaseRequest = {
   encomendaArtigoFaseId: number;
   maquinaId: number;
