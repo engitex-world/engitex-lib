@@ -18,7 +18,7 @@ export type Encomenda = {
   numeroEncomenda: string;
   ordemServico: string;
   cliente: Empresa;
-  cor: Cor;
+  cor?: Cor;
   codigoCor: string;
   cadernoEncargos?: CadernoEncargos;
   certificacoes?: Certificacao[];
