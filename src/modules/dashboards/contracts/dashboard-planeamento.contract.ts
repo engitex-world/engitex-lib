@@ -20,7 +20,8 @@ export type DashboardPlaneamentoMaquina = {
 export type DashboardPlaneamentoMaquinaEncomenda = {
   encomendaNumero: string;
   ordemServico: string;
-  cor: string;
+  corHex: string;
+  codigoCor: string;
   cliente: string;
   artigo: string;
   fase: string;
