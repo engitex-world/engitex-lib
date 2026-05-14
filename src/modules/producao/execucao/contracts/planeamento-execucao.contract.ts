@@ -1,6 +1,6 @@
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 
-import { PlaneamentoFaseCard } from '../../planeamento/contracts/get-planeamento-by-grupo-maquinas.contract.';
+import { PlaneamentoFaseCard } from '../../planeamento/contracts/get-planeamento-by-grupo-maquinas.contract';
 
 /**
  * Request para obter a fila de execução do operador.

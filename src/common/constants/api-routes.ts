@@ -64,13 +64,8 @@ export const APIRoutes = {
     dashboard: (empresaId: number) => `/${AppModules.PORTAL_CLIENTE}/dashboard/${empresaId}`,
   },
 
-  [AppModules.PROCESSOS_PRODUCAO]: {
-    list: `/${AppModules.PROCESSOS_PRODUCAO}`,
-    create: `/${AppModules.PROCESSOS_PRODUCAO}`,
-    lookup: `/${AppModules.PROCESSOS_PRODUCAO}/lookup`,
-    getById: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
-    update: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
-    delete: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
+  [AppModules.DASHBOARDS]: {
+    getDashboardPlaneamento: `/${AppModules.DASHBOARDS}/planeamento`,
   },
 
   [AppModules.PRODUTOS]: {
@@ -101,10 +96,21 @@ export const APIRoutes = {
     },
   },
 
-  [AppModules.PLANEAMENTO]: {
+  [AppModules.PRODUCAO.PROCESSOS]: {
+    list: `/${AppModules.PRODUCAO.PROCESSOS}`,
+    create: `/${AppModules.PRODUCAO.PROCESSOS}`,
+    lookup: `/${AppModules.PRODUCAO.PROCESSOS}/lookup`,
+    getById: (id: number) => `/${AppModules.PRODUCAO.PROCESSOS}/${id}`,
+    update: (id: number) => `/${AppModules.PRODUCAO.PROCESSOS}/${id}`,
+    delete: (id: number) => `/${AppModules.PRODUCAO.PROCESSOS}/${id}`,
+  },
+
+  [AppModules.PRODUCAO.EXECUCAO]: {},
+
+  [AppModules.PRODUCAO.PLANEAMENTO]: {
+    getPlaneamentoByGrupoMaquinas: `/${AppModules.PRODUCAO.PLANEAMENTO}`,
     // Consultas (Leitura/Visualizações)
     consultas: {
-      vistaGeral: `/${AppModules.PLANEAMENTO}/vista-geral`,
       getBoard: `/${AppModules.PLANEAMENTO}/board`,
       listarFasesPendentes: `/${AppModules.PLANEAMENTO}/por-planear`,
     },

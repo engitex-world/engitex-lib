@@ -3,7 +3,7 @@ import { Artigo } from '@lib/modules/artigos/types';
 import { Empresa } from '@lib/modules/empresas/types';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { Maquina } from '@lib/modules/maquinas/types';
-import { ProcessoProducao } from '@lib/modules/producao/processos/types';
+import { ProcessoProducao } from '@lib/modules/producao/processos-producao/types';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
 import {

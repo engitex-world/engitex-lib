@@ -3,6 +3,7 @@ export const AppModules = {
   ARTIGOS: 'artigos',
   CONTROLO_QUALIDADE: 'controlo-qualidade',
   CORES: 'cores',
+  DASHBOARDS: 'dashboards',
   EMPRESAS: 'empresas',
   ENCOMENDAS: 'encomendas',
   LABORATORIO: {

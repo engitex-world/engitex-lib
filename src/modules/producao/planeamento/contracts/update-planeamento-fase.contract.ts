@@ -1,19 +1,9 @@
-import { PlaneamentoFaseCard } from './get-planeamento-by-grupo-maquinas.contract.';
+import { PlaneamentoFaseCard } from './get-planeamento-by-grupo-maquinas.contract';
 
-export type AtribuirFaseMaquinaRequest = {
+export type UpsertPlaneamentoFaseRequest = {
   encomendaArtigoFaseId: number;
   maquinaId: number;
-};
-
-export type MoverFasePlaneamentoRequest = {
-  encomendaArtigoFaseId: number;
-  maquinaOrigemId: number;
-  maquinaDestinoId: number;
   posicaoDestino?: number;
-};
-
-export type InactivarFasePlaneamentoRequest = {
-  encomendaArtigoFaseId: number;
 };
 
 export type UpdateFaseObservacoesRequest = {
@@ -25,13 +15,8 @@ export type UpdateDatasPrevistasRequest = {
   dataPrevistaFim?: string;
 };
 
-export type UpdatePlaneamentoFaseRequest = UpdateFaseObservacoesRequest &
-  UpdateDatasPrevistasRequest;
-
-export type UpsertPlaneamentoFaseRequest = {
+export type InactivarFasePlaneamentoRequest = {
   encomendaArtigoFaseId: number;
-  maquinaId: number;
-  posicaoDestino?: number;
 };
 
 export type UpdatePlaneamentoFaseResponse = PlaneamentoFaseCard;
