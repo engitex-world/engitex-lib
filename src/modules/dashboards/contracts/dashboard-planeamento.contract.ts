@@ -3,7 +3,7 @@ import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 export type DashboardPlaneamentoResponse = {
   grupo: MaquinaGrupo;
   maquinas: DashboardPlaneamentoMaquina[];
-};
+}[];
 
 export type DashboardPlaneamentoMaquina = {
   id: number;
