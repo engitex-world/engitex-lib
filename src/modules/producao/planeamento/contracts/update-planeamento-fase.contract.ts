@@ -1,4 +1,4 @@
-import { PlaneamentoFaseCard } from './get-planeamento-by-grupo-maquinas.contract';
+import { PlaneamentoFaseCard } from './get-planeamento-producao.contract';
 
 export type UpsertPlaneamentoFaseRequest = {
   encomendaArtigoFaseId: number;

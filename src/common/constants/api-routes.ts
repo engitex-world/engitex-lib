@@ -116,7 +116,7 @@ export const APIRoutes = {
   },
 
   [AppModules.PRODUCAO.PLANEAMENTO]: {
-    getPlaneamentoByGrupoMaquinas: `/${AppModules.PRODUCAO.PLANEAMENTO}`,
+    getPlaneamentoProducao: `/${AppModules.PRODUCAO.PLANEAMENTO}`,
     updatePlaneamentoFase: (id: number) => `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}`,
     inactivarPlaneamento: (id: number) => `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}`,
     updateObservacoes: (id: number) => `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}/observacoes`,

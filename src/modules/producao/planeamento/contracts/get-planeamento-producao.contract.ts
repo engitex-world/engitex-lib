@@ -7,11 +7,11 @@ import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 
 import { PlaneamentoFase } from '../types';
 
-export type GetPlaneamentoByGrupoMaquinasRequest = {
+export type GetPlaneamentoProducaoRequest = {
   grupoMaquinas?: MaquinaGrupo;
 };
 
-export type GetPlaneamentoByGrupoMaquinasResponse = {
+export type GetPlaneamentoProducaoResponse = {
   grupoMaquinas: MaquinaGrupo;
   maquinas: PlaneamentoMaquinaResponse[];
   fasesPorPlanear: PlaneamentoFaseCard[];
