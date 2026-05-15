@@ -7,15 +7,6 @@ export type UpdatePlaneamentoFaseRequest = {
   observacoesPlaneamento?: string;
 };
 
-export type UpdateFaseObservacoesRequest = {
-  observacoesPlaneamento?: string;
-};
-
-export type UpdateDatasPrevistasRequest = {
-  dataPrevistaInicio?: string;
-  dataPrevistaFim?: string;
-};
-
 export type InactivarFasePlaneamentoRequest = {
   encomendaArtigoFaseId: number;
 };
