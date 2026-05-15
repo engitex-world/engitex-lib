@@ -1,9 +1,10 @@
 import { PlaneamentoFaseCard } from './get-planeamento-producao.contract';
 
-export type UpsertPlaneamentoFaseRequest = {
+export type UpdatePlaneamentoFaseRequest = {
   encomendaArtigoFaseId: number;
-  maquinaId: number;
+  maquinaId?: number;
   posicaoDestino?: number;
+  observacoesPlaneamento?: string;
 };
 
 export type UpdateFaseObservacoesRequest = {
