@@ -1,6 +1,6 @@
 import { MaquinaGrupo } from '../enums';
 
-export const MAQUINA_GRUPO_ORDER: Record<MaquinaGrupo, number> = {
+const MAQUINA_GRUPO_ORDER: Record<MaquinaGrupo, number> = {
   [MaquinaGrupo.DESENROLAR]: 0,
   [MaquinaGrupo.ABRIR_MALHA]: 1,
   [MaquinaGrupo.FECHAR_MALHA]: 2,
@@ -13,3 +13,7 @@ export const MAQUINA_GRUPO_ORDER: Record<MaquinaGrupo, number> = {
   [MaquinaGrupo.REVISTA]: 9,
   [MaquinaGrupo.CALANDRA]: 10,
 };
+
+export function getMaquinaGrupoSortOrder(grupo: MaquinaGrupo): number {
+  return MAQUINA_GRUPO_ORDER[grupo];
+}
