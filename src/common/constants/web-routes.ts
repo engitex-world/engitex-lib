@@ -40,6 +40,7 @@ export const WebRoutes = {
     List: `${AppRoutes.Encomendas}`,
     Create: `${AppRoutes.Encomendas}/criar`,
     Edit: (id: number | string) => `${AppRoutes.Encomendas}/${id}/editar`,
+    OrdemServico: (id: number | string) => `${AppRoutes.Encomendas}/ordem-servico/${id}`,
   },
 
   Maquinas: {
