@@ -108,11 +108,7 @@ export const APIRoutes = {
   },
 
   [AppModules.PRODUCAO.EXECUCAO]: {
-    getFilaOperador: `/${AppModules.PRODUCAO.EXECUCAO}/fila`,
-    iniciarFase: `/${AppModules.PRODUCAO.EXECUCAO}/iniciar`,
-    terminarFase: `/${AppModules.PRODUCAO.EXECUCAO}/terminar`,
-    adicionarObservacao: (faseId: number) =>
-      `/${AppModules.PRODUCAO.EXECUCAO}/fase/${faseId}/observacao`,
+    updateFase: `/${AppModules.PRODUCAO.EXECUCAO}/fase`,
   },
 
   [AppModules.PRODUCAO.PLANEAMENTO]: {
