@@ -16,7 +16,6 @@ import {
 
 export type Encomenda = {
   numeroEncomenda: string;
-  ordemServico: string;
   cliente: Empresa;
   cor?: Cor;
   codigoCor: string;
@@ -32,6 +31,7 @@ export type Encomenda = {
 
 export type EncomendaArtigo = {
   id: number;
+  ordemServico: string;
   artigo: Artigo;
   gramagemCru?: number;
   gramagemFinal: number;
