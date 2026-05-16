@@ -52,6 +52,8 @@ export const APIRoutes = {
     create: `/${AppModules.ENCOMENDAS}`,
     lookup: `/${AppModules.ENCOMENDAS}/lookup`,
     getById: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+    getByEncomendaArtigoId: (encomendaArtigoId: number) =>
+      `/${AppModules.ENCOMENDAS}/ordem-servico/${encomendaArtigoId}`,
     update: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
     delete: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
   },
