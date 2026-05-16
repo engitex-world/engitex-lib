@@ -108,7 +108,7 @@ export const APIRoutes = {
   },
 
   [AppModules.PRODUCAO.EXECUCAO]: {
-    updateFase: `/${AppModules.PRODUCAO.EXECUCAO}/fase`,
+    updateFaseById: (id: number) => `/${AppModules.PRODUCAO.EXECUCAO}/fase/${id}`,
   },
 
   [AppModules.PRODUCAO.PLANEAMENTO]: {
