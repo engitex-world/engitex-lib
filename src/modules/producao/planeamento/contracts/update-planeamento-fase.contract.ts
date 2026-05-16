@@ -7,7 +7,7 @@ export type UpdatePlaneamentoFaseRequest = {
   observacoesPlaneamento?: string;
 };
 
-export type InactivarFasePlaneamentoRequest = {
+export type RemoverPlaneamentoFaseRequest = {
   encomendaArtigoFaseId: number;
 };
 

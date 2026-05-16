@@ -1,1 +1,1 @@
-export * from './planeamento-execucao.contract';
+export * from './update-planeamento-execucao-fase.contract';
