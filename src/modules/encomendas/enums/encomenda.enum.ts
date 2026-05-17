@@ -1,10 +1,9 @@
 export enum EncomendaEstado {
-  AGUARDA_PLANEAMENTO = 'AGUARDA_PLANEAMENTO',
-  PLANEADA = 'PLANEADA', // Pelo menos uma fase está planeada
-  EM_PRODUCAO = 'EM_PRODUCAO', // Pelo menos uma fase está em execução
-  PRODUCAO_CONCLUIDA = 'PRODUCAO_CONCLUIDA', // Todas as fases concluídas
-  CONCLUIDA = 'CONCLUIDA', // Entrega feita
-  CANCELADA = 'CANCELADA',
+  INICIADA = 'INICIADA',
+  EM_PRODUCAO = 'EM_PRODUCAO',
+  PRONTA_PARA_ENTREGA = 'PRONTA_PARA_ENTREGA',
+  PARCIALMENTE_ENTREGUE = 'PARCIALMENTE_ENTREGUE', // Pelo menos um artigo entregue, mas não todos
+  ENTREGUE = 'ENTREGUE', // Todos os artigos entregues
 }
 
 export enum EncomendaArtigoUnidade {
