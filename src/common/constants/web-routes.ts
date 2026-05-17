@@ -5,6 +5,7 @@ enum AppRoutes {
   Empresas = '/empresas',
   Encomendas = '/encomendas',
   Maquinas = '/maquinas',
+  Planeamento = '/planeamento',
   ProcessosProducao = '/processos-producao',
   Produtos = '/produtos',
   Laboratorio = '/laboratorio',
@@ -39,6 +40,7 @@ export const WebRoutes = {
     List: `${AppRoutes.Encomendas}`,
     Create: `${AppRoutes.Encomendas}/criar`,
     Edit: (id: number | string) => `${AppRoutes.Encomendas}/${id}/editar`,
+    OrdemServico: (ordemServico: string) => `${AppRoutes.Encomendas}/ordem-servico/${ordemServico}`,
   },
 
   Maquinas: {
@@ -72,6 +74,12 @@ export const WebRoutes = {
   },
 
   Dashboard: `${AppRoutes.Dashboard}`,
+
+  Planeamento: {
+    Kanban: `${AppRoutes.Planeamento}/kanban`,
+    Execucao: `${AppRoutes.Planeamento}/execucao`,
+    VistaGeral: `${AppRoutes.Planeamento}/vista-geral`,
+  },
 
   PortalCliente: {
     Inicio: `${AppRoutes.PortalCliente}`,

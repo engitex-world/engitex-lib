@@ -52,6 +52,8 @@ export const APIRoutes = {
     create: `/${AppModules.ENCOMENDAS}`,
     lookup: `/${AppModules.ENCOMENDAS}/lookup`,
     getById: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+    getByOrdemServico: (ordemServico: string) =>
+      `/${AppModules.ENCOMENDAS}/ordem-servico/${ordemServico}`,
     update: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
     delete: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
   },
@@ -64,13 +66,8 @@ export const APIRoutes = {
     dashboard: (empresaId: number) => `/${AppModules.PORTAL_CLIENTE}/dashboard/${empresaId}`,
   },
 
-  [AppModules.PROCESSOS_PRODUCAO]: {
-    list: `/${AppModules.PROCESSOS_PRODUCAO}`,
-    create: `/${AppModules.PROCESSOS_PRODUCAO}`,
-    lookup: `/${AppModules.PROCESSOS_PRODUCAO}/lookup`,
-    getById: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
-    update: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
-    delete: (id: number) => `/${AppModules.PROCESSOS_PRODUCAO}/${id}`,
+  [AppModules.DASHBOARDS]: {
+    getDashboardPlaneamento: `/${AppModules.DASHBOARDS}/planeamento`,
   },
 
   [AppModules.PRODUTOS]: {
@@ -88,6 +85,8 @@ export const APIRoutes = {
     getById: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/${id}`,
     Amostra: {
       getById: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}`,
+      getByCodigoCor: (codigoCor: string) =>
+        `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/codigo-cor/${codigoCor}`,
       updateProcessosTingimento: (id: number) =>
         `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}/processos-tingimento`,
       updateEnsaios: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}/ensaios`,
@@ -99,6 +98,25 @@ export const APIRoutes = {
       cloneFrom: (amostraId: number, sourceAmostraId: number) =>
         `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${amostraId}/clonar-de/${sourceAmostraId}`,
     },
+  },
+
+  [AppModules.PRODUCAO.PROCESSOS]: {
+    list: `/${AppModules.PRODUCAO.PROCESSOS}`,
+    create: `/${AppModules.PRODUCAO.PROCESSOS}`,
+    lookup: `/${AppModules.PRODUCAO.PROCESSOS}/lookup`,
+    getById: (id: number) => `/${AppModules.PRODUCAO.PROCESSOS}/${id}`,
+    update: (id: number) => `/${AppModules.PRODUCAO.PROCESSOS}/${id}`,
+    delete: (id: number) => `/${AppModules.PRODUCAO.PROCESSOS}/${id}`,
+  },
+
+  [AppModules.PRODUCAO.EXECUCAO]: {
+    updateFaseById: (id: number) => `/${AppModules.PRODUCAO.EXECUCAO}/fase/${id}`,
+  },
+
+  [AppModules.PRODUCAO.PLANEAMENTO]: {
+    getPlaneamentoProducao: `/${AppModules.PRODUCAO.PLANEAMENTO}`,
+    updatePlaneamentoFase: (id: number) => `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}`,
+    removerPlaneamentoFase: (id: number) => `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}`,
   },
 
   [AppModules.TINTURARIA.PROCESSOS_TINGIMENTO]: {

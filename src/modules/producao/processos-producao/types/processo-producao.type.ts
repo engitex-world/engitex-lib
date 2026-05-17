@@ -12,6 +12,5 @@ export type ProcessoProducaoFase = {
 
 export type ProcessoProducao = {
   nome: string;
-  descricao?: string;
   fases: ProcessoProducaoFase[];
 } & Common;

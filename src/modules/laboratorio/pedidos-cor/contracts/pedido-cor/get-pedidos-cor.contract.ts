@@ -1,4 +1,4 @@
-import { PedidoCorEstado } from '../enums';
+import { PedidoCorEstado } from '../../enums';
 
 export type GetPedidosCorRequest = {
   empresaId?: string;

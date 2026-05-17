@@ -1,26 +1,39 @@
 import { Common } from '@lib/common/types/base-entity.type';
 import { Artigo } from '@lib/modules/artigos/types';
+import { CadernoEncargos } from '@lib/modules/controlo-qualidade/types/caderno-encargos.type';
+import { Cor } from '@lib/modules/cores/types';
 import { Empresa } from '@lib/modules/empresas/types';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
-import { ProcessoProducaoFaseEstado } from '@lib/modules/processos-producao/enums';
-import { ProcessoProducao } from '@lib/modules/processos-producao/types';
+import { Maquina } from '@lib/modules/maquinas/types';
+import { ProcessoProducao } from '@lib/modules/producao/processos-producao/types';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
-import { EncomendaArtigoUnidade, EncomendaEstado } from '../enums/encomenda.enum';
+import {
+  EncomendaArtigoFaseEstado,
+  EncomendaArtigoUnidade,
+  EncomendaEstado,
+} from '../enums/encomenda.enum';
 
-export type EncomendaArtigoFase = {
-  id: number;
-  nome: string;
-  ordem: number;
-  grupoMaquinas: MaquinaGrupo;
-  obrigatoria: boolean;
+export type Encomenda = {
+  numeroEncomenda: string;
+  cliente: Empresa;
+  cor?: Cor;
+  codigoCor: string;
+  cadernoEncargos?: CadernoEncargos;
+  certificacoes?: Certificacao[];
+  artigos: EncomendaArtigo[];
   observacoes?: string;
-  estado?: ProcessoProducaoFaseEstado;
-};
+  isDevolucao: boolean;
+  encomendaAnterior?: Encomenda;
+  estado: EncomendaEstado;
+  dataEntregaPrevista?: Date;
+} & Common;
 
 export type EncomendaArtigo = {
   id: number;
+  ordemServico: string;
   artigo: Artigo;
+  encomenda?: Encomenda;
   gramagemCru?: number;
   gramagemFinal: number;
   larguraCru?: number;
@@ -33,15 +46,24 @@ export type EncomendaArtigo = {
   fases: EncomendaArtigoFase[];
 };
 
-export type Encomenda = {
-  numeroEncomenda: string;
-  cliente: Empresa;
-  codigoCor: string;
-  certificacoes?: Certificacao[];
-  artigos: EncomendaArtigo[];
-  observacoes?: string;
-  isDevolucao: boolean;
-  encomendaAnterior?: Encomenda;
-  estado: EncomendaEstado;
-  dataEntregaPrevista?: Date;
-} & Common;
+export type EncomendaArtigoFase = {
+  id: number;
+  nome: string;
+  ordem: number;
+  grupoMaquinas: MaquinaGrupo;
+  obrigatoria: boolean;
+  estado: EncomendaArtigoFaseEstado;
+  observacoesPlaneamento?: string;
+  observacoesOperario: FaseObservacaoOperario[];
+  dataInicioReal?: Date;
+  utilizadorInicio?: string;
+  dataFimReal?: Date;
+  utilizadorFim?: string;
+  maquinaExecutada?: Maquina;
+};
+
+export type FaseObservacaoOperario = {
+  data: Date;
+  utilizador: string;
+  observacao: string;
+};

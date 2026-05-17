@@ -7,6 +7,8 @@ export type CreateEncomendaRequest = {
   numeroEncomenda: string;
   clienteId: number;
   codigoCor: string;
+  corId?: number;
+  cadernoEncargosId?: number;
   certificacoes?: Certificacao[];
   isDevolucao?: boolean;
   encomendaAnteriorId?: number;

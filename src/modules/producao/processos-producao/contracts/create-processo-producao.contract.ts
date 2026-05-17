@@ -10,6 +10,5 @@ export type CreateProcessoProducaoFaseRequest = {
 
 export type CreateProcessoProducaoRequest = {
   nome: string;
-  descricao?: string;
   fases: CreateProcessoProducaoFaseRequest[];
 };
