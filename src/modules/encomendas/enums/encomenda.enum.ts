@@ -4,6 +4,7 @@ export enum EncomendaEstado {
   PRONTA_PARA_ENTREGA = 'PRONTA_PARA_ENTREGA',
   PARCIALMENTE_ENTREGUE = 'PARCIALMENTE_ENTREGUE', // Pelo menos um artigo entregue, mas não todos
   ENTREGUE = 'ENTREGUE', // Todos os artigos entregues
+  CANCELADA = 'CANCELADA',
 }
 
 export enum EncomendaArtigoUnidade {
