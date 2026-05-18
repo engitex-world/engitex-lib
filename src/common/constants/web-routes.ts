@@ -1,17 +1,15 @@
 enum AppRoutes {
   Login = '/login',
+  Dashboard = '/dashboard',
 
   Utilizadores = '/utilizadores',
   Empresas = '/empresas',
   Encomendas = '/encomendas',
   Maquinas = '/maquinas',
-  Planeamento = '/planeamento',
   ProcessosProducao = '/processos-producao',
   Produtos = '/produtos',
   Laboratorio = '/laboratorio',
   PortalCliente = '/portal-cliente',
-  Dashboard = '/dashboard',
-
   Armazem = '/armazem',
   ControloQualidade = '/controlo-qualidade',
   Manutencao = '/manutencao',
@@ -75,10 +73,10 @@ export const WebRoutes = {
 
   Dashboard: `${AppRoutes.Dashboard}`,
 
-  Planeamento: {
-    Kanban: `${AppRoutes.Planeamento}/kanban`,
-    Execucao: `${AppRoutes.Planeamento}/execucao`,
-    VistaGeral: `${AppRoutes.Planeamento}/vista-geral`,
+  Producao: {
+    Planeamento: `${AppRoutes.Producao}/planeamento`,
+    Execucao: `${AppRoutes.Producao}/execucao`,
+    VistaGeral: `${AppRoutes.Producao}/vista-geral`,
   },
 
   PortalCliente: {
