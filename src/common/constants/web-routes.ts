@@ -85,6 +85,4 @@ export const WebRoutes = {
   },
 
   ControloQualidade: `${AppRoutes.ControloQualidade}`,
-
-  Manutencao: `${AppRoutes.Manutencao}`,
 };
