@@ -86,7 +86,7 @@ export const WebRoutes = {
     Laboratorio: `${AppRoutes.PortalCliente}/laboratorio`,
   },
 
-  Manutencao: {
-    List: `${AppRoutes.Manutencao}`,
-  },
+  ControloQualidade: `${AppRoutes.ControloQualidade}`,
+
+  Manutencao: `${AppRoutes.Manutencao}`,
 };
