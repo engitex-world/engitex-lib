@@ -28,8 +28,8 @@ export type Produto = {
   fichaTecnicaData?: Date;
   fichaSeguranca?: Buffer | string;
   fichaSegurancaData?: Date;
-  gotsApprovalLetter?: Buffer | string;
-  gotsApprovalLetterData?: Date;
+  cartaAprovacaoGots?: Buffer | string;
+  cartaAprovacaoGotsData?: Date;
 } & Common;
 
 export type ProdutoFornecedor = {
