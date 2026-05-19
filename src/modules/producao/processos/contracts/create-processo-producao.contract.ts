@@ -5,7 +5,6 @@ export type CreateProcessoProducaoFaseRequest = {
   ordem: number;
   grupoMaquinas: MaquinaGrupo;
   obrigatoria?: boolean;
-  observacoes?: string;
 };
 
 export type CreateProcessoProducaoRequest = {
