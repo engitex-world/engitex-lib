@@ -1,12 +1,11 @@
-export type ProdutoAlertas = {
-  preco: ProdutoAlertaPrioridade;
-  fichaTecnica: ProdutoAlertaPrioridade;
-  fichaSeguranca: ProdutoAlertaPrioridade;
-  gotsApprovalLetter: ProdutoAlertaPrioridade;
+export type ProdutoAlertaItem = {
+  severity: 'high' | 'medium' | 'low';
+  descricao: string;
 };
 
-enum ProdutoAlertaPrioridade {
-  NO_ALERT = 0,
-  HIGH = 1,
-  MEDIUM = 2,
-}
+export type ProdutoAlertas = {
+  preco: ProdutoAlertaItem | null;
+  fichaTecnica: ProdutoAlertaItem | null;
+  fichaSeguranca: ProdutoAlertaItem | null;
+  gotsApprovalLetter: ProdutoAlertaItem | null;
+};
