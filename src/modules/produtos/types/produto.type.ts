@@ -44,3 +44,5 @@ export interface HistoricoPrecoFornecedor {
   preco: number;
   data: Date;
 }
+
+export type ProdutoDocumentoTipo = 'ficha-tecnica' | 'ficha-seguranca' | 'carta-aprovacao-gots';
