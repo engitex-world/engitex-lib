@@ -4,7 +4,6 @@ export type ProdutoAlertaItem = {
 };
 
 export type ProdutoAlertas = {
-  preco: ProdutoAlertaItem | null;
   fichaTecnica: ProdutoAlertaItem | null;
   fichaSeguranca: ProdutoAlertaItem | null;
   gotsApprovalLetter: ProdutoAlertaItem | null;
