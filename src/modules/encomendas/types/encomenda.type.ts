@@ -5,7 +5,7 @@ import { Cor } from '@lib/modules/cores/types';
 import { Empresa } from '@lib/modules/empresas/types';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { Maquina } from '@lib/modules/maquinas/types';
-import { ProcessoProducao } from '@lib/modules/producao/processos-producao/types';
+import { ProcessoProducao } from '@lib/modules/producao/processos/types';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
 import {

@@ -6,7 +6,6 @@ enum AppRoutes {
   Empresas = '/empresas',
   Encomendas = '/encomendas',
   Maquinas = '/maquinas',
-  ProcessosProducao = '/processos-producao',
   Produtos = '/produtos',
   Laboratorio = '/laboratorio',
   PortalCliente = '/portal-cliente',
@@ -71,9 +70,9 @@ export const WebRoutes = {
     Planeamento: `${AppRoutes.Producao}/planeamento`,
     Execucao: `${AppRoutes.Producao}/execucao`,
     Processos: {
-      List: `${AppRoutes.ProcessosProducao}`,
-      Create: `${AppRoutes.ProcessosProducao}/criar`,
-      Edit: (id: number | string) => `${AppRoutes.ProcessosProducao}/${id}/editar`,
+      List: `${AppRoutes.Producao}/processos`,
+      Create: `${AppRoutes.Producao}/processos/criar`,
+      Edit: (id: number | string) => `${AppRoutes.Producao}/processos/${id}/editar`,
     },
   },
 
