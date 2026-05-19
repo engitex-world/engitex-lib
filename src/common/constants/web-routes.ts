@@ -47,12 +47,6 @@ export const WebRoutes = {
     Edit: (id: number | string) => `${AppRoutes.Maquinas}/${id}/editar`,
   },
 
-  ProcessosProducao: {
-    List: `${AppRoutes.ProcessosProducao}`,
-    Create: `${AppRoutes.ProcessosProducao}/criar`,
-    Edit: (id: number | string) => `${AppRoutes.ProcessosProducao}/${id}/editar`,
-  },
-
   Produtos: {
     List: `${AppRoutes.Produtos}`,
     Create: `${AppRoutes.Produtos}/criar`,
@@ -76,7 +70,11 @@ export const WebRoutes = {
   Producao: {
     Planeamento: `${AppRoutes.Producao}/planeamento`,
     Execucao: `${AppRoutes.Producao}/execucao`,
-    VistaGeral: `${AppRoutes.Producao}/vista-geral`,
+    Processos: {
+      List: `${AppRoutes.ProcessosProducao}`,
+      Create: `${AppRoutes.ProcessosProducao}/criar`,
+      Edit: (id: number | string) => `${AppRoutes.ProcessosProducao}/${id}/editar`,
+    },
   },
 
   PortalCliente: {
