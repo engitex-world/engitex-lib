@@ -1,3 +1,5 @@
+import { ProdutoDocumentoTipo } from '@lib/modules/produtos/types';
+
 import { AppModules } from './app-modules';
 
 export const APIRoutes = {
@@ -75,6 +77,8 @@ export const APIRoutes = {
     create: `/${AppModules.PRODUTOS}`,
     lookup: `/${AppModules.PRODUTOS}/lookup`,
     getById: (id: number) => `/${AppModules.PRODUTOS}/${id}`,
+    getDocumento: (id: number, tipo: ProdutoDocumentoTipo) =>
+      `/${AppModules.PRODUTOS}/${id}/documentos/${tipo}`,
     update: (id: number) => `/${AppModules.PRODUTOS}/${id}`,
     delete: (id: number) => `/${AppModules.PRODUTOS}/${id}`,
   },
