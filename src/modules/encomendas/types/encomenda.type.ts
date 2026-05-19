@@ -55,9 +55,9 @@ export type EncomendaArtigoFase = {
   estado: EncomendaArtigoFaseEstado;
   observacoesPlaneamento?: string;
   observacoesOperario: FaseObservacaoOperario[];
-  dataInicioReal?: Date;
+  dataInicio?: Date;
   utilizadorInicio?: string;
-  dataFimReal?: Date;
+  dataFim?: Date;
   utilizadorFim?: string;
   maquinaExecutada?: Maquina;
 };
