@@ -23,27 +23,27 @@ export const GrupoCorantesPrefixo: Record<GrupoCorantes, string> = {
 };
 
 export type ProdutoDocumentoItem = {
-  label: string;
-  data?: Date;
+  key: string;
   tipo: ProdutoDocumentoTipo;
+  data?: Date;
 };
 
 export const getProdutoDocumentosType = (produto: Produto): ProdutoDocumentoItem[] => {
   return [
     {
-      label: 'ficha-tecnica',
-      data: produto.fichaTecnicaData,
+      key: 'fichaTecnica',
       tipo: 'ficha-tecnica',
+      data: produto.fichaTecnicaData,
     },
     {
-      label: 'ficha-seguranca',
-      data: produto.fichaSegurancaData,
+      key: 'fichaSeguranca',
       tipo: 'ficha-seguranca',
+      data: produto.fichaSegurancaData,
     },
     {
-      label: 'carta-aprovacao-gots',
-      data: produto.cartaAprovacaoGotsData,
+      key: 'cartaAprovacaoGots',
       tipo: 'carta-aprovacao-gots',
+      data: produto.cartaAprovacaoGotsData,
     },
   ];
 };
