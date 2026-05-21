@@ -79,6 +79,7 @@ export const WebRoutes = {
   PortalCliente: {
     Inicio: `${AppRoutes.PortalCliente}`,
     Laboratorio: `${AppRoutes.PortalCliente}/laboratorio`,
+    Encomendas: `${AppRoutes.PortalCliente}/encomendas`,
   },
 
   ControloQualidade: `${AppRoutes.ControloQualidade}`,
