@@ -1,17 +1,14 @@
 enum AppRoutes {
   Login = '/login',
+  Dashboard = '/dashboard',
 
   Utilizadores = '/utilizadores',
   Empresas = '/empresas',
   Encomendas = '/encomendas',
   Maquinas = '/maquinas',
-  Planeamento = '/planeamento',
-  ProcessosProducao = '/processos-producao',
   Produtos = '/produtos',
   Laboratorio = '/laboratorio',
   PortalCliente = '/portal-cliente',
-  Dashboard = '/dashboard',
-
   Armazem = '/armazem',
   ControloQualidade = '/controlo-qualidade',
   Manutencao = '/manutencao',
@@ -49,12 +46,6 @@ export const WebRoutes = {
     Edit: (id: number | string) => `${AppRoutes.Maquinas}/${id}/editar`,
   },
 
-  ProcessosProducao: {
-    List: `${AppRoutes.ProcessosProducao}`,
-    Create: `${AppRoutes.ProcessosProducao}/criar`,
-    Edit: (id: number | string) => `${AppRoutes.ProcessosProducao}/${id}/editar`,
-  },
-
   Produtos: {
     List: `${AppRoutes.Produtos}`,
     Create: `${AppRoutes.Produtos}/criar`,
@@ -75,14 +66,21 @@ export const WebRoutes = {
 
   Dashboard: `${AppRoutes.Dashboard}`,
 
-  Planeamento: {
-    Kanban: `${AppRoutes.Planeamento}/kanban`,
-    Execucao: `${AppRoutes.Planeamento}/execucao`,
-    VistaGeral: `${AppRoutes.Planeamento}/vista-geral`,
+  Producao: {
+    Planeamento: `${AppRoutes.Producao}/planeamento`,
+    Execucao: `${AppRoutes.Producao}/execucao`,
+    Processos: {
+      List: `${AppRoutes.Producao}/processos`,
+      Create: `${AppRoutes.Producao}/processos/criar`,
+      Edit: (id: number | string) => `${AppRoutes.Producao}/processos/${id}/editar`,
+    },
   },
 
   PortalCliente: {
     Inicio: `${AppRoutes.PortalCliente}`,
     Laboratorio: `${AppRoutes.PortalCliente}/laboratorio`,
+    Encomendas: `${AppRoutes.PortalCliente}/encomendas`,
   },
+
+  ControloQualidade: `${AppRoutes.ControloQualidade}`,
 };

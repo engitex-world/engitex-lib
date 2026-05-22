@@ -28,8 +28,8 @@ export type Produto = {
   fichaTecnicaData?: Date;
   fichaSeguranca?: Buffer | string;
   fichaSegurancaData?: Date;
-  gotsApprovalLetter?: Buffer | string;
-  gotsApprovalLetterData?: Date;
+  cartaAprovacaoGots?: Buffer | string;
+  cartaAprovacaoGotsData?: Date;
 } & Common;
 
 export type ProdutoFornecedor = {
@@ -44,3 +44,5 @@ export interface HistoricoPrecoFornecedor {
   preco: number;
   data: Date;
 }
+
+export type ProdutoDocumentoTipo = 'ficha-tecnica' | 'ficha-seguranca' | 'carta-aprovacao-gots';

@@ -1,4 +1,5 @@
 import { GrupoCorantes, ProdutoTipo } from '../enums/produto.enum';
+import { Produto, ProdutoDocumentoTipo } from '../types';
 
 export const ProdutoTipoPrefixo = {
   [ProdutoTipo.CORANTE]: 'C',
@@ -19,4 +20,30 @@ export const GrupoCorantesPrefixo: Record<GrupoCorantes, string> = {
   [GrupoCorantes.NATURAL]: 'NA',
   [GrupoCorantes.PIGMENTO]: 'PG',
   [GrupoCorantes.BASICO]: 'BA',
+};
+
+export type ProdutoDocumentoItem = {
+  key: string;
+  tipo: ProdutoDocumentoTipo;
+  data?: Date;
+};
+
+export const getProdutoDocumentosType = (produto: Produto): ProdutoDocumentoItem[] => {
+  return [
+    {
+      key: 'fichaTecnica',
+      tipo: 'ficha-tecnica',
+      data: produto.fichaTecnicaData,
+    },
+    {
+      key: 'fichaSeguranca',
+      tipo: 'ficha-seguranca',
+      data: produto.fichaSegurancaData,
+    },
+    {
+      key: 'cartaAprovacaoGots',
+      tipo: 'carta-aprovacao-gots',
+      data: produto.cartaAprovacaoGotsData,
+    },
+  ];
 };
