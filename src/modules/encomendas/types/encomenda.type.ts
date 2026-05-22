@@ -59,7 +59,7 @@ export type EncomendaArtigoFase = {
   utilizadorInicio?: string;
   dataFim?: Date;
   utilizadorFim?: string;
-  maquinaExecutada?: Maquina;
+  maquina?: Maquina;
 };
 
 export type FaseObservacaoOperario = {
