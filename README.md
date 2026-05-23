@@ -4,6 +4,10 @@
 
 This library contains common logic, utilities, constants, enums, and types shared between the frontend and backend of the Engitex platform. It is structured to be used as a Git submodule in both projects.
 
+# Installation
+
+Check README.md on engitex-fe and engitex-be to setup the project and use this lib.
+
 ## Structure
 
 - **`common/`** – Cross-cutting concerns: constants and shared utilities
