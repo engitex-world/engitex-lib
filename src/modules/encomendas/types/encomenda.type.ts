@@ -33,7 +33,7 @@ export type EncomendaArtigo = {
   id: number;
   ordemServico: string;
   artigo: Artigo;
-  encomenda?: Encomenda;
+  encomenda: Encomenda;
   gramagemCru?: number;
   gramagemFinal: number;
   larguraCru?: number;
