@@ -8,7 +8,7 @@ const MAQUINA_GRUPO_ORDER: Record<MaquinaGrupo, number> = {
   [MaquinaGrupo.SECADOR]: 4,
   [MaquinaGrupo.LAMINA]: 5,
   [MaquinaGrupo.CARDA]: 6,
-  [MaquinaGrupo.RAMULA]: 7,
+  [MaquinaGrupo.RAMOLA]: 7,
   [MaquinaGrupo.SANFOR]: 8,
   [MaquinaGrupo.REVISTA]: 9,
   [MaquinaGrupo.CALANDRA]: 10,

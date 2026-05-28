@@ -8,7 +8,7 @@ export enum MaquinaGrupo {
   SECADOR = 'SECADOR',
   LAMINA = 'LAMINA',
   CARDA = 'CARDA',
-  RAMULA = 'RAMULA',
+  RAMOLA = 'RAMOLA',
   SANFOR = 'SANFOR',
   REVISTA = 'REVISTA',
   CALANDRA = 'CALANDRA',
