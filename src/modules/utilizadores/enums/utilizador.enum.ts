@@ -9,4 +9,5 @@ export enum UtilizadorFuncao {
   COMERCIAL = 'COMERCIAL',
   CONTABILIDADE = 'CONTABILIDADE',
   CLIENTE = 'CLIENTE',
+  DEMO = 'DEMO',
 }
