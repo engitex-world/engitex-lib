@@ -8,4 +8,4 @@ export type GetEmpresasRequest = {
   relacao?: EmpresaRelacao;
 };
 
-export type GetEmpresasResposne = Promise<Paginated<Empresa>>;
+export type GetEmpresasResponse = Promise<Paginated<Empresa>>;
