@@ -40,10 +40,18 @@ export const WebRoutes = {
     OrdemServico: (ordemServico: string) => `${AppRoutes.Encomendas}/ordem-servico/${ordemServico}`,
   },
 
-  Maquinas: {
-    List: `${AppRoutes.Maquinas}`,
-    Create: `${AppRoutes.Maquinas}/criar`,
-    Edit: (id: number | string) => `${AppRoutes.Maquinas}/${id}/editar`,
+  Manutencao: {
+    Intervencao: {
+      List: `${AppRoutes.Manutencao}`,
+      Create: `${AppRoutes.Manutencao}/criar`,
+      Detail: (id: number | string) => `${AppRoutes.Manutencao}/${id}`,
+      Edit: (id: number | string) => `${AppRoutes.Manutencao}/${id}/editar`,
+    },
+    Maquinas: {
+      List: `${AppRoutes.Maquinas}`,
+      Create: `${AppRoutes.Maquinas}/criar`,
+      Edit: (id: number | string) => `${AppRoutes.Maquinas}/${id}/editar`,
+    },
   },
 
   Produtos: {
