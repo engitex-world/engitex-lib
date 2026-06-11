@@ -49,12 +49,12 @@ export const APIRoutes = {
     delete: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
   },
 
-  [AppModules.MANUTENCAO]: {
-    list: `/${AppModules.MANUTENCAO}/intervencoes`,
-    create: `/${AppModules.MANUTENCAO}/intervencoes`,
-    getById: (id: number) => `/${AppModules.MANUTENCAO}/intervencoes/${id}`,
-    update: (id: number) => `/${AppModules.MANUTENCAO}/intervencoes/${id}`,
-    cancel: (id: number) => `/${AppModules.MANUTENCAO}/intervencoes/${id}/cancelar`,
+  [AppModules.MANUTENCAO.INTERVENCOES]: {
+    list: `/${AppModules.MANUTENCAO.INTERVENCOES}`,
+    create: `/${AppModules.MANUTENCAO.INTERVENCOES}`,
+    getById: (id: number) => `/${AppModules.MANUTENCAO.INTERVENCOES}/${id}`,
+    update: (id: number) => `/${AppModules.MANUTENCAO.INTERVENCOES}/${id}`,
+    delete: (id: number) => `/${AppModules.MANUTENCAO.INTERVENCOES}/${id}`,
   },
 
   [AppModules.ENCOMENDAS]: {
