@@ -2,7 +2,7 @@ import { ManutencaoCausa, ManutencaoPrioridade, ManutencaoTipo } from '../enums'
 
 export type CreateManutencaoIntervencaoRequest = {
   maquinaId: number;
-  tecnicoId?: number;
+  responsavelId?: number;
   descricao: string;
   tipo?: ManutencaoTipo;
   causa?: ManutencaoCausa;
