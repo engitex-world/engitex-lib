@@ -5,7 +5,6 @@ import { ManutencaoIntervencao } from '../types/manutencao.type';
 
 export type GetManutencaoIntervencoesRequest = {
   maquinaId?: number;
-  tecnicoId?: number;
   estado?: ManutencaoEstado;
 };
 
