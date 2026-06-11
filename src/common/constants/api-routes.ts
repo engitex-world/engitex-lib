@@ -25,8 +25,9 @@ export const APIRoutes = {
 
   [AppModules.UTILIZADORES]: {
     list: `/${AppModules.UTILIZADORES}`,
-    create: `/${AppModules.UTILIZADORES}`,
+    lookup: `/${AppModules.UTILIZADORES}/lookup`,
     getById: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
+    create: `/${AppModules.UTILIZADORES}`,
     update: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
     delete: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
   },
@@ -42,9 +43,9 @@ export const APIRoutes = {
 
   [AppModules.MAQUINAS]: {
     list: `/${AppModules.MAQUINAS}`,
-    create: `/${AppModules.MAQUINAS}`,
     lookup: `/${AppModules.MAQUINAS}/lookup`,
     getById: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
+    create: `/${AppModules.MAQUINAS}`,
     update: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
     delete: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
   },
