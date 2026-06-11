@@ -1,3 +1,2 @@
-export * from './create-anomalia.contract';
-export * from './create-intervencao.contract';
-export * from './get-intervencoes.contract';
+export * from './create-manutencao-intervencao.contract';
+export * from './get-manutencao-intervencoes.contract';

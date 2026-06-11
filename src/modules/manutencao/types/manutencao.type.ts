@@ -1,17 +1,18 @@
 import { Common } from '@lib/common/types';
 import { Maquina } from '@lib/modules/maquinas/types';
 
-import { ManutencaoCausa, ManutencaoPrioridade, ManutencaoTipo } from '../enums';
+import { ManutencaoCausa, ManutencaoEstado, ManutencaoPrioridade, ManutencaoTipo } from '../enums';
 
 export type ManutencaoIntervencao = {
   maquina: Maquina;
   maquinaId: number;
-  tecnicoId?: number;
-  tipo: ManutencaoTipo;
-  causa: ManutencaoCausa;
-  prioridade: ManutencaoPrioridade;
+  responsavelId?: number;
   descricao: string;
-  dataPlaneada: Date;
-  dataInicio: Date;
+  tipo?: ManutencaoTipo;
+  causa?: ManutencaoCausa;
+  prioridade?: ManutencaoPrioridade;
+  estado: ManutencaoEstado;
+  dataPlaneada?: Date;
+  dataInicio?: Date;
   dataFim?: Date;
 } & Common;
