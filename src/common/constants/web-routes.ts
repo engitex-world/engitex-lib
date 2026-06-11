@@ -20,44 +20,13 @@ enum AppRoutes {
 export const WebRoutes = {
   Login: `${AppRoutes.Login}`,
 
-  Utilizadores: {
-    List: `${AppRoutes.Utilizadores}`,
-    Create: `${AppRoutes.Utilizadores}/criar`,
-    Edit: (id: number | string) => `${AppRoutes.Utilizadores}/${id}/editar`,
-    UpdatePassword: `${AppRoutes.Utilizadores}/perfil/password`,
-  },
-
-  Empresas: {
-    List: `${AppRoutes.Empresas}`,
-    Create: `${AppRoutes.Empresas}/criar`,
-    Edit: (id: number | string) => `${AppRoutes.Empresas}/${id}/editar`,
-  },
+  Dashboard: `${AppRoutes.Dashboard}`,
 
   Encomendas: {
     List: `${AppRoutes.Encomendas}`,
     Create: `${AppRoutes.Encomendas}/criar`,
     Edit: (id: number | string) => `${AppRoutes.Encomendas}/${id}/editar`,
     OrdemServico: (ordemServico: string) => `${AppRoutes.Encomendas}/ordem-servico/${ordemServico}`,
-  },
-
-  Manutencao: {
-    Intervencao: {
-      List: `${AppRoutes.Manutencao}/intervencoes`,
-      Create: `${AppRoutes.Manutencao}/intervencoes/criar`,
-      Detail: (id: number | string) => `${AppRoutes.Manutencao}/intervencoes/${id}`,
-      Edit: (id: number | string) => `${AppRoutes.Manutencao}/intervencoes/${id}/editar`,
-    },
-    Maquinas: {
-      List: `${AppRoutes.Manutencao}/maquinas`,
-      Create: `${AppRoutes.Manutencao}/maquinas/criar`,
-      Edit: (id: number | string) => `${AppRoutes.Manutencao}/maquinas/${id}/editar`,
-    },
-  },
-
-  Produtos: {
-    List: `${AppRoutes.Produtos}`,
-    Create: `${AppRoutes.Produtos}/criar`,
-    Edit: (id: number | string) => `${AppRoutes.Produtos}/${id}/editar`,
   },
 
   Laboratorio: {
@@ -72,8 +41,6 @@ export const WebRoutes = {
     },
   },
 
-  Dashboard: `${AppRoutes.Dashboard}`,
-
   Producao: {
     Planeamento: `${AppRoutes.Producao}/planeamento`,
     Execucao: `${AppRoutes.Producao}/execucao`,
@@ -84,11 +51,45 @@ export const WebRoutes = {
     },
   },
 
+  Produtos: {
+    List: `${AppRoutes.Produtos}`,
+    Create: `${AppRoutes.Produtos}/criar`,
+    Edit: (id: number | string) => `${AppRoutes.Produtos}/${id}/editar`,
+  },
+
+  ControloQualidade: `${AppRoutes.ControloQualidade}`,
+
+  Manutencao: {
+    Intervencao: {
+      List: `${AppRoutes.Manutencao}/intervencoes`,
+      Create: `${AppRoutes.Manutencao}/intervencoes/criar`,
+      Detail: (id: number | string) => `${AppRoutes.Manutencao}/intervencoes/${id}`,
+      Edit: (id: number | string) => `${AppRoutes.Manutencao}/intervencoes/${id}/editar`,
+    },
+  },
+
+  Maquinas: {
+    List: `${AppRoutes.Maquinas}`,
+    Create: `${AppRoutes.Maquinas}/criar`,
+    Edit: (id: number | string) => `${AppRoutes.Maquinas}/${id}/editar`,
+  },
+
+  Empresas: {
+    List: `${AppRoutes.Empresas}`,
+    Create: `${AppRoutes.Empresas}/criar`,
+    Edit: (id: number | string) => `${AppRoutes.Empresas}/${id}/editar`,
+  },
+
+  Utilizadores: {
+    List: `${AppRoutes.Utilizadores}`,
+    Create: `${AppRoutes.Utilizadores}/criar`,
+    Edit: (id: number | string) => `${AppRoutes.Utilizadores}/${id}/editar`,
+    UpdatePassword: `${AppRoutes.Utilizadores}/perfil/password`,
+  },
+
   PortalCliente: {
     Inicio: `${AppRoutes.PortalCliente}`,
     Laboratorio: `${AppRoutes.PortalCliente}/laboratorio`,
     Encomendas: `${AppRoutes.PortalCliente}/encomendas`,
   },
-
-  ControloQualidade: `${AppRoutes.ControloQualidade}`,
 };
