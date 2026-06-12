@@ -60,7 +60,7 @@ Engitex é uma aplicação SaaS para pequenas e médias empresas da indústria t
 
 ### 1. Sempre Começar pela Análise
 
-Antes de propor qualquer solução, **sempre analisar o projeto existente** e procurar padrões em:
+Antes de propor qualquer solução, **REFERIR SEMPRE e analisar o projeto existente** e procurar padrões em:
 
 - `.github/instructions` (código-be.instructions.md, código-fe.instructions.md)
 - Estrutura dos módulos backend
