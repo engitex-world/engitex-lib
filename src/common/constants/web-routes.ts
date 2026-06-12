@@ -62,12 +62,10 @@ export const WebRoutes = {
   Manutencao: {
     List: `${AppRoutes.Manutencao}`,
     Create: `${AppRoutes.Manutencao}/criar`,
-    Detail: (id: number | string) => `${AppRoutes.Manutencao}/${id}`,
     Edit: (id: number | string) => `${AppRoutes.Manutencao}/${id}/editar`,
     /* Intervencao: {
       List: `${AppRoutes.Manutencao}/intervencoes`,
       Create: `${AppRoutes.Manutencao}/intervencoes/criar`,
-      Detail: (id: number | string) => `${AppRoutes.Manutencao}/intervencoes/${id}`,
       Edit: (id: number | string) => `${AppRoutes.Manutencao}/intervencoes/${id}/editar`,
     }, */
   },
