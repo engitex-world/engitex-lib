@@ -29,6 +29,13 @@ export const WebRoutes = {
     OrdemServico: (ordemServico: string) => `${AppRoutes.Encomendas}/ordem-servico/${ordemServico}`,
   },
 
+  Armazem: {
+    MalhaCru: {
+      List: `${AppRoutes.Armazem}/malha-em-cru`,
+      Create: `${AppRoutes.Armazem}/malha-em-cru/criar`,
+    },
+  },
+
   Laboratorio: {
     PedidosCor: {
       List: `${AppRoutes.Laboratorio}/pedidos-cor`,

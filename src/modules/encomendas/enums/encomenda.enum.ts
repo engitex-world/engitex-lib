@@ -7,11 +7,6 @@ export enum EncomendaEstado {
   CANCELADA = 'CANCELADA',
 }
 
-export enum EncomendaArtigoUnidade {
-  PECA = 'PEÇAS',
-  KG = 'KG',
-}
-
 export enum EncomendaArtigoFaseEstado {
   AGUARDA_PLANEAMENTO = 'AGUARDA_PLANEAMENTO',
   PLANEADA = 'PLANEADA',

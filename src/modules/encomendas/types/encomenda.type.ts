@@ -1,4 +1,5 @@
 import { Common } from '@lib/common/types/base-entity.type';
+import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 import { Artigo } from '@lib/modules/artigos/types';
 import { CadernoEncargos } from '@lib/modules/controlo-qualidade/types/caderno-encargos.type';
 import { Cor } from '@lib/modules/cores/types';
@@ -8,11 +9,7 @@ import { Maquina } from '@lib/modules/maquinas/types';
 import { ProcessoProducao } from '@lib/modules/producao/processos/types';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
-import {
-  EncomendaArtigoFaseEstado,
-  EncomendaArtigoUnidade,
-  EncomendaEstado,
-} from '../enums/encomenda.enum';
+import { EncomendaArtigoFaseEstado, EncomendaEstado } from '../enums/encomenda.enum';
 
 export type Encomenda = {
   numeroEncomenda: string;
@@ -42,7 +39,7 @@ export type EncomendaArtigo = {
   lugarArmazem?: string;
   observacoes?: string;
   quantidade: number;
-  unidade: EncomendaArtigoUnidade;
+  unidade: ArtigoUnidade;
   fases: EncomendaArtigoFase[];
 };
 

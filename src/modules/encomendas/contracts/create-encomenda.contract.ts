@@ -1,7 +1,8 @@
+import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
-import { EncomendaArtigoUnidade, EncomendaEstado } from '../enums';
+import { EncomendaEstado } from '../enums';
 
 export type CreateEncomendaRequest = {
   numeroEncomenda: string;
@@ -28,7 +29,7 @@ export type CreateEncomendaArtigoRequest = {
   lugarArmazem?: string;
   observacoes?: string;
   quantidade: number;
-  unidade: EncomendaArtigoUnidade;
+  unidade: ArtigoUnidade;
   fases: CreateEncomendaArtigoFaseRequest[];
 };
 
