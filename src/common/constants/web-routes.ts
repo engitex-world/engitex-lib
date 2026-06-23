@@ -33,6 +33,7 @@ export const WebRoutes = {
     MalhaCru: {
       List: `${AppRoutes.Armazem}/malha-em-cru`,
       Create: `${AppRoutes.Armazem}/malha-em-cru/criar`,
+      Edit: (id: number | string) => `${AppRoutes.Armazem}/malha-em-cru/${id}/editar`,
     },
   },
 
