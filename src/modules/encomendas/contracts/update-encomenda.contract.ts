@@ -20,6 +20,7 @@ export type UpdateEncomendaRequest = {
 export type UpdateEncomendaArtigoRequest = {
   id?: number;
   artigoId?: number;
+  malhaCruArtigoId?: number;
   gramagemCru?: number;
   gramagemFinal?: number;
   larguraCru?: number;

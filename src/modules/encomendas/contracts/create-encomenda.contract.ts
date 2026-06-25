@@ -21,6 +21,7 @@ export type CreateEncomendaRequest = {
 
 export type CreateEncomendaArtigoRequest = {
   artigoId: number;
+  malhaCruArtigoId?: number;
   gramagemCru?: number;
   gramagemFinal: number;
   larguraCru?: number;
