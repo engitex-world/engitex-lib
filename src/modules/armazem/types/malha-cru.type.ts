@@ -2,6 +2,7 @@ import { Common } from '@lib/common/types';
 import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 import { Artigo } from '@lib/modules/artigos/types';
 import { Empresa } from '@lib/modules/empresas/types';
+import { EncomendaArtigo } from '@lib/modules/encomendas/types/encomenda.type';
 
 export type MalhaCru = {
   numeroEntrada: string;
@@ -25,6 +26,7 @@ export type MalhaCruArtigo = {
 export type MalhaCruArtigoEncomenda = {
   id: number;
   encomendaArtigoId: number;
+  encomendaArtigo?: EncomendaArtigo;
   quantidade: number;
   observacoes?: string;
   criadoEm: Date;
