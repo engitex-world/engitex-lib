@@ -3,6 +3,6 @@ export type CreateEncomendaArtigoPartidaRequest = {
   quantidade: number;
 };
 
-export type SplitEncomendaArtigoPartidasRequest = {
+export type CreateEncomendaArtigoPartidasRequest = {
   partidas: CreateEncomendaArtigoPartidaRequest[];
 };
