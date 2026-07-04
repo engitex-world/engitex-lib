@@ -3,6 +3,7 @@ import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
 import { EncomendaEstado } from '../enums';
+import { CreateEncomendaArtigoPartidaRequest } from './create-encomenda-artigo-partidas.contract';
 
 export type UpdateEncomendaRequest = {
   numeroEncomenda?: string;
@@ -30,6 +31,7 @@ export type UpdateEncomendaArtigoRequest = {
   observacoes?: string;
   quantidade?: number;
   unidade?: ArtigoUnidade;
+  partidas?: CreateEncomendaArtigoPartidaRequest[];
   fases?: UpdateEncomendaArtigoFaseRequest[];
 };
 

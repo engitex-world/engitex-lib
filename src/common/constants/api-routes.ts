@@ -72,6 +72,7 @@ export const APIRoutes = {
   [AppModules.ARMAZEM.MALHA_CRU]: {
     list: `/${AppModules.ARMAZEM.MALHA_CRU}`,
     create: `/${AppModules.ARMAZEM.MALHA_CRU}`,
+    lookup: `/${AppModules.ARMAZEM.MALHA_CRU}/lookup`,
     getById: (id: number) => `/${AppModules.ARMAZEM.MALHA_CRU}/${id}`,
     allocateEncomenda: (id: number) => `/${AppModules.ARMAZEM.MALHA_CRU}/artigos/${id}/associar`,
     update: (id: number) => `/${AppModules.ARMAZEM.MALHA_CRU}/artigos/${id}`,
