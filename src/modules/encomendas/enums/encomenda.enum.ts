@@ -15,3 +15,8 @@ export enum EncomendaArtigoFaseEstado {
   CANCELADA = 'CANCELADA',
   BLOQUEADA = 'BLOQUEADA',
 }
+
+export enum EncomendaArtigoPartidaMotivo {
+  GESTAO_PLANEAMENTO = 'GESTAO_PLANEAMENTO',
+  NAO_CONFORMIDADE_PRODUCAO = 'NAO_CONFORMIDADE_PRODUCAO',
+}
