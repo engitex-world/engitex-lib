@@ -13,6 +13,9 @@ export type AuthUtilizador = {
   redefinirPassword: boolean;
   funcoes: UtilizadorFuncao[];
   empresaId: number;
+  organizacao: {
+    subDominio: string;
+  };
 };
 
 export type AuthSession = {
