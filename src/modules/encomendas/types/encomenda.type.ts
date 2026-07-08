@@ -9,7 +9,11 @@ import { Maquina } from '@lib/modules/maquinas/types';
 import { ProcessoProducao } from '@lib/modules/producao/processos/types';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
-import { EncomendaArtigoFaseEstado, EncomendaEstado } from '../enums/encomenda.enum';
+import {
+  DevolucaoMotivo,
+  EncomendaArtigoFaseEstado,
+  EncomendaEstado,
+} from '../enums/encomenda.enum';
 
 export type Encomenda = {
   numeroEncomenda: string;
@@ -20,8 +24,8 @@ export type Encomenda = {
   certificacoes?: Certificacao[];
   artigos: EncomendaArtigo[];
   observacoes?: string;
-  isDevolucao: boolean;
-  encomendaAnterior?: Encomenda;
+  devolucaoEncomenda?: Encomenda;
+  devolucaoMotivo?: DevolucaoMotivo;
   estado: EncomendaEstado;
   dataEntregaPrevista?: Date;
 } & Common;
@@ -49,6 +53,8 @@ export type EncomendaArtigoFase = {
   ordem: number;
   grupoMaquinas: MaquinaGrupo;
   obrigatoria: boolean;
+  quantidadeFinal?: number;
+  unidade?: ArtigoUnidade;
   estado: EncomendaArtigoFaseEstado;
   observacoesPlaneamento?: string;
   observacoesOperario: FaseObservacaoOperario[];
