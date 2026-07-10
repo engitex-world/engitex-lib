@@ -7,7 +7,7 @@ export type ProducaoFase = {
   tempoPreparacao: number;
   tempoKg?: number;
   tempoCiclo?: number;
-};
+} & Common;
 
 export type ProcessoProducaoFase = {
   producaoFaseId: number;
