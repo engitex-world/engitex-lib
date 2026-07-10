@@ -1,10 +1,8 @@
-import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
-
 export type CreateProcessoProducaoFaseRequest = {
-  nome: string;
+  producaoFaseId: number;
   ordem: number;
-  grupoMaquinas: MaquinaGrupo;
   obrigatoria?: boolean;
+  observacoes?: string;
 };
 
 export type CreateProcessoProducaoRequest = {

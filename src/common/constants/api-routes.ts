@@ -130,6 +130,7 @@ export const APIRoutes = {
     list: `/${AppModules.PRODUCAO.PROCESSOS}`,
     create: `/${AppModules.PRODUCAO.PROCESSOS}`,
     lookup: `/${AppModules.PRODUCAO.PROCESSOS}/lookup`,
+    lookupFases: `/${AppModules.PRODUCAO.PROCESSOS}/fases/lookup`,
     getById: (id: number) => `/${AppModules.PRODUCAO.PROCESSOS}/${id}`,
     update: (id: number) => `/${AppModules.PRODUCAO.PROCESSOS}/${id}`,
     delete: (id: number) => `/${AppModules.PRODUCAO.PROCESSOS}/${id}`,

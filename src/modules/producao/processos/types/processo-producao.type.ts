@@ -1,10 +1,18 @@
 import { Common } from '@lib/common/types/base-entity.type';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 
-export type ProcessoProducaoFase = {
+export type ProducaoFase = {
   nome: string;
-  ordem: number;
   grupoMaquinas: MaquinaGrupo;
+  tempoPreparacao: number;
+  tempoKg?: number;
+  tempoCiclo?: number;
+};
+
+export type ProcessoProducaoFase = {
+  producaoFaseId: number;
+  producaoFase: ProducaoFase;
+  ordem: number;
   obrigatoria: boolean;
   observacoes?: string;
   processoProducaoId: number;

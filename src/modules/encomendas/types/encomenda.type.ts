@@ -53,6 +53,7 @@ export type EncomendaArtigoFase = {
   nome: string;
   ordem: number;
   grupoMaquinas: MaquinaGrupo;
+  duracaoEstimada?: number;
   obrigatoria: boolean;
   quantidadeFinal?: number;
   unidade?: ArtigoUnidade;
