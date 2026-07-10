@@ -24,7 +24,7 @@ export type Encomenda = {
   certificacoes?: Certificacao[];
   artigos: EncomendaArtigo[];
   observacoes?: string;
-  devolucaoEncomenda?: Encomenda;
+  isDevolucao?: boolean;
   devolucaoMotivo?: DevolucaoMotivo;
   estado: EncomendaEstado;
   dataEntregaPrevista?: Date;
@@ -35,6 +35,7 @@ export type EncomendaArtigo = {
   ordemServico: string;
   artigo: Artigo;
   encomenda: Encomenda;
+  devolucaoEncomendaArtigoId?: number;
   gramagemCru?: number;
   gramagemFinal: number;
   larguraCru?: number;

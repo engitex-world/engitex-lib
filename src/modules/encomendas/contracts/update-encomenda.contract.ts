@@ -2,15 +2,13 @@ import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
-import { DevolucaoMotivo, EncomendaEstado } from '../enums';
+import { EncomendaEstado } from '../enums';
 
 export type UpdateEncomendaRequest = {
   numeroEncomenda?: string;
   clienteId?: number;
   codigoCor?: string;
   certificacoes?: Certificacao[];
-  devolucaoEncomendaId?: number;
-  devolucaoMotivo?: DevolucaoMotivo;
   observacoes?: string;
   estado?: EncomendaEstado;
   dataEntregaPrevista?: Date;

@@ -25,6 +25,8 @@ export const WebRoutes = {
   Encomendas: {
     List: `${AppRoutes.Encomendas}`,
     Create: `${AppRoutes.Encomendas}/criar`,
+    CreateDevolucao: `${AppRoutes.Encomendas}/devolucoes/criar`,
+
     Edit: (id: number | string) => `${AppRoutes.Encomendas}/${id}/editar`,
     OrdemServico: (ordemServico: string) => `${AppRoutes.Encomendas}/ordem-servico/${ordemServico}`,
   },
