@@ -1,0 +1,31 @@
+export enum ManutencaoTipo {
+  PREVENCAO = 'PREVENCAO',
+  MELHORIA = 'MELHORIA',
+  CORRETIVA = 'CORRETIVA',
+}
+
+export enum ManutencaoPrioridade {
+  BAIXA = 'BAIXA',
+  MEDIA = 'MEDIA',
+  ALTA = 'ALTA',
+  CRITICA = 'CRITICA',
+}
+
+export enum ManutencaoEstado {
+  AGUARDA_PLANEAMENTO = 'AGUARDA_PLANEAMENTO',
+  PLANEADA = 'PLANEADA',
+  EM_EXECUCAO = 'EM_EXECUCAO',
+  EM_ANALISE = 'EM_ANALISE',
+  CONCLUIDA = 'CONCLUIDA',
+  CANCELADA = 'CANCELADA',
+}
+
+export enum ManutencaoCausa {
+  MECANICA = 'MECANICA',
+  ELETRICA = 'ELETRICA',
+  HIDRAULICA = 'HIDRAULICA',
+  SOFTWARE = 'SOFTWARE',
+  SENSOR = 'SENSOR',
+  DESGASTE = 'DESGASTE',
+  OUTRA = 'OUTRA',
+}

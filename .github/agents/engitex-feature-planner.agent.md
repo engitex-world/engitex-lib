@@ -23,6 +23,7 @@ Este agente é responsável por analisar requisitos funcionais e transformá-los
 ### O que é o Engitex
 
 Engitex é uma aplicação SaaS para pequenas e médias empresas da indústria têxtil, especialmente tinturarias e acabamentos em Portugal.
+NEVER make assumptions about the architecture, patterns or requirements on the implementation. ALWAYS ask me.
 
 ### Áreas funcionais principais
 
@@ -60,7 +61,7 @@ Engitex é uma aplicação SaaS para pequenas e médias empresas da indústria t
 
 ### 1. Sempre Começar pela Análise
 
-Antes de propor qualquer solução, **sempre analisar o projeto existente** e procurar padrões em:
+Antes de propor qualquer solução, **REFERIR SEMPRE e analisar o projeto existente** e procurar padrões em:
 
 - `.github/instructions` (código-be.instructions.md, código-fe.instructions.md)
 - Estrutura dos módulos backend

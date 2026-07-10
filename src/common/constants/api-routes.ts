@@ -25,8 +25,9 @@ export const APIRoutes = {
 
   [AppModules.UTILIZADORES]: {
     list: `/${AppModules.UTILIZADORES}`,
-    create: `/${AppModules.UTILIZADORES}`,
+    lookup: `/${AppModules.UTILIZADORES}/lookup`,
     getById: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
+    create: `/${AppModules.UTILIZADORES}`,
     update: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
     delete: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
   },
@@ -42,11 +43,19 @@ export const APIRoutes = {
 
   [AppModules.MAQUINAS]: {
     list: `/${AppModules.MAQUINAS}`,
-    create: `/${AppModules.MAQUINAS}`,
     lookup: `/${AppModules.MAQUINAS}/lookup`,
     getById: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
+    create: `/${AppModules.MAQUINAS}`,
     update: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
     delete: (id: number) => `/${AppModules.MAQUINAS}/${id}`,
+  },
+
+  [AppModules.MANUTENCAO.INTERVENCOES]: {
+    list: `/${AppModules.MANUTENCAO.INTERVENCOES}`,
+    create: `/${AppModules.MANUTENCAO.INTERVENCOES}`,
+    getById: (id: number) => `/${AppModules.MANUTENCAO.INTERVENCOES}/${id}`,
+    update: (id: number) => `/${AppModules.MANUTENCAO.INTERVENCOES}/${id}`,
+    delete: (id: number) => `/${AppModules.MANUTENCAO.INTERVENCOES}/${id}`,
   },
 
   [AppModules.ENCOMENDAS]: {
@@ -54,10 +63,23 @@ export const APIRoutes = {
     create: `/${AppModules.ENCOMENDAS}`,
     lookup: `/${AppModules.ENCOMENDAS}/lookup`,
     getById: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+    createArtigoPartidas: (encomendaArtigoId: number) =>
+      `/${AppModules.ENCOMENDAS}/artigos/${encomendaArtigoId}/partidas`,
+    createDevolucao: `/${AppModules.ENCOMENDAS}/devolucoes`,
+    lookupOrdensServico: `/${AppModules.ENCOMENDAS}/lookup/ordens-servico`,
     getByOrdemServico: (ordemServico: string) =>
       `/${AppModules.ENCOMENDAS}/ordem-servico/${ordemServico}`,
     update: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
     delete: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+  },
+
+  [AppModules.ARMAZEM.MALHA_CRU]: {
+    list: `/${AppModules.ARMAZEM.MALHA_CRU}`,
+    create: `/${AppModules.ARMAZEM.MALHA_CRU}`,
+    lookup: `/${AppModules.ARMAZEM.MALHA_CRU}/lookup`,
+    getById: (id: number) => `/${AppModules.ARMAZEM.MALHA_CRU}/${id}`,
+    allocateEncomenda: (id: number) => `/${AppModules.ARMAZEM.MALHA_CRU}/artigos/${id}/associar`,
+    update: (id: number) => `/${AppModules.ARMAZEM.MALHA_CRU}/artigos/${id}`,
   },
 
   [AppModules.ORGANIZACAO]: {

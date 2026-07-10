@@ -6,8 +6,14 @@ export const AppModules = {
   DASHBOARDS: 'dashboards',
   EMPRESAS: 'empresas',
   ENCOMENDAS: 'encomendas',
+  ARMAZEM: {
+    MALHA_CRU: 'armazem/malha-em-cru',
+  },
   LABORATORIO: {
     PEDIDOS_COR: 'laboratorio/pedidos-cor',
+  },
+  MANUTENCAO: {
+    INTERVENCOES: 'manutencao/intervencoes',
   },
   MAQUINAS: 'maquinas',
   ORGANIZACAO: 'organizacao',

@@ -1,4 +1,5 @@
 import { Common } from '@lib/common/types/base-entity.type';
+import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 import { Artigo } from '@lib/modules/artigos/types';
 import { CadernoEncargos } from '@lib/modules/controlo-qualidade/types/caderno-encargos.type';
 import { Cor } from '@lib/modules/cores/types';
@@ -9,8 +10,8 @@ import { ProcessoProducao } from '@lib/modules/producao/processos/types';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
 import {
+  DevolucaoMotivo,
   EncomendaArtigoFaseEstado,
-  EncomendaArtigoUnidade,
   EncomendaEstado,
 } from '../enums/encomenda.enum';
 
@@ -23,8 +24,8 @@ export type Encomenda = {
   certificacoes?: Certificacao[];
   artigos: EncomendaArtigo[];
   observacoes?: string;
-  isDevolucao: boolean;
-  encomendaAnterior?: Encomenda;
+  isDevolucao?: boolean;
+  devolucaoMotivo?: DevolucaoMotivo;
   estado: EncomendaEstado;
   dataEntregaPrevista?: Date;
 } & Common;
@@ -34,6 +35,7 @@ export type EncomendaArtigo = {
   ordemServico: string;
   artigo: Artigo;
   encomenda: Encomenda;
+  devolucaoEncomendaArtigoId?: number;
   gramagemCru?: number;
   gramagemFinal: number;
   larguraCru?: number;
@@ -42,7 +44,7 @@ export type EncomendaArtigo = {
   lugarArmazem?: string;
   observacoes?: string;
   quantidade: number;
-  unidade: EncomendaArtigoUnidade;
+  unidade: ArtigoUnidade;
   fases: EncomendaArtigoFase[];
 };
 
@@ -52,6 +54,8 @@ export type EncomendaArtigoFase = {
   ordem: number;
   grupoMaquinas: MaquinaGrupo;
   obrigatoria: boolean;
+  quantidadeFinal?: number;
+  unidade?: ArtigoUnidade;
   estado: EncomendaArtigoFaseEstado;
   observacoesPlaneamento?: string;
   observacoesOperario: FaseObservacaoOperario[];

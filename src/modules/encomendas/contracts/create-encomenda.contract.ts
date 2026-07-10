@@ -1,7 +1,8 @@
+import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
-import { EncomendaArtigoUnidade, EncomendaEstado } from '../enums';
+import { EncomendaEstado } from '../enums';
 
 export type CreateEncomendaRequest = {
   numeroEncomenda: string;
@@ -10,8 +11,6 @@ export type CreateEncomendaRequest = {
   corId?: number;
   cadernoEncargosId?: number;
   certificacoes?: Certificacao[];
-  isDevolucao?: boolean;
-  encomendaAnteriorId?: number;
   observacoes?: string;
   estado?: EncomendaEstado;
   dataEntregaPrevista?: Date;
@@ -20,6 +19,7 @@ export type CreateEncomendaRequest = {
 
 export type CreateEncomendaArtigoRequest = {
   artigoId: number;
+  malhaCruArtigoId?: number;
   gramagemCru?: number;
   gramagemFinal: number;
   larguraCru?: number;
@@ -28,7 +28,7 @@ export type CreateEncomendaArtigoRequest = {
   lugarArmazem?: string;
   observacoes?: string;
   quantidade: number;
-  unidade: EncomendaArtigoUnidade;
+  unidade: ArtigoUnidade;
   fases: CreateEncomendaArtigoFaseRequest[];
 };
 
