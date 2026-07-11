@@ -10,8 +10,8 @@ import { ProcessoProducao } from '@lib/modules/producao/processos/types';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
 import {
-  DevolucaoMotivo,
   EncomendaArtigoFaseEstado,
+  EncomendaDevolucaoMotivo,
   EncomendaEstado,
 } from '../enums/encomenda.enum';
 
@@ -25,7 +25,7 @@ export type Encomenda = {
   artigos: EncomendaArtigo[];
   observacoes?: string;
   isDevolucao?: boolean;
-  devolucaoMotivo?: DevolucaoMotivo;
+  devolucaoMotivo?: EncomendaDevolucaoMotivo;
   estado: EncomendaEstado;
   dataEntregaPrevista?: Date;
 } & Common;
