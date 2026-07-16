@@ -66,7 +66,15 @@ export const WebRoutes = {
     Edit: (id: number | string) => `${AppRoutes.Produtos}/${id}/editar`,
   },
 
-  ControloQualidade: `${AppRoutes.ControloQualidade}`,
+  ControloQualidade: {
+    Resultados: `${AppRoutes.ControloQualidade}`,
+    CadernosEncargos: {
+      List: `${AppRoutes.ControloQualidade}/cadernos-encargos`,
+      Create: `${AppRoutes.ControloQualidade}/cadernos-encargos/criar`,
+      Edit: (id: number | string) =>
+        `${AppRoutes.ControloQualidade}/cadernos-encargos/${id}/editar`,
+    },
+  },
 
   Manutencao: {
     List: `${AppRoutes.Manutencao}`,
