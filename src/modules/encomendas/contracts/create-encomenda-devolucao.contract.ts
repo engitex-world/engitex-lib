@@ -1,10 +1,10 @@
-import { DevolucaoMotivo } from '../enums';
+import { EncomendaDevolucaoMotivo } from '../enums';
 
 import { CreateEncomendaArtigoRequest, CreateEncomendaRequest } from './create-encomenda.contract';
 
 export type CreateEncomendaDevolucaoRequest = CreateEncomendaRequest & {
   isDevolucao: boolean;
-  devolucaoMotivo: DevolucaoMotivo;
+  devolucaoMotivo: EncomendaDevolucaoMotivo;
   artigos: CreateEncomendaDevolucaoArtigoRequest[];
 };
 
