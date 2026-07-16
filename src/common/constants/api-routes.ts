@@ -35,6 +35,7 @@ export const APIRoutes = {
   [AppModules.CONTROLO_QUALIDADE]: {
     create: `/${AppModules.CONTROLO_QUALIDADE}`,
     lookup: `/${AppModules.CONTROLO_QUALIDADE}/lookup`,
+    lookupNormas: `/${AppModules.CONTROLO_QUALIDADE}/normas/lookup`,
   },
 
   [AppModules.CORES]: {
