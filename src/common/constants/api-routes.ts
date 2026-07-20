@@ -34,6 +34,7 @@ export const APIRoutes = {
 
   [AppModules.CONTROLO_QUALIDADE]: {
     CadernosEncargos: {
+      list: `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos`,
       create: `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos`,
       lookup: `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos/lookup`,
       getById: (id: number) => `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos/${id}`,
