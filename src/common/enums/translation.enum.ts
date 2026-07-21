@@ -11,6 +11,7 @@ export enum TranslatedEnums {
   COR_TOM = 'cor-tom-tipo',
   CORANTE_LABORATORIO_UNIDADE = 'corante-laboratorio-unidade-tipo',
   CORANTE_TINTURARIA_UNIDADE = 'corante-tinturaria-unidade-tipo',
+  CONTROLO_QUALIDADE_RESULTADO_ESTADO = 'controlo-qualidade-resultado-estado-tipo',
   EMPRESAS_RELACAO = 'empresa-relacao-tipo',
   FRASES_RISCO = 'frases-de-risco-tipo',
   LAB_DIP_ESTADO = 'lab-dip-estado-tipo',

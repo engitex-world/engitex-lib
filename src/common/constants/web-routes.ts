@@ -67,7 +67,10 @@ export const WebRoutes = {
   },
 
   ControloQualidade: {
-    Resultados: `${AppRoutes.ControloQualidade}`,
+    Resultados: {
+      List: `${AppRoutes.ControloQualidade}`,
+      Create: `${AppRoutes.ControloQualidade}/criar`,
+    },
     CadernosEncargos: {
       List: `${AppRoutes.ControloQualidade}/cadernos-encargos`,
       Create: `${AppRoutes.ControloQualidade}/cadernos-encargos/criar`,

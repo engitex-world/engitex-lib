@@ -40,6 +40,11 @@ export const APIRoutes = {
       getById: (id: number) => `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos/${id}`,
       update: (id: number) => `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos/${id}`,
     },
+    Resultados: {
+      list: `/${AppModules.CONTROLO_QUALIDADE}/resultados`,
+      create: `/${AppModules.CONTROLO_QUALIDADE}/resultados`,
+      getById: (id: number) => `/${AppModules.CONTROLO_QUALIDADE}/resultados/${id}`,
+    },
     Normas: {
       lookup: `/${AppModules.CONTROLO_QUALIDADE}/normas/lookup`,
     },
