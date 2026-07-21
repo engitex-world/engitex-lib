@@ -1,10 +1,10 @@
 import { Paginated } from '@lib/common/types';
 
-import { ControloQualidadeResultado } from '../types';
+import { ControloQualidadeResultado, ControloQualidadeResultadoEstado } from '../types';
 
 export type GetControloQualidadeResultadosRequest = {
   encomendaArtigoId?: number;
-  estado?: string;
+  estado?: ControloQualidadeResultadoEstado;
 };
 
 export type GetControloQualidadeResultadosResponse = Promise<Paginated<ControloQualidadeResultado>>;
