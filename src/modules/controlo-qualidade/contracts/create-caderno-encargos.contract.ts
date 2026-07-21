@@ -4,6 +4,7 @@ export type CreateCadernoEncargosNormaRequest = {
   normaQualidadeId: number;
   valorMin?: number;
   valorMax?: number;
+  observacoes?: string;
 };
 
 export type CreateCadernoEncargosRequest = {
