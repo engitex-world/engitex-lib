@@ -1,12 +1,14 @@
-export type CreateControloQualidadeResultadoNormaRequest = {
-  cadernoEncargosNormaId: number;
-  valorMedido: number;
-};
+import { ControloQualidadeResultadoNormaValor } from '../types';
 
 export type CreateControloQualidadeResultadoRequest = {
   encomendaArtigoId: number;
   encomendaArtigoFaseId: number;
   cadernoEncargosId?: number;
   observacoes?: string;
-  normas: CreateControloQualidadeResultadoNormaRequest[];
+  resultados: CreateControloQualidadeResultadoNormaRequest[];
+};
+
+export type CreateControloQualidadeResultadoNormaRequest = {
+  cadernoEncargosNormaId: number;
+  valor: ControloQualidadeResultadoNormaValor;
 };

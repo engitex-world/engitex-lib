@@ -1,9 +1,13 @@
 import { Certificacao } from '@lib/modules/produtos/enums';
 
+import { CadernoEncargosNormaRegra, NormaQualidadeCampoReferencia } from '../enums';
+
 export type CreateCadernoEncargosNormaRequest = {
   normaQualidadeId: number;
-  valorMin?: number;
-  valorMax?: number;
+  regra: CadernoEncargosNormaRegra;
+  valorMinimo?: number;
+  valorMaximo?: number;
+  campoReferencia?: NormaQualidadeCampoReferencia;
   observacoes?: string;
 };
 

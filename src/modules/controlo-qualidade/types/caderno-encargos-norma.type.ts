@@ -1,8 +1,13 @@
+import { CadernoEncargosNormaRegra, NormaQualidadeCampoReferencia } from '../enums';
+
 import { NormaQualidade } from './norma-qualidade.type';
 
 export type CadernoEncargosNorma = {
+  id: number;
   normaQualidade: NormaQualidade;
-  valorMin?: number;
-  valorMax?: number;
+  regra: CadernoEncargosNormaRegra;
+  valorMinimo?: number;
+  valorMaximo?: number;
+  campoReferencia?: NormaQualidadeCampoReferencia;
   observacoes?: string;
 };

@@ -7,6 +7,7 @@ import { CadernoEncargosNorma } from './caderno-encargos-norma.type';
 
 export type CadernoEncargos = {
   nome: string;
+  versao: number;
   cliente: Empresa;
   certificacoes?: Certificacao[];
   normas: CadernoEncargosNorma[];
