@@ -1,6 +1,7 @@
 import { Paginated } from '@lib/common/types';
 
-import { ControloQualidadeResultado, ControloQualidadeResultadoEstado } from '../types';
+import { ControloQualidadeResultadoEstado } from '../enums';
+import { ControloQualidadeResultado } from '../types';
 
 export type GetControloQualidadeResultadosRequest = {
   encomendaArtigoId?: number;
