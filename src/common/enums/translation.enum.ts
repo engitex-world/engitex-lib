@@ -13,6 +13,7 @@ export enum TranslatedEnums {
   CORANTE_TINTURARIA_UNIDADE = 'corante-tinturaria-unidade-tipo',
   CADERNO_ENCARGOS_NORMA_REGRA = 'caderno-encargos-norma-regra-tipo',
   CONTROLO_QUALIDADE_RESULTADO_ESTADO = 'controlo-qualidade-resultado-estado-tipo',
+  NORMA_QUALIDADE_CAMPO_REFERENCIA = 'norma-qualidade-campo-referencia-tipo',
   EMPRESAS_RELACAO = 'empresa-relacao-tipo',
   FRASES_RISCO = 'frases-de-risco-tipo',
   LAB_DIP_ESTADO = 'lab-dip-estado-tipo',
