@@ -50,6 +50,7 @@ export type EncomendaArtigo = {
 
 export type EncomendaArtigoFase = {
   id: number;
+  producaoFaseId?: number;
   nome: string;
   ordem: number;
   grupoMaquinas: MaquinaGrupo;

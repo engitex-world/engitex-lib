@@ -1,5 +1,4 @@
 import { ArtigoUnidade } from '@lib/modules/artigos/enums';
-import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
 import { EncomendaEstado } from '../enums';
@@ -33,9 +32,8 @@ export type CreateEncomendaArtigoRequest = {
 };
 
 export type CreateEncomendaArtigoFaseRequest = {
-  nome: string;
+  producaoFaseId: number;
   ordem: number;
-  grupoMaquinas: MaquinaGrupo;
   obrigatoria?: boolean;
   observacoes?: string;
 };
