@@ -1,11 +1,8 @@
-import { Paginated } from '@lib/common/types';
+import { PlaneamentoFaseCard } from '@lib/modules/producao/planeamento/contracts';
 
-import { ControloQualidadeResultadoEstado } from '../enums';
-import { ControloQualidadeResultado } from '../types';
+export type GetControloQualidadeResultadosRequest = Record<string, never>;
 
-export type GetControloQualidadeResultadosRequest = {
-  encomendaArtigoId?: number;
-  estado?: ControloQualidadeResultadoEstado;
+export type GetControloQualidadeResultadosResponse = {
+  testesEmExecucao: PlaneamentoFaseCard[];
+  testesPorIniciar: PlaneamentoFaseCard[];
 };
-
-export type GetControloQualidadeResultadosResponse = Promise<Paginated<ControloQualidadeResultado>>;
