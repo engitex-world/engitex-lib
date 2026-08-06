@@ -1,4 +1,4 @@
-import { Common } from '@lib/common/types/base-entity.type';
+import { AuditEntity } from '@lib/common/types/audit-entity.type';
 import { EmpresaRelacao } from '@lib/modules/empresas/enums/empresa.enum';
 import { Pais } from '@lib/modules/organizacao/enums/pais.enum';
 import { UtilizadorFuncao } from '@lib/modules/utilizadores/enums/utilizador.enum';
@@ -6,6 +6,7 @@ import { UtilizadorFuncao } from '@lib/modules/utilizadores/enums/utilizador.enu
 import { Utilizador } from '../../utilizadores/types';
 
 export type Empresa = {
+  id: number;
   nome: string;
   sigla: string;
   relacao: EmpresaRelacao;
@@ -16,7 +17,7 @@ export type Empresa = {
   nif: string;
   gestor?: Utilizador;
   contactos: EmpresaContacto[];
-} & Common;
+} & AuditEntity;
 
 export type EmpresaContacto = {
   id: number;

@@ -1,4 +1,4 @@
-import { Common } from '@lib/common/types/base-entity.type';
+import { AuditEntity } from '@lib/common/types/audit-entity.type';
 import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 import { Artigo } from '@lib/modules/artigos/types';
 import { CadernoEncargos } from '@lib/modules/controlo-qualidade/types/caderno-encargos.type';
@@ -16,6 +16,7 @@ import {
 } from '../enums/encomenda.enum';
 
 export type Encomenda = {
+  id: number;
   numeroEncomenda: string;
   cliente: Empresa;
   cor?: Cor;
@@ -28,7 +29,7 @@ export type Encomenda = {
   devolucaoMotivo?: EncomendaDevolucaoMotivo;
   estado: EncomendaEstado;
   dataEntregaPrevista?: Date;
-} & Common;
+} & AuditEntity;
 
 export type EncomendaArtigo = {
   id: number;

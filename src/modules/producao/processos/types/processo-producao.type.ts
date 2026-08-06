@@ -1,13 +1,14 @@
-import { Common } from '@lib/common/types/base-entity.type';
+import { AuditEntity } from '@lib/common/types/audit-entity.type';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 
 export type ProducaoFase = {
+  id: number;
   nome: string;
   grupoMaquinas: MaquinaGrupo;
   tempoPreparacao: number;
   tempoKg?: number;
   tempoCiclo?: number;
-} & Common;
+} & AuditEntity;
 
 export type ProcessoProducaoFase = {
   producaoFaseId: number;
@@ -19,6 +20,7 @@ export type ProcessoProducaoFase = {
 };
 
 export type ProcessoProducao = {
+  id: number;
   nome: string;
   fases: ProcessoProducaoFase[];
-} & Common;
+} & AuditEntity;

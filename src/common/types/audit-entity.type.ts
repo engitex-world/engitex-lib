@@ -1,5 +1,4 @@
-export type Common = {
-  id: number;
+export type AuditEntity = {
   criadoEm: Date;
   criadoPor: string;
   atualizadoEm?: Date;

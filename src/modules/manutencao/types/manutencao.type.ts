@@ -1,9 +1,10 @@
-import { Common } from '@lib/common/types';
+import { AuditEntity } from '@lib/common/types';
 import { Maquina } from '@lib/modules/maquinas/types';
 
 import { ManutencaoCausa, ManutencaoEstado, ManutencaoPrioridade, ManutencaoTipo } from '../enums';
 
 export type ManutencaoIntervencao = {
+  id: number;
   maquina: Maquina;
   maquinaId: number;
   responsavelId?: number;
@@ -15,4 +16,4 @@ export type ManutencaoIntervencao = {
   dataPlaneada?: Date;
   dataInicio?: Date;
   dataFim?: Date;
-} & Common;
+} & AuditEntity;

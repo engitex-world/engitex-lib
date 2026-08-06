@@ -1,7 +1,8 @@
-import { Common } from '@lib/common/types/base-entity.type';
+import { AuditEntity } from '@lib/common/types/audit-entity.type';
 import { UtilizadorFuncao } from '@lib/modules/utilizadores/enums/utilizador.enum';
 
 export type Utilizador = {
+  id: number;
   nome: string;
   nomeUtilizador: string;
   password: string;
@@ -10,4 +11,4 @@ export type Utilizador = {
   funcoes: UtilizadorFuncao[];
   redefinirPassword: boolean;
   empresaId?: number;
-} & Common;
+} & AuditEntity;

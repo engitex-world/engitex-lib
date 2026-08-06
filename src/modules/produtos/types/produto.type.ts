@@ -1,4 +1,4 @@
-import { Common } from '@lib/common/types/base-entity.type';
+import { AuditEntity } from '@lib/common/types/audit-entity.type';
 import { Empresa } from '@lib/modules/empresas/types';
 import { Certificacao } from '@lib/modules/produtos/enums/certificacao.enum';
 import { FrasesSeguranca } from '@lib/modules/produtos/enums/frases-seguranca.enum';
@@ -9,6 +9,7 @@ import {
 } from '@lib/modules/produtos/enums/produto.enum';
 
 export type Produto = {
+  id: number;
   codigo: string;
   nome: string;
   nomeComercial: string;
@@ -30,7 +31,7 @@ export type Produto = {
   fichaSegurancaData?: Date;
   cartaAprovacaoGots?: Buffer | string;
   cartaAprovacaoGotsData?: Date;
-} & Common;
+} & AuditEntity;
 
 export type ProdutoFornecedor = {
   id: number;

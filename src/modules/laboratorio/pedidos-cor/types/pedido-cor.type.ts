@@ -1,4 +1,4 @@
-import { Common } from '@lib/common/types/base-entity.type';
+import { AuditEntity } from '@lib/common/types/audit-entity.type';
 import { ArtigoFibra } from '@lib/modules/artigos/enums/artigo-fibra.enum';
 import { PedidoCorEstado } from '@lib/modules/laboratorio/pedidos-cor/enums/pedido-cor.enum';
 import { Certificacao } from '@lib/modules/produtos/enums/certificacao.enum';
@@ -15,6 +15,7 @@ import { Produto } from '../../../produtos/types';
 import { LabDip } from './lab-dip.type';
 
 export type PedidoCor = {
+  id: number;
   cliente: Empresa;
   referenciaPedido?: string;
   artigo: Artigo;
@@ -25,7 +26,7 @@ export type PedidoCor = {
   dataEntregaPrevista?: Date;
   estado: PedidoCorEstado;
   observacoes?: string;
-} & Common;
+} & AuditEntity;
 
 export type PedidoCorAmostra = {
   id: number;

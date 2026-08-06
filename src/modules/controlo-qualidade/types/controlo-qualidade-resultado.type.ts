@@ -1,4 +1,4 @@
-import { Common } from '@lib/common/types/base-entity.type';
+import { AuditEntity } from '@lib/common/types/audit-entity.type';
 
 import { ControloQualidadeResultadoEstado } from '../enums';
 
@@ -6,13 +6,14 @@ import { CadernoEncargosNorma } from './caderno-encargos-norma.type';
 import { CadernoEncargos } from './caderno-encargos.type';
 
 export type ControloQualidadeResultado = {
+  id: number;
   encomendaArtigoId: number;
   encomendaArtigoFaseId: number;
   cadernoEncargos?: CadernoEncargos;
   estado: ControloQualidadeResultadoEstado;
   observacoes?: string;
   resultados: ControloQualidadeResultadoNorma[];
-} & Common;
+} & AuditEntity;
 
 export type ControloQualidadeResultadoNorma = {
   cadernoEncargosNorma: CadernoEncargosNorma;
