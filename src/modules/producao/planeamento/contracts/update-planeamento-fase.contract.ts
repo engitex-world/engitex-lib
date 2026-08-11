@@ -1,3 +1,6 @@
+import { ResponseError } from '@lib/common/enums';
+import { ServerActionResult } from '@lib/common/types/server-action.type';
+
 import { PlaneamentoFaseCard } from './get-planeamento-producao.contract';
 
 export type UpdatePlaneamentoFaseRequest = {
@@ -11,4 +14,4 @@ export type RemoverPlaneamentoFaseRequest = {
   encomendaArtigoFaseId: number;
 };
 
-export type UpdatePlaneamentoFaseResponse = PlaneamentoFaseCard;
+export type UpdatePlaneamentoFaseResponse = ServerActionResult<PlaneamentoFaseCard, ResponseError>;

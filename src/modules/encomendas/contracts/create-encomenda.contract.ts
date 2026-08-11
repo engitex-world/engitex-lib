@@ -1,7 +1,10 @@
+import { ResponseError } from '@lib/common/enums';
+import { ServerActionResult } from '@lib/common/types/server-action.type';
 import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
 import { EncomendaEstado } from '../enums';
+import { Encomenda } from '../types';
 
 export type CreateEncomendaRequest = {
   numeroEncomenda: string;
@@ -37,3 +40,5 @@ export type CreateEncomendaArtigoFaseRequest = {
   obrigatoria?: boolean;
   observacoes?: string;
 };
+
+export type CreateEncomendaResponse = ServerActionResult<Encomenda, ResponseError>;

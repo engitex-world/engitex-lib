@@ -1,3 +1,5 @@
+import { ResponseError } from '@lib/common/enums';
+import { ServerActionResult } from '@lib/common/types/server-action.type';
 import {
   Encomenda,
   EncomendaArtigo,
@@ -9,12 +11,6 @@ import { PlaneamentoFase } from '../types';
 
 export type GetPlaneamentoProducaoRequest = {
   grupoMaquinas?: MaquinaGrupo;
-};
-
-export type GetPlaneamentoProducaoResponse = {
-  grupoMaquinas: MaquinaGrupo;
-  maquinas: PlaneamentoMaquinaResponse[];
-  fasesPorPlanear: PlaneamentoFaseCard[];
 };
 
 export type PlaneamentoFaseCard = {
@@ -34,3 +30,14 @@ export type PlaneamentoMaquinaResponse = {
   faseEmExecucao?: PlaneamentoFaseCard;
   fila: PlaneamentoFaseCard[];
 };
+
+export type GetPlaneamentoProducaoResponseData = {
+  grupoMaquinas: MaquinaGrupo;
+  maquinas: PlaneamentoMaquinaResponse[];
+  fasesPorPlanear: PlaneamentoFaseCard[];
+};
+
+export type GetPlaneamentoProducaoResponse = ServerActionResult<
+  GetPlaneamentoProducaoResponseData,
+  ResponseError
+>;

@@ -1,3 +1,8 @@
+import { ResponseError } from '@lib/common/enums';
+import { ServerActionResult } from '@lib/common/types/server-action.type';
+
+import { PedidoCorAmostra } from '../../types';
+
 /**
  * Request para clonar fórmula de uma amostra de cor para outra.
  *
@@ -8,3 +13,5 @@
 export type CloneAmostraRequest = {
   ensaioIds?: number[];
 };
+
+export type CloneAmostraResponse = ServerActionResult<PedidoCorAmostra, ResponseError>;

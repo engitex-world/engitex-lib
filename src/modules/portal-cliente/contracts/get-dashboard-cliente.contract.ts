@@ -8,4 +8,7 @@ export type GetDashboardClienteResponseData = {
   };
 };
 
-export type GetDashboardClienteResponse = ServerActionResult<GetDashboardClienteResponseData, ResponseError>;
+export type GetDashboardClienteResponse = ServerActionResult<
+  GetDashboardClienteResponseData,
+  ResponseError
+>;

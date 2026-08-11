@@ -1,5 +1,6 @@
 import { ResponseError } from '@lib/common/enums';
 import { Paginated, ServerActionResult } from '@lib/common/types';
+
 import { Certificacao } from '../enums/certificacao.enum';
 import { ProdutoSubTipo, ProdutoTipo } from '../enums/produto.enum';
 import { Produto, ProdutoAlertas } from '../types';

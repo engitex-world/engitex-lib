@@ -8,4 +8,7 @@ export type UpdateProcessoProducaoRequest = Partial<CreateProcessoProducaoReques
 
 export type UpdateProcessoProducaoResponse = ServerActionResult<ProcessoProducao, ResponseError>;
 
-export type InactivateProcessoProducaoResponse = ServerActionResult<{ success: boolean }, ResponseError>;
+export type InactivateProcessoProducaoResponse = ServerActionResult<
+  { success: boolean },
+  ResponseError
+>;
