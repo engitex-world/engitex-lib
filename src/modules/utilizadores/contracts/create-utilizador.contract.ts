@@ -11,4 +11,4 @@ export type CreateUtilizadorRequest = {
   ativo?: boolean;
 };
 
-export type CreateUtilizadorResponse = Utilizador & { codigoValidacao: string };
+export type CreateUtilizadorResponse = { utilizador: Utilizador; codigoValidacao: string };
