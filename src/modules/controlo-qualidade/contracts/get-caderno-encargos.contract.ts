@@ -1,5 +1,4 @@
-import { ResponseError } from '@lib/common/enums';
-import { Paginated, ServerActionResult } from '@lib/common/types';
+import { Paginated } from '@lib/common/types';
 
 import { CadernoEncargos } from '../types';
 
@@ -8,7 +7,4 @@ export type GetCadernoEncargosRequest = {
   clienteId?: number;
 };
 
-export type GetCadernoEncargosResponse = ServerActionResult<
-  Paginated<CadernoEncargos>,
-  ResponseError
->;
+export type GetCadernoEncargosResponse = Promise<Paginated<CadernoEncargos>>;
