@@ -1,5 +1,5 @@
 ---
-name: Engitex Lib Coder
+name: Lib Coder
 description: Specialized agent for the engitex-lib shared library. Creates and maintains contracts, enums, shared types, and validation constants that serve as the boundary contract between frontend and backend.
 target: vscode
 tools:
@@ -27,6 +27,15 @@ tools:
 user-invocable: true
 disable-model-invocation: false
 argument-hint: 'Describe the contract, enum, type, or shared constant you want to create or modify.'
+handoffs:
+  - agent: Backend Coder
+    label: Implementar no Backend
+    prompt: |
+      Os contratos e tipos foram implementados na engitex-lib.
+      Implementa agora o backend: entities, repositories, use-cases e DTOs.
+      Segue as instruções em .github/instructions/code-be.instructions.md.
+      Após concluíres, sugere o handoff para o Frontend Coder.
+    send: false
 ---
 
 # Engitex Lib Coder

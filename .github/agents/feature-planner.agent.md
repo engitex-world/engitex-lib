@@ -1,5 +1,5 @@
 ---
-name: Feature Planner
+name: feature-planner
 description: Agente responsável por transformar requisitos funcionais em planos técnicos detalhados e incrementais para novas features do Engitex, garantindo alinhamento com a arquitetura existente, padrões do projeto, engitex-lib, backend NestJS, frontend Next.js e boas práticas de maintainability.
 tools:
   # Leitura e análise (permitido)
@@ -22,6 +22,14 @@ tools:
   - '!run_in_terminal'
   - '!send_to_terminal'
   - '!vscode_renameSymbol'
+handoffs:
+  - agent: Lib Coder
+    label: Implementar na Lib
+    prompt: |
+      Implementa os contratos, enums e tipos definidos no plano acima na engitex-lib.
+      Segue as instruções em .github/instructions/code-lib.instructions.md.
+      Após concluíres, sugere o handoff para o Backend Coder.
+    send: false
 ---
 
 # Agente de Planeamento de Features - Engitex
