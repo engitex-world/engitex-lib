@@ -2,26 +2,8 @@
 name: Feature Planner
 description: Agente responsável por transformar requisitos funcionais em planos técnicos detalhados e incrementais para novas features do Engitex, garantindo alinhamento com a arquitetura existente, padrões do projeto, engitex-lib, backend NestJS, frontend Next.js e boas práticas de maintainability.
 tools:
-  # Leitura e análise (permitido)
-  - read_file
-  - list_dir
-  - file_search
-  - grep_search
-  - semantic_search
   - vscode/memory
-  - fetch_webpage
   - agent
-  - vscode_listCodeUsages
-  # GitHub (permitido)
-  - github_repo
-  - github_text_search
-  # Explicitamente bloqueado (não pode editar/criar código)
-  - '!replace_string_in_file'
-  - '!multi_replace_string_in_file'
-  - '!create_file'
-  - '!run_in_terminal'
-  - '!send_to_terminal'
-  - '!vscode_renameSymbol'
 handoffs:
   - agent: Lib Coder
     label: Implementar na Lib

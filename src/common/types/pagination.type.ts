@@ -1,9 +1,14 @@
 export type PaginationInfo = {
-  totalElements: number;
-  totalPages: number;
   page: number;
   pageSize: number;
+  totalElements: number;
+  totalPages: number;
   prev: string | null;
   next: string | null;
   tabs?: Record<string, number>;
+};
+
+export type Paginated<T> = {
+  info: PaginationInfo;
+  results: T[];
 };

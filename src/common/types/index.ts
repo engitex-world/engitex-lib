@@ -1,3 +1,2 @@
 export * from './audit-entity.type';
-export * from './server-action.type';
-export * from './table.type';
+export * from './pagination.type';
