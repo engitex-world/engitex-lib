@@ -1,4 +1,7 @@
+import { ResponseError } from '@lib/common/enums';
+import { ServerActionResult } from '@lib/common/types/server-action.type';
 import { ManutencaoCausa, ManutencaoPrioridade, ManutencaoTipo } from '../enums';
+import { ManutencaoIntervencao } from '../types';
 
 export type CreateManutencaoIntervencaoRequest = {
   maquinaId: number;
@@ -11,3 +14,5 @@ export type CreateManutencaoIntervencaoRequest = {
   dataInicio?: Date;
   dataFim?: Date;
 };
+
+export type CreateManutencaoIntervencaoResponse = ServerActionResult<ManutencaoIntervencao, ResponseError>;

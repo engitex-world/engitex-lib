@@ -1,5 +1,5 @@
-import { Paginated } from '@lib/common/types';
-
+import { ResponseError } from '@lib/common/enums';
+import { Paginated, ServerActionResult } from '@lib/common/types';
 import { Certificacao } from '../enums/certificacao.enum';
 import { ProdutoSubTipo, ProdutoTipo } from '../enums/produto.enum';
 import { Produto, ProdutoAlertas } from '../types';
@@ -13,4 +13,4 @@ export type GetProdutosRequest = {
 
 export type ProdutoWithAlertas = Produto & { alertas: ProdutoAlertas };
 
-export type GetProdutosResponse = Promise<Paginated<ProdutoWithAlertas>>;
+export type GetProdutosResponse = ServerActionResult<Paginated<ProdutoWithAlertas>, ResponseError>;
