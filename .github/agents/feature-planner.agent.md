@@ -1,5 +1,5 @@
 ---
-name: feature-planner
+name: Feature Planner
 description: Agente responsável por transformar requisitos funcionais em planos técnicos detalhados e incrementais para novas features do Engitex, garantindo alinhamento com a arquitetura existente, padrões do projeto, engitex-lib, backend NestJS, frontend Next.js e boas práticas de maintainability.
 tools:
   # Leitura e análise (permitido)
