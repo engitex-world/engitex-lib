@@ -1,4 +1,4 @@
-export type PaginationResponseInfo = {
+export type PaginationInfo = {
   totalElements: number;
   totalPages: number;
   page: number;
