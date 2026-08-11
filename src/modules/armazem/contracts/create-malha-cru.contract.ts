@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 import { MalhaCru } from '@lib/modules/armazem/types';
 import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 
@@ -19,4 +17,4 @@ export type CreateMalhaCruArtigoRequest = {
   lugarArmazem?: string;
 };
 
-export type CreateMalhaCruResponse = ServerActionResult<MalhaCru, ResponseError>;
+export type CreateMalhaCruResponse = Promise<MalhaCru>;
