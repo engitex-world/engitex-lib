@@ -12,4 +12,4 @@ export type CreateProcessoProducaoRequest = {
   fases: CreateProcessoProducaoFaseRequest[];
 };
 
-export type CreateProcessoProducaoResponse = Promise<ProcessoProducao>;
+export type CreateProcessoProducaoResponse = ProcessoProducao;

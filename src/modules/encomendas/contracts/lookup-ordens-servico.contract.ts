@@ -5,4 +5,4 @@ export type LookupOrdensServicoRequest = {
   clienteId: number;
 };
 
-export type LookupOrdensServicoResponse = Promise<Encomenda[]>;
+export type LookupOrdensServicoResponse = Encomenda[];

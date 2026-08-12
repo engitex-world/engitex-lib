@@ -7,4 +7,4 @@ export type LookupProdutosRequest = {
   subTipos?: ProdutoSubTipo[];
 };
 
-export type LookupProdutosResponse = Promise<Produto[]>;
+export type LookupProdutosResponse = Produto[];

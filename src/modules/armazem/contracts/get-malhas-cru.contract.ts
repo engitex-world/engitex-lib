@@ -9,4 +9,4 @@ export type GetMalhasCruRequest = {
   disponivel?: boolean;
 };
 
-export type GetMalhasCruResponse = Promise<Paginated<MalhaCru>>;
+export type GetMalhasCruResponse = Paginated<MalhaCru>;

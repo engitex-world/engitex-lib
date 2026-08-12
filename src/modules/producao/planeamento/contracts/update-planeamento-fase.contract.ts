@@ -12,4 +12,4 @@ export type RemoverPlaneamentoFaseRequest = {
   encomendaArtigoFaseId: number;
 };
 
-export type UpdatePlaneamentoFaseResponse = Promise<PlaneamentoFaseCard>;
+export type UpdatePlaneamentoFaseResponse = PlaneamentoFaseCard;

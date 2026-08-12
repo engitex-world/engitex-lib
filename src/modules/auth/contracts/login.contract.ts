@@ -10,4 +10,4 @@ export type LoginResponseData = {
   utilizador: AuthUtilizador;
 };
 
-export type LoginResponse = Promise<LoginResponseData>;
+export type LoginResponse = LoginResponseData;

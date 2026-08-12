@@ -11,4 +11,4 @@ export type GetProcessosTingimentoCompativeisResponseItem = {
   processosTingimento: ProcessoTingimento[];
 };
 
-export type GetProcessosTingimentoCompativeisResponse = Promise<GetProcessosTingimentoCompativeisResponseItem[]>;
+export type GetProcessosTingimentoCompativeisResponse = GetProcessosTingimentoCompativeisResponseItem[];

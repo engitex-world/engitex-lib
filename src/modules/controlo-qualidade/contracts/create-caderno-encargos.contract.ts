@@ -19,4 +19,4 @@ export type CreateCadernoEncargosRequest = {
   normas: CreateCadernoEncargosNormaRequest[];
 };
 
-export type CreateCadernoEncargosResponse = Promise<CadernoEncargos>;
+export type CreateCadernoEncargosResponse = CadernoEncargos;

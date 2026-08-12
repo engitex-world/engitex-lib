@@ -13,4 +13,4 @@ export type GetProdutosRequest = {
 
 export type ProdutoWithAlertas = Produto & { alertas: ProdutoAlertas };
 
-export type GetProdutosResponse = Promise<Paginated<ProdutoWithAlertas>>;
+export type GetProdutosResponse = Paginated<ProdutoWithAlertas>;

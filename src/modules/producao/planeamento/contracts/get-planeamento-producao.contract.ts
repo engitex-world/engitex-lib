@@ -35,4 +35,4 @@ export type GetPlaneamentoProducaoResponseData = {
   fasesPorPlanear: PlaneamentoFaseCard[];
 };
 
-export type GetPlaneamentoProducaoResponse = Promise<GetPlaneamentoProducaoResponseData>;
+export type GetPlaneamentoProducaoResponse = GetPlaneamentoProducaoResponseData;

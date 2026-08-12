@@ -4,13 +4,13 @@ import { CreateUtilizadorRequest } from './create-utilizador.contract';
 
 export type UpdateUtilizadorRequest = Partial<CreateUtilizadorRequest>;
 
-export type UpdateUtilizadorResponse = Promise<Utilizador>;
+export type UpdateUtilizadorResponse = Utilizador;
 
 export type UpdatePasswordUtilizadorRequest = {
   currentPassword: string;
   newPassword: string;
 };
 
-export type UpdatePasswordUtilizadorResponse = Promise<{ success: boolean }>;
+export type UpdatePasswordUtilizadorResponse = { success: boolean };
 
-export type InactivateUtilizadorResponse = Promise<{ success: boolean }>;
+export type InactivateUtilizadorResponse = { success: boolean };

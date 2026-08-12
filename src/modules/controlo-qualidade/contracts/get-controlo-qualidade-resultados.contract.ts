@@ -5,4 +5,4 @@ export type GetControloQualidadeResultadosResponseData = {
   testesPorIniciar: PlaneamentoFaseCard[];
 };
 
-export type GetControloQualidadeResultadosResponse = Promise<GetControloQualidadeResultadosResponseData>;
+export type GetControloQualidadeResultadosResponse = GetControloQualidadeResultadosResponseData;

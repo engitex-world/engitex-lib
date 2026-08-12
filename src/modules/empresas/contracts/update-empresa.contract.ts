@@ -4,4 +4,4 @@ import { CreateEmpresaRequest } from './create-empresa.contract';
 
 export type UpdateEmpresaRequest = Partial<CreateEmpresaRequest>;
 
-export type UpdateEmpresaResponse = Promise<Empresa>;
+export type UpdateEmpresaResponse = Empresa;

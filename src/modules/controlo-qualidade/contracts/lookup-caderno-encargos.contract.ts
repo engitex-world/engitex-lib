@@ -5,4 +5,4 @@ export type LookupCadernoEncargosRequest = {
   clienteId?: number;
 };
 
-export type LookupCadernoEncargosResponse = Promise<CadernoEncargos[]>;
+export type LookupCadernoEncargosResponse = CadernoEncargos[];

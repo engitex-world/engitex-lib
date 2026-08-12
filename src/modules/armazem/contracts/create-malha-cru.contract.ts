@@ -17,4 +17,4 @@ export type CreateMalhaCruArtigoRequest = {
   lugarArmazem?: string;
 };
 
-export type CreateMalhaCruResponse = Promise<MalhaCru>;
+export type CreateMalhaCruResponse = MalhaCru;

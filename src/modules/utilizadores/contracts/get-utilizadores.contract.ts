@@ -8,4 +8,4 @@ export type GetUtilizadoresRequest = {
   funcoes?: UtilizadorFuncao[];
 };
 
-export type GetUtilizadoresResponse = Promise<Paginated<Utilizador>>;
+export type GetUtilizadoresResponse = Paginated<Utilizador>;

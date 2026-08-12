@@ -12,4 +12,4 @@ export type CreateEncomendaArtigoPartidasRequest = {
   partidas: CreateEncomendaArtigoPartidaRequest[];
 };
 
-export type CreateEncomendaArtigoPartidasResponse = Promise<Encomenda>;
+export type CreateEncomendaArtigoPartidasResponse = Encomenda;

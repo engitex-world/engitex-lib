@@ -7,4 +7,4 @@ export type GetCadernoEncargosRequest = {
   clienteId?: number;
 };
 
-export type GetCadernoEncargosResponse = Promise<Paginated<CadernoEncargos>>;
+export type GetCadernoEncargosResponse = Paginated<CadernoEncargos>;

@@ -6,4 +6,4 @@ export type GetProcessosProducaoRequest = {
   pesquisa?: string;
 };
 
-export type GetProcessosProducaoResponse = Promise<Paginated<ProcessoProducao>>;
+export type GetProcessosProducaoResponse = Paginated<ProcessoProducao>;

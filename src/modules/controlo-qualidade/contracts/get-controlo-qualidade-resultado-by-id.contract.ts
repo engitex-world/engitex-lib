@@ -5,4 +5,4 @@ export type GetControloQualidadeResultadoByIdRequest = {
   id: number;
 };
 
-export type GetControloQualidadeResultadoByIdResponse = Promise<ControloQualidadeResultado>;
+export type GetControloQualidadeResultadoByIdResponse = ControloQualidadeResultado;

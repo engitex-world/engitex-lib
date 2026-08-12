@@ -24,4 +24,4 @@ export type CreateEmpresaRequest = {
   contactos?: CreateEmpresaContactoRequest[];
 };
 
-export type CreateEmpresaResponse = Promise<Empresa>;
+export type CreateEmpresaResponse = Empresa;

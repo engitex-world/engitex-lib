@@ -39,4 +39,4 @@ export type CreateEncomendaArtigoFaseRequest = {
   observacoes?: string;
 };
 
-export type CreateEncomendaResponse = Promise<Encomenda>;
+export type CreateEncomendaResponse = Encomenda;

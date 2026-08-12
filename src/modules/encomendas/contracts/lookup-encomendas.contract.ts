@@ -7,4 +7,4 @@ export type LookupEncomendasRequest = {
   clienteId?: number;
 };
 
-export type LookupEncomendasResponse = Promise<Encomenda[]>;
+export type LookupEncomendasResponse = Encomenda[];

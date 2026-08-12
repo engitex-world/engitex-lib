@@ -14,4 +14,4 @@ export type CreateManutencaoIntervencaoRequest = {
   dataFim?: Date;
 };
 
-export type CreateManutencaoIntervencaoResponse = Promise<ManutencaoIntervencao>;
+export type CreateManutencaoIntervencaoResponse = ManutencaoIntervencao;

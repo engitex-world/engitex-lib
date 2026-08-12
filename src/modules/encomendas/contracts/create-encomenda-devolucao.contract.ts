@@ -14,4 +14,4 @@ export type CreateEncomendaDevolucaoArtigoRequest = CreateEncomendaArtigoRequest
   devolucaoEncomendaArtigoId: number;
 };
 
-export type CreateEncomendaDevolucaoResponse = Promise<Encomenda>;
+export type CreateEncomendaDevolucaoResponse = Encomenda;

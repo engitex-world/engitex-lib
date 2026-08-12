@@ -4,6 +4,6 @@ import { CreateProcessoProducaoRequest } from './create-processo-producao.contra
 
 export type UpdateProcessoProducaoRequest = Partial<CreateProcessoProducaoRequest>;
 
-export type UpdateProcessoProducaoResponse = Promise<ProcessoProducao>;
+export type UpdateProcessoProducaoResponse = ProcessoProducao;
 
-export type InactivateProcessoProducaoResponse = Promise<{ success: boolean }>;
+export type InactivateProcessoProducaoResponse = { success: boolean };

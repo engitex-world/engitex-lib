@@ -13,4 +13,4 @@ export type CreateControloQualidadeResultadoNormaRequest = {
   valor: ControloQualidadeResultadoNormaValor;
 };
 
-export type CreateControloQualidadeResultadoResponse = Promise<ControloQualidadeResultado>;
+export type CreateControloQualidadeResultadoResponse = ControloQualidadeResultado;

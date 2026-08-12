@@ -4,4 +4,4 @@ export type UpdateMalhaCruArtigoRequest = {
   quantidadeRecebida: number;
 };
 
-export type UpdateMalhaCruArtigoResponse = Promise<MalhaCru>;
+export type UpdateMalhaCruArtigoResponse = MalhaCru;

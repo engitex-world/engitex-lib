@@ -6,4 +6,4 @@ export type CreateArtigoRequest = {
   composicao: ArtigoComposicao[];
 };
 
-export type CreateArtigoResponse = Promise<Artigo>;
+export type CreateArtigoResponse = Artigo;

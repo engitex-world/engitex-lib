@@ -9,4 +9,4 @@ export type GetEncomendasRequest = {
   clienteId?: number;
 };
 
-export type GetEncomendasResponse = Promise<Paginated<Encomenda>>;
+export type GetEncomendasResponse = Paginated<Encomenda>;

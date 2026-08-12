@@ -4,6 +4,6 @@ import { CreateMaquinaRequest } from './create-maquina.contract';
 
 export type UpdateMaquinaRequest = Partial<CreateMaquinaRequest>;
 
-export type UpdateMaquinaResponse = Promise<Maquina>;
+export type UpdateMaquinaResponse = Maquina;
 
-export type InactivateMaquinaResponse = Promise<{ success: boolean }>;
+export type InactivateMaquinaResponse = { success: boolean };

@@ -8,4 +8,4 @@ export type CreateMaquinaRequest = {
   observacoes?: string;
 };
 
-export type CreateMaquinaResponse = Promise<Maquina>;
+export type CreateMaquinaResponse = Maquina;

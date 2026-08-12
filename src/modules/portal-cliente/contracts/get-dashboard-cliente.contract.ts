@@ -6,4 +6,4 @@ export type GetDashboardClienteResponseData = {
   };
 };
 
-export type GetDashboardClienteResponse = Promise<GetDashboardClienteResponseData>;
+export type GetDashboardClienteResponse = GetDashboardClienteResponseData;

@@ -5,4 +5,4 @@ export type LookupNormasQualidade = {
   codigo?: string;
 };
 
-export type LookupNormasQualidadeResponse = Promise<NormaQualidade[]>;
+export type LookupNormasQualidadeResponse = NormaQualidade[];
