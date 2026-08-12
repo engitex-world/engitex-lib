@@ -1,4 +1,4 @@
-import { Paginated } from '@lib/common/types/table.type';
+import { Paginated } from '@lib/common/types';
 import { EmpresaRelacao } from '@lib/modules/empresas/enums';
 
 import { Empresa } from '../types';

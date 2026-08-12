@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 import { EmpresaRelacao } from '@lib/modules/empresas/enums';
 import { Empresa } from '@lib/modules/empresas/types';
 import { Pais } from '@lib/modules/organizacao/enums';
@@ -26,4 +24,4 @@ export type CreateEmpresaRequest = {
   contactos?: CreateEmpresaContactoRequest[];
 };
 
-export type CreateEmpresaResponse = ServerActionResult<Empresa, ResponseError>;
+export type CreateEmpresaResponse = Promise<Empresa>;
