@@ -8,4 +8,4 @@ export type GetPedidosCorRequest = {
   estado?: PedidoCorEstado;
 };
 
-export type GetPedidosCorResponse = Promise<Paginated<PedidoCor>>;
+export type GetPedidosCorResponse = Paginated<PedidoCor>;

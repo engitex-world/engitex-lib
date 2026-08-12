@@ -5,4 +5,4 @@ export type GetPedidoCorAmostraRequest = {
   amostraId?: string;
 };
 
-export type GetPedidoCorAmostraResponse = Promise<PedidoCorAmostra>;
+export type GetPedidoCorAmostraResponse = PedidoCorAmostra;

@@ -12,4 +12,4 @@ type UpdateLabDipItem = {
   observacoes?: string;
 };
 
-export type UpdateLabDipsResponse = Promise<LabDip[]>;
+export type UpdateLabDipsResponse = LabDip[];

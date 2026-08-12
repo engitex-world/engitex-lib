@@ -12,4 +12,4 @@ export type CloneAmostraRequest = {
   ensaioIds?: number[];
 };
 
-export type CloneAmostraResponse = Promise<PedidoCorAmostra>;
+export type CloneAmostraResponse = PedidoCorAmostra;

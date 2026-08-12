@@ -13,4 +13,4 @@ export type UpdateProcessoTingimentoAmostraRequest = {
   })[];
 };
 
-export type UpdateProcessoAmostraResponse = Promise<PedidoCorAmostra>;
+export type UpdateProcessoAmostraResponse = PedidoCorAmostra;

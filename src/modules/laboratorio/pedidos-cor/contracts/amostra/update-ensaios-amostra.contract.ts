@@ -20,4 +20,4 @@ export interface ProdutoProcessoUpdateDto {
   action: 'update' | 'add' | 'remove';
 }
 
-export type UpdateEnsaiosAmostraResponse = Promise<PedidoCorAmostra>;
+export type UpdateEnsaiosAmostraResponse = PedidoCorAmostra;

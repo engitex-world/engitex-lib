@@ -6,4 +6,4 @@ export type CustoEnsaiosAmostra = EnsaioAmostra & {
   produtosSemPreco: string[];
 };
 
-export type GetCustoEnsaiosAmostraResponse = Promise<CustoEnsaiosAmostra[]>;
+export type GetCustoEnsaiosAmostraResponse = CustoEnsaiosAmostra[];
