@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 import { PreparacaoTingimento } from '@lib/modules/tinturaria/processos-tingimento/enums';
 
 import { PedidoCorAmostra, ProcessoTingimentoAmostra } from '../../types';
@@ -15,4 +13,4 @@ export type UpdateProcessoTingimentoAmostraRequest = {
   })[];
 };
 
-export type UpdateProcessoAmostraResponse = ServerActionResult<PedidoCorAmostra, ResponseError>;
+export type UpdateProcessoAmostraResponse = Promise<PedidoCorAmostra>;

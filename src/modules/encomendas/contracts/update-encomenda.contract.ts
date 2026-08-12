@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 import { Certificacao } from '@lib/modules/produtos/enums';
 
@@ -41,4 +39,4 @@ export type UpdateEncomendaArtigoFaseRequest = {
   observacoes?: string;
 };
 
-export type UpdateEncomendaResponse = ServerActionResult<Encomenda, ResponseError>;
+export type UpdateEncomendaResponse = Promise<Encomenda>;

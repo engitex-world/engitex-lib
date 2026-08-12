@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 
 import { EncomendaDevolucaoMotivo } from '../enums';
 import { Encomenda } from '../types';
@@ -16,4 +14,4 @@ export type CreateEncomendaDevolucaoArtigoRequest = CreateEncomendaArtigoRequest
   devolucaoEncomendaArtigoId: number;
 };
 
-export type CreateEncomendaDevolucaoResponse = ServerActionResult<Encomenda, ResponseError>;
+export type CreateEncomendaDevolucaoResponse = Promise<Encomenda>;

@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 
 export type GetDashboardClienteResponseData = {
   laboratorio: {
@@ -8,7 +6,4 @@ export type GetDashboardClienteResponseData = {
   };
 };
 
-export type GetDashboardClienteResponse = ServerActionResult<
-  GetDashboardClienteResponseData,
-  ResponseError
->;
+export type GetDashboardClienteResponse = Promise<GetDashboardClienteResponseData>;

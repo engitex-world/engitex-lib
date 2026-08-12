@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 
 import { PedidoCorAmostra } from '../../types';
 
@@ -14,4 +12,4 @@ export type CloneAmostraRequest = {
   ensaioIds?: number[];
 };
 
-export type CloneAmostraResponse = ServerActionResult<PedidoCorAmostra, ResponseError>;
+export type CloneAmostraResponse = Promise<PedidoCorAmostra>;

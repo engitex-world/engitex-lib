@@ -1,8 +1,7 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
+import { MalhaCru } from '../types';
 
 export type UpdateMalhaCruArtigoRequest = {
   quantidadeRecebida: number;
 };
 
-export type UpdateMalhaCruArtigoResponse = ServerActionResult<{ success: boolean }, ResponseError>;
+export type UpdateMalhaCruArtigoResponse = Promise<MalhaCru>;

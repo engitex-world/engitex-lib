@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 import { PlaneamentoFaseCard } from '@lib/modules/producao/planeamento/contracts';
 
 export type GetControloQualidadeResultadosResponseData = {
@@ -7,7 +5,4 @@ export type GetControloQualidadeResultadosResponseData = {
   testesPorIniciar: PlaneamentoFaseCard[];
 };
 
-export type GetControloQualidadeResultadosResponse = ServerActionResult<
-  GetControloQualidadeResultadosResponseData,
-  ResponseError
->;
+export type GetControloQualidadeResultadosResponse = Promise<GetControloQualidadeResultadosResponseData>;

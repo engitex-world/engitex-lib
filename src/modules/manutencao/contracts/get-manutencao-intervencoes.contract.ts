@@ -1,5 +1,4 @@
-import { ResponseError } from '@lib/common/enums';
-import { Paginated, ServerActionResult } from '@lib/common/types';
+import { Paginated } from '@lib/common/types';
 
 import { ManutencaoEstado } from '../enums';
 import { ManutencaoIntervencao } from '../types/manutencao.type';
@@ -9,7 +8,4 @@ export type GetManutencaoIntervencoesRequest = {
   estado?: ManutencaoEstado;
 };
 
-export type GetManutencaoIntervencoesResponse = ServerActionResult<
-  Paginated<ManutencaoIntervencao>,
-  ResponseError
->;
+export type GetManutencaoIntervencoesResponse = Promise<Paginated<ManutencaoIntervencao>>;

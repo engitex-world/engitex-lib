@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 import { ProcessoProducao } from '@lib/modules/producao/processos/types';
 
 export type CreateProcessoProducaoFaseRequest = {
@@ -14,4 +12,4 @@ export type CreateProcessoProducaoRequest = {
   fases: CreateProcessoProducaoFaseRequest[];
 };
 
-export type CreateProcessoProducaoResponse = ServerActionResult<ProcessoProducao, ResponseError>;
+export type CreateProcessoProducaoResponse = Promise<ProcessoProducao>;

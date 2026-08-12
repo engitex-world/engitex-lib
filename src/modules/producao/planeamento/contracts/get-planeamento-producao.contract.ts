@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 import {
   Encomenda,
   EncomendaArtigo,
@@ -37,7 +35,4 @@ export type GetPlaneamentoProducaoResponseData = {
   fasesPorPlanear: PlaneamentoFaseCard[];
 };
 
-export type GetPlaneamentoProducaoResponse = ServerActionResult<
-  GetPlaneamentoProducaoResponseData,
-  ResponseError
->;
+export type GetPlaneamentoProducaoResponse = Promise<GetPlaneamentoProducaoResponseData>;

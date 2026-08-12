@@ -1,5 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
 
 import { LabDipEstado } from '../../enums';
 import { LabDip } from '../../types';
@@ -14,4 +12,4 @@ type UpdateLabDipItem = {
   observacoes?: string;
 };
 
-export type UpdateLabDipsResponse = ServerActionResult<LabDip[], ResponseError>;
+export type UpdateLabDipsResponse = Promise<LabDip[]>;

@@ -1,6 +1,3 @@
-import { ResponseError } from '@lib/common/enums';
-import { ServerActionResult } from '@lib/common/types/server-action.type';
-
 import { ControloQualidadeResultado, ControloQualidadeResultadoNormaValor } from '../types';
 
 export type CreateControloQualidadeResultadoRequest = {
@@ -16,7 +13,4 @@ export type CreateControloQualidadeResultadoNormaRequest = {
   valor: ControloQualidadeResultadoNormaValor;
 };
 
-export type CreateControloQualidadeResultadoResponse = ServerActionResult<
-  ControloQualidadeResultado,
-  ResponseError
->;
+export type CreateControloQualidadeResultadoResponse = Promise<ControloQualidadeResultado>;
