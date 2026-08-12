@@ -1,4 +1,3 @@
-
 import { EncomendaArtigoPartidaMotivo } from '../enums';
 import { Encomenda } from '../types';
 

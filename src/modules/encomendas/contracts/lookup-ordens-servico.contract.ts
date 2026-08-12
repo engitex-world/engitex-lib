@@ -1,4 +1,3 @@
-
 import { Encomenda } from '../types';
 
 export type LookupOrdensServicoRequest = {

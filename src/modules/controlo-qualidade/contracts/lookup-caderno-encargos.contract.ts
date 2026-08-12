@@ -1,4 +1,3 @@
-
 import { CadernoEncargos } from '../types';
 
 export type LookupCadernoEncargosRequest = {

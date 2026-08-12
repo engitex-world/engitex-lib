@@ -1,4 +1,3 @@
-
 import { ManutencaoCausa, ManutencaoPrioridade, ManutencaoTipo } from '../enums';
 import { ManutencaoIntervencao } from '../types';
 

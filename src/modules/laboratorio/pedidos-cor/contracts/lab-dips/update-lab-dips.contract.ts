@@ -1,4 +1,3 @@
-
 import { LabDipEstado } from '../../enums';
 import { LabDip } from '../../types';
 

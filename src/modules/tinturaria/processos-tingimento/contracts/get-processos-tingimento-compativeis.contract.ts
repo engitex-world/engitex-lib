@@ -11,4 +11,5 @@ export type GetProcessosTingimentoCompativeisResponseItem = {
   processosTingimento: ProcessoTingimento[];
 };
 
-export type GetProcessosTingimentoCompativeisResponse = GetProcessosTingimentoCompativeisResponseItem[];
+export type GetProcessosTingimentoCompativeisResponse =
+  GetProcessosTingimentoCompativeisResponseItem[];

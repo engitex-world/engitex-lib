@@ -1,4 +1,3 @@
-
 import { EnsaioAmostra } from '../../types';
 
 export type CustoEnsaiosAmostra = EnsaioAmostra & {

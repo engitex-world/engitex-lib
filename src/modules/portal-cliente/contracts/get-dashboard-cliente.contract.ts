@@ -1,4 +1,3 @@
-
 export type GetDashboardClienteResponseData = {
   laboratorio: {
     email: string;

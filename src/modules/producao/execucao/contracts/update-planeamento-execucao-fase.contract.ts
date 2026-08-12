@@ -1,4 +1,3 @@
-
 import { PlaneamentoFaseCard } from '../../planeamento/contracts';
 
 export type UpdatePlaneamentoExecucaoFaseRequest = {

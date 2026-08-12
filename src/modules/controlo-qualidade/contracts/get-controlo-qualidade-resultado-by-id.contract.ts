@@ -1,4 +1,3 @@
-
 import { ControloQualidadeResultado } from '../types';
 
 export type GetControloQualidadeResultadoByIdRequest = {

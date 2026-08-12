@@ -1,4 +1,3 @@
-
 import { NormaQualidade } from '../types';
 
 export type LookupNormasQualidade = {
