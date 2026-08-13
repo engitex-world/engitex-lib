@@ -1,4 +1,5 @@
 ---
+name: Lib Coding Copilot Instructions
 description: This file describes the code style and architecture guidelines for the engitex-lib shared library.
 applyTo: '**'
 ---
