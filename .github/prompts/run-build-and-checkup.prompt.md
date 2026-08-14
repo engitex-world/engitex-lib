@@ -1,4 +1,12 @@
-Sempre que terminares alteracoes de codigo, executa este checklist obrigatorio antes da resposta final:
+Sempre que terminares alteracoes de codigo, executa um dos modos abaixo antes da resposta final.
+
+Modo 1: Rapido (default para alteracoes locais)
+
+1. Executar apenas no(s) repositorio(s) alterado(s):
+   - yarn build
+   - yarn checkup:fix
+
+Modo 2: Completo (obrigatorio para mudancas cross-repo, alteracoes em contratos da lib, ou quando o utilizador pedir validacao total)
 
 1. No engitex-lib, correr:
    - yarn build
@@ -12,7 +20,6 @@ Sempre que terminares alteracoes de codigo, executa este checklist obrigatorio a
 
 Regras:
 
-- Executar na ordem acima.
 - Se algum comando falhar, parar e reportar exatamente o erro e o repositorio.
 - Se `checkup:fix` alterar ficheiros, reportar quais foram alterados.
-- So concluir a tarefa depois de todos os comandos terminarem com sucesso.
+- Indicar explicitamente no resumo final qual modo foi usado (Rapido ou Completo).
