@@ -1,3 +1,4 @@
+import { MalhaCru } from '@lib/modules/armazem/types';
 import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 
 export type CreateMalhaCruRequest = {
@@ -15,3 +16,5 @@ export type CreateMalhaCruArtigoRequest = {
   unidade: ArtigoUnidade;
   lugarArmazem?: string;
 };
+
+export type CreateMalhaCruResponse = MalhaCru;

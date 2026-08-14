@@ -17,6 +17,8 @@ export enum ResponseError {
   DB = 'DB',
   MESSAGE = 'MESSAGE',
   DETAIL = 'DETAIL',
+  ERROR_SERVER_ACTION = 'ERROR_SERVER_ACTION',
+  GENERIC_INPUT_ERROR = 'GENERIC_INPUT_ERROR',
 
   // Specific errors
   USER_NOT_FOUND = 'USER_NOT_FOUND',

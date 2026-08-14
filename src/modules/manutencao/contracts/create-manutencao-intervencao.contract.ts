@@ -1,4 +1,5 @@
 import { ManutencaoCausa, ManutencaoPrioridade, ManutencaoTipo } from '../enums';
+import { ManutencaoIntervencao } from '../types';
 
 export type CreateManutencaoIntervencaoRequest = {
   maquinaId: number;
@@ -11,3 +12,5 @@ export type CreateManutencaoIntervencaoRequest = {
   dataInicio?: Date;
   dataFim?: Date;
 };
+
+export type CreateManutencaoIntervencaoResponse = ManutencaoIntervencao;

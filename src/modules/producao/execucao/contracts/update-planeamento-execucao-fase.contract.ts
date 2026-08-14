@@ -1,3 +1,5 @@
+import { PlaneamentoFaseCard } from '../../planeamento/contracts';
+
 export type UpdatePlaneamentoExecucaoFaseRequest = {
   encomendaArtigoFaseId: number;
   acao: UpdatePlaneamentoExecucaoFaseAcao;
@@ -5,3 +7,5 @@ export type UpdatePlaneamentoExecucaoFaseRequest = {
 };
 
 export type UpdatePlaneamentoExecucaoFaseAcao = 'INICIAR' | 'TERMINAR' | 'ADICIONAR_OBSERVACAO';
+
+export type UpdatePlaneamentoExecucaoFaseResponse = PlaneamentoFaseCard;

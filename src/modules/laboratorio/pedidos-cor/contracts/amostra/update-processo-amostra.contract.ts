@@ -1,6 +1,6 @@
 import { PreparacaoTingimento } from '@lib/modules/tinturaria/processos-tingimento/enums';
 
-import { ProcessoTingimentoAmostra } from '../../types';
+import { PedidoCorAmostra, ProcessoTingimentoAmostra } from '../../types';
 
 export type UpdateProcessoTingimentoAmostraRequest = {
   preparacaoTingimento: PreparacaoTingimento;
@@ -12,3 +12,5 @@ export type UpdateProcessoTingimentoAmostraRequest = {
     processoTingimentoId: number;
   })[];
 };
+
+export type UpdateProcessoAmostraResponse = PedidoCorAmostra;

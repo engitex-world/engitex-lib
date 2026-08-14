@@ -33,8 +33,21 @@ export const APIRoutes = {
   },
 
   [AppModules.CONTROLO_QUALIDADE]: {
-    create: `/${AppModules.CONTROLO_QUALIDADE}`,
-    lookup: `/${AppModules.CONTROLO_QUALIDADE}/lookup`,
+    CadernosEncargos: {
+      list: `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos`,
+      create: `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos`,
+      lookup: `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos/lookup`,
+      getById: (id: number) => `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos/${id}`,
+      update: (id: number) => `/${AppModules.CONTROLO_QUALIDADE}/cadernos-encargos/${id}`,
+    },
+    Resultados: {
+      list: `/${AppModules.CONTROLO_QUALIDADE}/resultados`,
+      create: `/${AppModules.CONTROLO_QUALIDADE}/resultados`,
+      getById: (id: number) => `/${AppModules.CONTROLO_QUALIDADE}/resultados/${id}`,
+    },
+    Normas: {
+      lookup: `/${AppModules.CONTROLO_QUALIDADE}/normas/lookup`,
+    },
   },
 
   [AppModules.CORES]: {

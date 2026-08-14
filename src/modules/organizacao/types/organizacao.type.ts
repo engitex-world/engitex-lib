@@ -1,7 +1,8 @@
 import { LocaleType } from '@lib/common/enums/locale.enum';
-import { Common } from '@lib/common/types/base-entity.type';
+import { AuditEntity } from '@lib/common/types/audit-entity.type';
 
 export type Organizacao = {
+  id: number;
   nome: string;
   subDominio: string;
   website: string;
@@ -16,6 +17,7 @@ export type Organizacao = {
 };
 
 export type OrganizacaoConfig = {
+  id: number;
   contexto: string;
   valor: string;
-} & Common;
+} & AuditEntity;

@@ -6,7 +6,10 @@ export type GetProcessosTingimentoCompativeisRequest = {
   fibras: ArtigoFibra[];
 };
 
-export type GetProcessosTingimentoCompativeisResponse = {
+export type GetProcessosTingimentoCompativeisResponseItem = {
   fibras: ArtigoFibra[];
   processosTingimento: ProcessoTingimento[];
-}[];
+};
+
+export type GetProcessosTingimentoCompativeisResponse =
+  GetProcessosTingimentoCompativeisResponseItem[];

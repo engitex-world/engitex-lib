@@ -1,2 +1,2 @@
-export * from './base-entity.type';
-export * from './table.type';
+export * from './audit-entity.type';
+export * from './pagination.type';

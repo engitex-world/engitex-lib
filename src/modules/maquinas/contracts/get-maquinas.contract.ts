@@ -8,4 +8,4 @@ export type GetMaquinasRequest = {
   grupo?: MaquinaGrupo;
 };
 
-export type GetMaquinasResponse = Promise<Paginated<Maquina>>;
+export type GetMaquinasResponse = Paginated<Maquina>;

@@ -11,12 +11,6 @@ export type GetPlaneamentoProducaoRequest = {
   grupoMaquinas?: MaquinaGrupo;
 };
 
-export type GetPlaneamentoProducaoResponse = {
-  grupoMaquinas: MaquinaGrupo;
-  maquinas: PlaneamentoMaquinaResponse[];
-  fasesPorPlanear: PlaneamentoFaseCard[];
-};
-
 export type PlaneamentoFaseCard = {
   id: number;
   planeamentoFaseId?: number;
@@ -34,3 +28,11 @@ export type PlaneamentoMaquinaResponse = {
   faseEmExecucao?: PlaneamentoFaseCard;
   fila: PlaneamentoFaseCard[];
 };
+
+export type GetPlaneamentoProducaoResponseData = {
+  grupoMaquinas: MaquinaGrupo;
+  maquinas: PlaneamentoMaquinaResponse[];
+  fasesPorPlanear: PlaneamentoFaseCard[];
+};
+
+export type GetPlaneamentoProducaoResponse = GetPlaneamentoProducaoResponseData;

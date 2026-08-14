@@ -1,5 +1,7 @@
 import { ProdutoReceitaLaboratorioUnidade, ProdutoTipo } from '@lib/modules/produtos/enums';
 
+import { PedidoCorAmostra } from '../../types';
+
 export interface UpdateEnsaiosAmostraRequest {
   processos: ProcessoUpdateDto[];
 }
@@ -17,3 +19,5 @@ export interface ProdutoProcessoUpdateDto {
   quantidadesPorEnsaio: Record<string, number>; // Map<ensaioId, quantidade>
   action: 'update' | 'add' | 'remove';
 }
+
+export type UpdateEnsaiosAmostraResponse = PedidoCorAmostra;

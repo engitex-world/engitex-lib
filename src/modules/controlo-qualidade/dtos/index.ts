@@ -1,1 +1,4 @@
-export type { CreateCadernoEncargosDto } from './create-caderno-encargos.dto';
+export type {
+  CreateCadernoEncargosDto,
+  CreateCadernoEncargosNormaDto,
+} from './create-caderno-encargos.dto';

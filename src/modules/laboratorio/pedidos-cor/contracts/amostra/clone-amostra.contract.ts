@@ -1,3 +1,5 @@
+import { PedidoCorAmostra } from '../../types';
+
 /**
  * Request para clonar fórmula de uma amostra de cor para outra.
  *
@@ -8,3 +10,5 @@
 export type CloneAmostraRequest = {
   ensaioIds?: number[];
 };
+
+export type CloneAmostraResponse = PedidoCorAmostra;

@@ -8,4 +8,4 @@ export type GetManutencaoIntervencoesRequest = {
   estado?: ManutencaoEstado;
 };
 
-export type GetManutencaoIntervencoesResponse = Promise<Paginated<ManutencaoIntervencao>>;
+export type GetManutencaoIntervencoesResponse = Paginated<ManutencaoIntervencao>;
