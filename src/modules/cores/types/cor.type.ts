@@ -1,4 +1,4 @@
-import { CorIntensidade, CorTom } from '@lib/modules/cores/enums/cor.enum';
+import { CorTom } from '@lib/modules/cores/enums/cor.enum';
 
 export type Cor = {
   id: number;
@@ -6,5 +6,7 @@ export type Cor = {
   rgbHex: string;
   pantone?: string;
   tom: CorTom;
-  intensidade: CorIntensidade;
+  oklabL: number;
+  oklabA: number;
+  oklabB: number;
 };
