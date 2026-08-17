@@ -94,6 +94,7 @@ O agente **deve seguir sempre** os ficheiros de instruções dentro de `.github/
 - Para frontend: `code-fe.instructions.md`
 
 Estes ficheiros definem os padrões de arquitetura, naming, estrutura e boas práticas do projeto.
+Quando o plano envolver contracts, enums, routes, `ResponseError` ou payloads partilhados entre lib, backend e frontend, usa também a skill `sync-contract` para mapear dependências, detetar drift e definir a ordem `engitex-lib` → `engitex-be` → `engitex-fe`.
 
 ### 3. Handoffs Claros
 

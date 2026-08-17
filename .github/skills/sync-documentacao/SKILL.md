@@ -1,5 +1,5 @@
 ---
-name: audit-documentacao
+name: sync-documentacao
 description: Auditoria recorrente de instrucoes, prompts, skills e agentes nesta workspace Engitex (be, fe, lib), com deteccao de referencias quebradas, inconsistencias e risco de deriva.
 user-invocable: true
 keywords:
@@ -77,9 +77,7 @@ Validar no minimo:
 
 ### Fase 4 - Validacao
 
-1. Correr script de auditoria local:
-   - `./scripts/audit-documentacao.sh`
-2. Se houver alteracoes de codigo, aplicar o modo de validacao definido no prompt de checkup
+1. Se houver alteracoes de codigo, aplicar o modo de validacao definido no prompt de checkup
 
 ## Output esperado
 
@@ -95,9 +93,5 @@ A resposta final deve conter:
 
 No chat:
 
-- `Usa o skill audit-documentacao e audita a workspace em modo completo.`
+- `Usa o skill sync-documentacao e audita a workspace em modo completo.`
 - `Executa auditoria recorrente de customizacoes e corrige apenas P0/P1.`
-
-No terminal:
-
-- `cd engitex-lib && ./scripts/audit-documentacao.sh`

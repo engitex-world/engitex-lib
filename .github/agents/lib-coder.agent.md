@@ -123,3 +123,5 @@ This library is **Step 1** in the implementation workflow:
 3. **engitex-fe** (implements contracts in Zod schemas, uses enums)
 
 Changes here affect both frontend and backend. Ensure backwards compatibility when modifying existing contracts.
+
+For changes that affect backend or frontend consumers, use the `sync-contract` skill to discover the full dependency chain and validate drift before handing off the implementation.
