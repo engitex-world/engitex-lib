@@ -3,6 +3,7 @@ export enum TranslatedEnums {
   ARTIGO_FIBRA = 'artigo-fibra-tipo',
   ARTIGO_UNIDADE = 'artigo-unidade-tipo',
   CERTIFICACAO = 'certificacao-tipo',
+  ENCOMENDA_ARTIGO_PARTIDA_MOTIVO = 'encomenda-artigo-partida-motivo-tipo',
   ENCOMENDA_ESTADO = 'encomenda-estado-tipo',
   ENCOMENDA_DEVOLUCAO_MOTIVO = 'encomenda-devolucao-motivo-tipo',
   ENCOMENDA_ARTIGO_FASE_ESTADO = 'encomenda-artigo-fase-estado-tipo',
