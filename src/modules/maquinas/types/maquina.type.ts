@@ -1,3 +1,4 @@
+import { DiaSemana } from '@lib/common/enums';
 import { AuditEntity } from '@lib/common/types/audit-entity.type';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums/maquina-grupo.enum';
 import { MaquinaEspecificacoes } from '@lib/modules/maquinas/types/maquina-especificacoes.type';
@@ -14,4 +15,12 @@ export type Maquina = {
   anoFabrico?: number;
   dataInstalacao?: Date;
   especificacoes?: MaquinaEspecificacoes;
+  horarios: MaquinaHorario[];
 } & AuditEntity;
+
+export type MaquinaHorario = {
+  id: number;
+  diaSemana: DiaSemana;
+  horaInicio: string;
+  horaFim: string;
+};
