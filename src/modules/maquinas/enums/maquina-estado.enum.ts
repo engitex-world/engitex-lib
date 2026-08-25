@@ -1,0 +1,5 @@
+export enum MaquinaEstado {
+  OPERACIONAL = 'OPERACIONAL',
+  BLOQUEADA = 'BLOQUEADA',
+  EM_MANUTENCAO = 'EM_MANUTENCAO',
+}
