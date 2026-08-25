@@ -12,6 +12,7 @@ export enum TranslatedEnums {
   COR_TOM = 'cor-tom-tipo',
   CORANTE_LABORATORIO_UNIDADE = 'corante-laboratorio-unidade-tipo',
   CORANTE_TINTURARIA_UNIDADE = 'corante-tinturaria-unidade-tipo',
+  DIA_SEMANA = 'dia-semana-tipo',
   CADERNO_ENCARGOS_NORMA_REGRA = 'caderno-encargos-norma-regra-tipo',
   CONTROLO_QUALIDADE_RESULTADO_ESTADO = 'controlo-qualidade-resultado-estado-tipo',
   NORMA_QUALIDADE_TIPO_RESULTADO = 'norma-qualidade-tipo-resultado-tipo',
