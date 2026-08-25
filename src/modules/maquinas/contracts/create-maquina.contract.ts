@@ -1,3 +1,4 @@
+import { DiaSemana } from '@lib/common/enums';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
 import { Maquina } from '@lib/modules/maquinas/types';
 import { MaquinaEspecificacoes } from '@lib/modules/maquinas/types/maquina-especificacoes.type';
@@ -17,7 +18,7 @@ export type CreateMaquinaRequest = {
 };
 
 export type CreateMaquinaHorarioRequest = {
-  diaSemana: number;
+  diaSemana: DiaSemana;
   horaInicio: string;
   horaFim: string;
 };
