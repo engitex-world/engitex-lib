@@ -4,6 +4,7 @@ import {
   EncomendaArtigoFase,
 } from '@lib/modules/encomendas/types/encomenda.type';
 import { MaquinaEstado, MaquinaGrupo } from '@lib/modules/maquinas/enums';
+import { MaquinaHorario } from '@lib/modules/maquinas/types';
 
 import { PlaneamentoFase } from '../types';
 
@@ -28,6 +29,7 @@ export type PlaneamentoMaquinaResponse = {
   estado: MaquinaEstado;
   faseEmExecucao?: PlaneamentoFaseCard;
   fila: PlaneamentoFaseCard[];
+  horarios?: MaquinaHorario[];
 };
 
 export type GetPlaneamentoProducaoResponseData = {
