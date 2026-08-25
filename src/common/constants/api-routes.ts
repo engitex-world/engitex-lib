@@ -157,6 +157,8 @@ export const APIRoutes = {
     getPlaneamentoProducao: `/${AppModules.PRODUCAO.PLANEAMENTO}`,
     updatePlaneamentoFase: (id: number) => `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}`,
     removerPlaneamentoFase: (id: number) => `/${AppModules.PRODUCAO.PLANEAMENTO}/fase/${id}`,
+    criarAgrupamento: `/${AppModules.PRODUCAO.PLANEAMENTO}/agrupamento`,
+    getFasesElegiveisAgrupamento: `/${AppModules.PRODUCAO.PLANEAMENTO}/agrupamento/fases-elegiveis`,
   },
 
   [AppModules.TINTURARIA.PROCESSOS_TINGIMENTO]: {
