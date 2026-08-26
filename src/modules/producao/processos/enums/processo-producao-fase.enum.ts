@@ -3,6 +3,5 @@ export enum ProcessoProducaoFaseEstado {
   PLANEADA = 'PLANEADA',
   EM_EXECUCAO = 'EM_EXECUCAO',
   CONCLUIDA = 'CONCLUIDA',
-  SALTADA = 'SALTADA',
   BLOQUEADA = 'BLOQUEADA',
 }
