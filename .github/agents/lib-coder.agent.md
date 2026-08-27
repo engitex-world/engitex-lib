@@ -112,7 +112,15 @@ Do not duplicate or override those instructions here unless explicitly stated.
 - Request types end with `Request`: `CreateEmpresaRequest`, `GetUtilizadoresRequest`
 - Response types end with `Response`: `EmpresaResponse`, `UtilizadorResponse`
 - Query types for filters: `GetEmpresasRequest` (pagination, filters, sorting)
-- Lookup types for select options: `LookupEmpresasRequest`
+- Lookup types for select options: `LookupEmpresasRequest`, `LookupEmpresasResponse`
+
+**Lookup Contracts:**
+
+- Build on `LookupOption<TData>` from `@lib/common/types` (`id` + `nome` + campos extra explícitos)
+- O element type (`[Entity]Lookup`) vive **dentro do ficheiro do contrato** e é **privado** — nunca em `types/`
+- Só `Lookup[Entity]sResponse` é exportado; BE e FE tipam sempre contra o `Response`
+- Nunca expor a entidade de domínio completa num lookup
+- Antes de adicionar campos extra, aplica a tabela de decisão "lookup vs. get-by-id" da secção 5 das instruções
 
 ## Workflow Context
 

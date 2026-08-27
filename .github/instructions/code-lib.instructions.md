@@ -40,7 +40,7 @@ This library serves as the **boundary contract** between frontend (engitex-fe) a
 | **Domain Enums**      | `EmpresaRelacao`, `UtilizadorFuncao`, `StatusEncomenda`          | `src/modules/[domain]/enums/`     |
 | **Shared Enums**      | `ResponseError`, `DtoValidator`, `LocaleEnum`                    | `src/common/enums/`               |
 | **Route Constants**   | `APIRoutes`, `WebRoutes`, `AppModules`                           | `src/common/constants/`           |
-| **Shared Types**      | `PaginationOptions`, `SortOptions`, `SelectOption`               | `src/common/types/`               |
+| **Shared Types**      | `PaginationOptions`, `SortOptions`, `LookupOption`               | `src/common/types/`               |
 | **Pure Utilities**    | String formatters, type guards (no external deps)                | `src/common/utils/`               |
 
 ### ❌ NOT ALLOWED
@@ -70,6 +70,8 @@ This library serves as the **boundary contract** between frontend (engitex-fe) a
   - Response types: `[Entity]Response` → `EmpresaResponse`
   - Query types: `Get[Entity]sRequest` → `GetEmpresasRequest` (includes filters, pagination)
   - Lookup types: `Lookup[Entity]sRequest` → `LookupEmpresasRequest` (for selects)
+  - Lookup responses: `Lookup[Entity]sResponse` → `LookupEmpresasResponse`
+  - Lookup element types: `[Entity]Lookup` → `CadernoEncargosLookup` (private to the contract file)
   - Enums: `[Entity][Concept]` → `EmpresaRelacao`, `UtilizadorFuncao`
 - **File naming**:
   - Contracts: `[operation]-[entity].contract.ts` → `create-empresa.contract.ts`
@@ -101,7 +103,7 @@ src/
       index.ts
     types/
       pagination.type.ts      # PaginationOptions, SortOptions
-      select-option.type.ts   # SelectOption for dropdowns
+      lookup.type.ts          # LookupOption base para contratos de lookup
       index.ts
     utils/
       index.ts                # Pure utility functions (if any)
@@ -191,14 +193,49 @@ export type GetEmpresasRequest = {
 
 ### Lookup Contracts (for selects)
 
+Lookups alimentam selects/comboboxes. O contrato mínimo é `id` + `nome`, mas cada domínio pode expor **poucos** campos adicionais para evitar um get-by-id logo a seguir à seleção.
+
 ```ts
 // src/modules/empresas/contracts/lookup-empresas.contract.ts
+import { LookupOption } from '@lib/common/types';
 import { EmpresaRelacao } from '@lib/modules/empresas/enums';
 
 export type LookupEmpresasRequest = {
   relacao?: EmpresaRelacao;
 };
+
+type EmpresaLookup = LookupOption<{
+  relacao: EmpresaRelacao;
+}>;
+
+export type LookupEmpresasResponse = EmpresaLookup[];
 ```
+
+#### Regras
+
+- O tipo do elemento (`[Entity]Lookup`) vive **dentro do ficheiro do contrato** e é **privado** (sem `export`).
+  - Não pertence a `types/` — `types/` é para o domínio, não para a forma de uma resposta específica.
+- Só `Lookup[Entity]sResponse` é exportado. Backend e frontend tipam sempre contra o `Response`.
+- Os campos extra são declarados explicitamente no `LookupOption<TData>`. **Nunca** devolver a entidade de domínio completa num lookup.
+- Se um consumidor parece precisar do element type isolado, isso é sinal de que está a tipar a coisa errada — deve tipar contra o `Response`.
+
+#### Quando trazer dados extra no lookup vs. fazer get-by-id
+
+Trazer no lookup só compensa quando o payload adicional é pequeno e quase sempre necessário após a seleção.
+
+| Situação                                                              | Escolha            |
+| --------------------------------------------------------------------- | ------------------ |
+| Campo escalar, enum ou array curto de enums                           | Lookup             |
+| Necessário imediatamente ao selecionar, dentro de um formulário       | Lookup             |
+| Lista já filtrada (poucas dezenas de opções)                          | Lookup             |
+| Exige joins adicionais no backend                                     | `get-by-id`        |
+| Só usado nalguns ramos do fluxo                                       | `get-by-id`        |
+| Precisa de estar fresco no momento da submissão                       | `get-by-id`        |
+| Lookup sem filtro que devolve centenas/milhares de linhas             | `get-by-id`        |
+
+Independentemente da escolha, o dado que vem do lookup é conveniência de UI — o backend revalida sempre na submissão.
+
+---
 
 ### Guidelines
 
@@ -288,15 +325,17 @@ export type SortOptions = {
 };
 ```
 
-### Select Options
+### Lookup Options
 
 ```ts
-// src/common/types/select-option.type.ts
-export type SelectOption<T = number> = {
-  label: string;
-  value: T;
-};
+// src/common/types/lookup.type.ts
+export type LookupOption<TData = unknown> = {
+  id: number;
+  nome: string;
+} & TData;
 ```
+
+Base para todos os contratos de lookup. `TData` permite a cada domínio expor campos adicionais de forma explícita (ver secção 5).
 
 ---
 
