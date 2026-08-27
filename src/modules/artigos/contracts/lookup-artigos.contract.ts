@@ -3,7 +3,7 @@ import { ArtigoComposicao } from '@lib/modules/artigos/types';
 
 import { ArtigoEstrutura } from '../enums';
 
-type ArtigoLookup = LookupOption<{
+export type ArtigoLookup = LookupOption<{
   estrutura: ArtigoEstrutura;
   composicao: ArtigoComposicao[];
 }>;
