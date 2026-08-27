@@ -13,7 +13,6 @@ export type ManutencaoIntervencao = {
   causa?: ManutencaoCausa;
   prioridade?: ManutencaoPrioridade;
   estado: ManutencaoEstado;
-  dataPlaneada?: Date;
   dataInicio?: Date;
   dataFim?: Date;
 } & AuditEntity;

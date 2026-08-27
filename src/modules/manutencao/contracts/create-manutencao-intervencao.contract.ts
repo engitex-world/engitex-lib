@@ -8,9 +8,9 @@ export type CreateManutencaoIntervencaoRequest = {
   tipo?: ManutencaoTipo;
   causa?: ManutencaoCausa;
   prioridade?: ManutencaoPrioridade;
-  dataPlaneada?: Date;
   dataInicio?: Date;
   dataFim?: Date;
+  bloquear?: boolean; // Bloqueia a máquina e todas as fases em execução associadas
 };
 
 export type CreateManutencaoIntervencaoResponse = ManutencaoIntervencao;

@@ -3,7 +3,9 @@ import {
   EncomendaArtigo,
   EncomendaArtigoFase,
 } from '@lib/modules/encomendas/types/encomenda.type';
-import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
+import { ManutencaoIntervencao } from '@lib/modules/manutencao/types';
+import { MaquinaEstado, MaquinaGrupo } from '@lib/modules/maquinas/enums';
+import { MaquinaHorario } from '@lib/modules/maquinas/types';
 
 import { PlaneamentoFase } from '../types';
 
@@ -25,8 +27,11 @@ export type PlaneamentoMaquinaResponse = {
   maquinaId: number;
   nome: string;
   codigo: string;
+  estado: MaquinaEstado;
   faseEmExecucao?: PlaneamentoFaseCard;
   fila: PlaneamentoFaseCard[];
+  horarios?: MaquinaHorario[];
+  intervencoes: ManutencaoIntervencao[];
 };
 
 export type GetPlaneamentoProducaoResponseData = {

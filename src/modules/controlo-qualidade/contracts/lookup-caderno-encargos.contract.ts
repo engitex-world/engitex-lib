@@ -1,7 +1,12 @@
-import { CadernoEncargos } from '../types';
+import { LookupOption } from '@lib/common/types';
+import { Certificacao } from '@lib/modules/produtos/enums/certificacao.enum';
 
 export type LookupCadernoEncargosRequest = {
   clienteId?: number;
 };
 
-export type LookupCadernoEncargosResponse = CadernoEncargos[];
+type CadernoEncargosLookup = LookupOption<{
+  certificacoes: Certificacao[];
+}>;
+
+export type LookupCadernoEncargosResponse = CadernoEncargosLookup[];
