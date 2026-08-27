@@ -71,7 +71,7 @@ This library serves as the **boundary contract** between frontend (engitex-fe) a
   - Query types: `Get[Entity]sRequest` → `GetEmpresasRequest` (includes filters, pagination)
   - Lookup types: `Lookup[Entity]sRequest` → `LookupEmpresasRequest` (for selects)
   - Lookup responses: `Lookup[Entity]sResponse` → `LookupEmpresasResponse`
-  - Lookup element types: `[Entity]Lookup` → `CadernoEncargosLookup` (declared and exported from the contract file)
+  - Lookup element types: `[Entity]Lookup` → `CadernoEncargosLookup` (private to the contract file)
   - Enums: `[Entity][Concept]` → `EmpresaRelacao`, `UtilizadorFuncao`
 - **File naming**:
   - Contracts: `[operation]-[entity].contract.ts` → `create-empresa.contract.ts`
@@ -204,7 +204,7 @@ export type LookupEmpresasRequest = {
   relacao?: EmpresaRelacao;
 };
 
-export type EmpresaLookup = LookupOption<{
+type EmpresaLookup = LookupOption<{
   relacao: EmpresaRelacao;
 }>;
 
@@ -213,12 +213,11 @@ export type LookupEmpresasResponse = EmpresaLookup[];
 
 #### Regras
 
-- O element type (`[Entity]Lookup`) vive **dentro do ficheiro do contrato**, não em `types/`.
+- O element type (`[Entity]Lookup`) vive **dentro do ficheiro do contrato** e é **privado** (sem `export`).
   - `types/` é para o domínio; a forma de uma resposta de lookup pertence ao contrato que a define.
-- Tanto `[Entity]Lookup` como `Lookup[Entity]sResponse` são exportados:
-  - `Lookup[Entity]sResponse` para tipar a resposta da API (frontend) e o retorno do use-case (backend).
-  - `[Entity]Lookup` para tipar o elemento individual quando necessário (ex.: retorno de um mapper no repositório).
+- Só `Lookup[Entity]sResponse` é exportado. Backend e frontend tipam sempre contra o `Response`.
 - Os campos extra são declarados explicitamente no `LookupOption<TData>`. **Nunca** devolver a entidade de domínio completa num lookup.
+- Se um consumidor parece precisar do element type isolado, está a tipar a coisa errada — deve tipar contra o `Response`.
 
 #### Quando trazer dados extra no lookup vs. fazer get-by-id
 
