@@ -5,7 +5,7 @@ export type LookupCadernoEncargosRequest = {
   clienteId?: number;
 };
 
-type CadernoEncargosLookup = LookupOption<{
+export type CadernoEncargosLookup = LookupOption<{
   certificacoes: Certificacao[];
 }>;
 
