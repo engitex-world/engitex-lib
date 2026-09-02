@@ -74,7 +74,7 @@ NEVER make assumptions about the architecture, patterns or requirements on the i
 
 Antes de propor qualquer solução, **REFERIR SEMPRE e analisar o projeto existente** e procurar padrões em:
 
-- `.github/instructions` (code-be.instructions.md, code-fe.instructions.md)
+- `.github/instructions` (backend-code.instructions.md, frontend-code.instructions.md)
 - Estrutura dos módulos backend
 - Estrutura dos módulos frontend
 - Engitex-lib (contratos, enums, tipos)
@@ -90,8 +90,8 @@ Antes de propor qualquer solução, **REFERIR SEMPRE e analisar o projeto existe
 
 O agente **deve seguir sempre** os ficheiros de instruções dentro de `.github/instructions`:
 
-- Para backend: `code-be.instructions.md`
-- Para frontend: `code-fe.instructions.md`
+- Para backend: `backend-code.instructions.md`
+- Para frontend: `frontend-code.instructions.md`
 
 Estes ficheiros definem os padrões de arquitetura, naming, estrutura e boas práticas do projeto.
 Quando o plano envolver contracts, enums, routes, `ResponseError` ou payloads partilhados entre lib, backend e frontend, usa também a skill `sync-contract` para mapear dependências, detetar drift e definir a ordem `engitex-lib` → `engitex-be` → `engitex-fe`.
@@ -100,8 +100,8 @@ Quando o plano envolver contracts, enums, routes, `ResponseError` ou payloads pa
 
 Quando o plano envolver alterações:
 
-- **Backend (engitex-be)**: Criar secção "Handoff para be-coder.agent.md" com instruções claras, ficheiros prováveis, use cases e ordem de implementação.
-- **Frontend (engitex-fe)**: Criar secção "Handoff para fe-coder.agent.md" com instruções claras, páginas, componentes, hooks, API files e ordem de implementação.
+- **Backend (engitex-be)**: Criar secção "Handoff para backend-coder.agent.md" com instruções claras, ficheiros prováveis, use cases e ordem de implementação.
+- **Frontend (engitex-fe)**: Criar secção "Handoff para frontend-coder.agent.md" com instruções claras, páginas, componentes, hooks, API files e ordem de implementação.
 - **Engitex-lib**: Indicar claramente quais contratos, enums ou tipos devem ser criados antes do backend/frontend começar.
 
 **Importante**: O agente NÃO deve chamar os agentes automaticamente. Deve preparar handoffs claros para depois.
@@ -229,8 +229,8 @@ Quando criar um plano de feature, **sempre usar este formato**:
 14. **Riscos técnicos e decisões importantes** - O que pode dar errado
 15. **MVP vs evolução futura** - Claramente separado
 16. **Handoff para engitex-lib, se aplicável** - Instruções claras
-17. **Handoff para be-coder.agent.md, se aplicável** - Instruções claras
-18. **Handoff para fe-coder.agent.md, se aplicável** - Instruções claras
+17. **Handoff para backend-coder.agent.md, se aplicável** - Instruções claras
+18. **Handoff para frontend-coder.agent.md, se aplicável** - Instruções claras
 19. **Checklist incremental de implementação** - Passos verificáveis
 20. **Perguntas para validar antes de avançar** - Sempre obrigatório
 

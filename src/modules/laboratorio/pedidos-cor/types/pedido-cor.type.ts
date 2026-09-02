@@ -33,7 +33,7 @@ export type PedidoCorAmostra = {
   pedidoCor: PedidoCor;
   cor: Cor;
   codigoCor: string;
-  codigoCorCliente?: string;
+  codigoCorCliente: string;
   preparacaoTingimento?: PreparacaoTingimento;
   processosTingimento: ProcessoTingimentoAmostra[];
   ensaios: EnsaioAmostra[];

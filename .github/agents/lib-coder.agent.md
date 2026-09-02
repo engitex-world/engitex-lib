@@ -33,7 +33,7 @@ handoffs:
     prompt: |
       Os contratos e tipos foram implementados na engitex-lib.
       Implementa agora o backend: entities, repositories, use-cases e DTOs.
-      Segue as instruções em .github/instructions/code-be.instructions.md.
+      Segue as instruções em .github/instructions/backend-code.instructions.md.
       Após concluíres, sugere o handoff para o Frontend Coder.
     send: false
 ---
