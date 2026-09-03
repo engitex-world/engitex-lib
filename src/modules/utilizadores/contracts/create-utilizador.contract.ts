@@ -5,10 +5,10 @@ export type CreateUtilizadorRequest = {
   nome: string;
   nomeUtilizador: string;
   email: string;
-  password?: string;
   telemovel: string;
   funcoes: UtilizadorFuncao[];
   ativo?: boolean;
 };
 
+// `codigoValidacao` e a password inicial gerada pelo backend, devolvida uma unica vez na criacao
 export type CreateUtilizadorResponse = { utilizador: Utilizador; codigoValidacao: string };
