@@ -11,7 +11,6 @@ export type UpdateEncomendaRequest = {
   certificacoes?: Certificacao[];
   observacoes?: string;
   estado?: EncomendaEstado;
-  dataEntregaPrevista?: Date;
   artigos?: UpdateEncomendaArtigoRequest[];
 };
 
@@ -28,6 +27,8 @@ export type UpdateEncomendaArtigoRequest = {
   observacoes?: string;
   quantidade?: number;
   unidade?: ArtigoUnidade;
+  dataEntregaPrevista?: Date;
+  dataEntregaEfetiva?: Date;
   fases?: UpdateEncomendaArtigoFaseRequest[];
 };
 

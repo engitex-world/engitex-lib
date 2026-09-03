@@ -13,7 +13,6 @@ export type CreateEncomendaRequest = {
   certificacoes?: Certificacao[];
   observacoes?: string;
   estado?: EncomendaEstado;
-  dataEntregaPrevista?: Date;
   artigos: CreateEncomendaArtigoRequest[];
 };
 
@@ -29,6 +28,8 @@ export type CreateEncomendaArtigoRequest = {
   observacoes?: string;
   quantidade: number;
   unidade: ArtigoUnidade;
+  dataEntregaPrevista?: Date;
+  dataEntregaEfetiva?: Date;
   fases: CreateEncomendaArtigoFaseRequest[];
 };
 

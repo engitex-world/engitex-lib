@@ -28,7 +28,6 @@ export type Encomenda = {
   isDevolucao?: boolean;
   devolucaoMotivo?: EncomendaDevolucaoMotivo;
   estado: EncomendaEstado;
-  dataEntregaPrevista?: Date;
 } & AuditEntity;
 
 export type EncomendaArtigo = {
@@ -46,6 +45,8 @@ export type EncomendaArtigo = {
   observacoes?: string;
   quantidade: number;
   unidade: ArtigoUnidade;
+  dataEntregaPrevista?: Date;
+  dataEntregaEfetiva?: Date;
   fases: EncomendaArtigoFase[];
 };
 

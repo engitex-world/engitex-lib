@@ -105,6 +105,7 @@ export const APIRoutes = {
 
   [AppModules.DASHBOARDS]: {
     getDashboardPlaneamento: `/${AppModules.DASHBOARDS}/planeamento`,
+    getDashboardResumo: `/${AppModules.DASHBOARDS}/resumo`,
   },
 
   [AppModules.PRODUTOS]: {
