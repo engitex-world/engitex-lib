@@ -223,15 +223,15 @@ export type LookupEmpresasResponse = EmpresaLookup[];
 
 Trazer no lookup só compensa quando o payload adicional é pequeno e quase sempre necessário após a seleção.
 
-| Situação                                                              | Escolha            |
-| --------------------------------------------------------------------- | ------------------ |
-| Campo escalar, enum ou array curto de enums                           | Lookup             |
-| Necessário imediatamente ao selecionar, dentro de um formulário       | Lookup             |
-| Lista já filtrada (poucas dezenas de opções)                          | Lookup             |
-| Exige joins adicionais no backend                                     | `get-by-id`        |
-| Só usado nalguns ramos do fluxo                                       | `get-by-id`        |
-| Precisa de estar fresco no momento da submissão                       | `get-by-id`        |
-| Lookup sem filtro que devolve centenas/milhares de linhas             | `get-by-id`        |
+| Situação                                                        | Escolha     |
+| --------------------------------------------------------------- | ----------- |
+| Campo escalar, enum ou array curto de enums                     | Lookup      |
+| Necessário imediatamente ao selecionar, dentro de um formulário | Lookup      |
+| Lista já filtrada (poucas dezenas de opções)                    | Lookup      |
+| Exige joins adicionais no backend                               | `get-by-id` |
+| Só usado nalguns ramos do fluxo                                 | `get-by-id` |
+| Precisa de estar fresco no momento da submissão                 | `get-by-id` |
+| Lookup sem filtro que devolve centenas/milhares de linhas       | `get-by-id` |
 
 Independentemente da escolha, o dado que vem do lookup é conveniência de UI — o backend revalida sempre na submissão.
 

@@ -1,6 +1,6 @@
 ---
 name: skill-refactor-audit
-description: "Use when: auditing and optionally executing full-stack Engitex refactors across engitex-lib, engitex-be, and engitex-fe for naming consistency, contract drift, architecture alignment, and validation discipline."
+description: 'Use when: auditing and optionally executing full-stack Engitex refactors across engitex-lib, engitex-be, and engitex-fe for naming consistency, contract drift, architecture alignment, and validation discipline.'
 user-invocable: true
 keywords:
   - refactor
