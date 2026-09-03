@@ -1,5 +1,5 @@
 ---
-name: sync-contract
+name: skill-sync-contract
 user-invocable: true
 description: 'Audita e sincroniza contratos partilhados da Engitex entre engitex-lib, engitex-be e engitex-fe, detetando contract drift, breaking changes e atualizações full-stack incompletas.'
 keywords:
@@ -19,8 +19,8 @@ keywords:
 Garante que alterações a contratos partilhados permanecem consistentes entre a biblioteca canónica, o backend e o frontend. Esta skill complementa as instruções existentes; não as substitui:
 
 - `engitex-lib/.github/instructions/code-lib.instructions.md`
-- `engitex-be/.github/instructions/code-be.instructions.md`
-- `engitex-fe/.github/instructions/code-fe.instructions.md`
+- `engitex-be/.github/instructions/backend-code.instructions.md`
+- `engitex-fe/.github/instructions/frontend-code.instructions.md`
 
 A `engitex-lib` no topo da workspace é a source of truth para contracts, types, enums, `APIRoutes`, `AppModules` e `ResponseError`. As cópias em `engitex-be/engitex-lib` e `engitex-fe/engitex-lib` são réplicas a auditar e reportar, mas não devem ser editadas automaticamente por esta primeira versão.
 
@@ -97,11 +97,11 @@ Procura o contract concreto, tipos de response, enums relacionados, `AppModules`
 
 ### engitex-be
 
-Procura DTOs que implementam ou derivam do contract da lib, decorators `class-validator`, controller e método HTTP, parâmetros, query builders, use case, mappers, repositories quando necessários e exceções mapeadas para `ResponseError`. Respeita a arquitetura e os limites definidos em `code-be.instructions.md`.
+Procura DTOs que implementam ou derivam do contract da lib, decorators `class-validator`, controller e método HTTP, parâmetros, query builders, use case, mappers, repositories quando necessários e exceções mapeadas para `ResponseError`. Respeita a arquitetura e os limites definidos em `backend-code.instructions.md`.
 
 ### engitex-fe
 
-Procura schemas Zod e `satisfies`/`ZodType` do contract, API functions, payloads e tipos de resposta, hooks TanStack Query, query keys, invalidation, mappers, forms e consumers UI. Verifica `ResponseError`, `FormMessage`, error mapping e traduções quando aplicável. Respeita a arquitetura definida em `code-fe.instructions.md` e usa `sync-i18n` para a sincronização de traduções.
+Procura schemas Zod e `satisfies`/`ZodType` do contract, API functions, payloads e tipos de resposta, hooks TanStack Query, query keys, invalidation, mappers, forms e consumers UI. Verifica `ResponseError`, `FormMessage`, error mapping e traduções quando aplicável. Respeita a arquitetura definida em `frontend-code.instructions.md` e usa `skill-sync-i18n` para a sincronização de traduções.
 
 ## Drift a detetar
 
@@ -139,7 +139,7 @@ Quando o fluxo introduzir ou alterar erros, segue:
 ResponseError → exception/backend → response → FE error mapper → i18n/UI
 ```
 
-Confirma que o código existe na lib, é produzido pelo BE, é interpretado pelo FE e não expõe mensagens técnicas. Para validação, verifica `DtoValidator`/`FormMessage` e as traduções aplicáveis; usa `sync-i18n` para sincronizar ficheiros de locale, em vez de duplicar esse workflow aqui.
+Confirma que o código existe na lib, é produzido pelo BE, é interpretado pelo FE e não expõe mensagens técnicas. Para validação, verifica `DtoValidator`/`FormMessage` e as traduções aplicáveis; usa `skill-sync-i18n` para sincronizar ficheiros de locale, em vez de duplicar esse workflow aqui.
 
 ## Breaking changes
 

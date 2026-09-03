@@ -5,7 +5,7 @@ import { ProdutoSubTipo, ProdutoTipo } from '../enums/produto.enum';
 import { Produto, ProdutoAlertas } from '../types';
 
 export type GetProdutosRequest = {
-  search?: string;
+  pesquisa?: string;
   certificacoes?: Certificacao[];
   tipo?: ProdutoTipo;
   subTipos?: ProdutoSubTipo[];

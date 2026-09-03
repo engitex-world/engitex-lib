@@ -122,6 +122,7 @@ export const APIRoutes = {
     create: `/${AppModules.LABORATORIO.PEDIDOS_COR}`,
     list: `/${AppModules.LABORATORIO.PEDIDOS_COR}`,
     getById: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/${id}`,
+    update: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/${id}`,
     Amostra: {
       getById: (id: number) => `/${AppModules.LABORATORIO.PEDIDOS_COR}/amostra/${id}`,
       getByCodigoCor: (codigoCor: string) =>

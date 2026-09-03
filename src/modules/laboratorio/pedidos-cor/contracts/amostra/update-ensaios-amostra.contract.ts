@@ -4,6 +4,8 @@ import { PedidoCorAmostra } from '../../types';
 
 export interface UpdateEnsaiosAmostraRequest {
   processos: ProcessoUpdateDto[];
+  ensaiosNovosIds: number[];
+  ensaiosRemovidosIds: number[];
 }
 
 export interface ProcessoUpdateDto {

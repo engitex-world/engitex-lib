@@ -1,5 +1,5 @@
 ---
-name: sync-documentacao
+name: skill-sync-documentacao
 description: Auditoria recorrente de instrucoes, prompts, skills e agentes nesta workspace Engitex (be, fe, lib), com deteccao de referencias quebradas, inconsistencias e risco de deriva.
 user-invocable: true
 keywords:
@@ -55,16 +55,18 @@ Usa este skill quando:
 Validar no minimo:
 
 1. Referencias legadas para agentes (devem ser zero):
-   - `engitex-be-coder.agent.md`
-   - `engitex-fe-coder.agent.md`
-   - `engitex-be-coder`
-   - `engitex-fe-coder`
+   - `be-coder.agent.md`
+   - `fe-coder.agent.md`
+   - `be-coder`
+   - `fe-coder`
 2. Referencias legadas para instrucoes (devem ser zero):
-   - `codigo-be.instructions.md`
-   - `codigo-fe.instructions.md`
+   - `code-be.instructions.md`
+   - `code-fe.instructions.md`
 3. Existencia dos ficheiros essenciais:
-   - `engitex-be/.github/agents/be-coder.agent.md`
-   - `engitex-fe/.github/agents/fe-coder.agent.md`
+   - `engitex-be/.github/agents/backend-coder.agent.md`
+   - `engitex-fe/.github/agents/frontend-coder.agent.md`
+   - `engitex-be/.github/instructions/backend-code.instructions.md`
+   - `engitex-fe/.github/instructions/frontend-code.instructions.md`
    - `engitex-lib/.github/agents/lib-coder.agent.md`
 4. Typos conhecidos e artefactos de edicao
 5. Conflitos entre regras absolutas e workflow pratico
@@ -77,7 +79,8 @@ Validar no minimo:
 
 ### Fase 4 - Validacao
 
-1. Se houver alteracoes de codigo, aplicar o modo de validacao definido no prompt de checkup
+1. Para auditorias sem alteracoes, validar documentalmente as referencias, os paths, o frontmatter e o Markdown; nao executar builds de codigo sem necessidade.
+2. Se houver alteracoes de codigo, aplicar o modo de validacao definido no prompt de checkup.
 
 ## Output esperado
 

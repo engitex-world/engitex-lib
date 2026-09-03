@@ -1,0 +1,25 @@
+name: Quality Checks
+
+on:
+  pull_request:
+    branches: [master, dev]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Check types
+        run: yarn typecheck
+      - name: Lint
+        run: yarn lint
+      - name: Check formatting
+        run: yarn format
+      - name: Build
+        run: yarn build
