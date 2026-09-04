@@ -12,7 +12,6 @@ export type CreateEmpresaContactoRequest = {
 };
 
 export type CreateEmpresaRequest = {
-  id?: number;
   nome: string;
   relacao: EmpresaRelacao;
   pais: Pais;
@@ -20,7 +19,6 @@ export type CreateEmpresaRequest = {
   morada: string;
   cidade: string;
   nif: string;
-  ativo?: boolean;
   contactos?: CreateEmpresaContactoRequest[];
 };
 

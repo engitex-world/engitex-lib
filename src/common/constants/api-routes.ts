@@ -20,7 +20,6 @@ export const APIRoutes = {
     getById: (id: number) => `/${AppModules.EMPRESAS}/${id}`,
     create: `/${AppModules.EMPRESAS}`,
     update: (id: number) => `/${AppModules.EMPRESAS}/${id}`,
-    delete: (id: number) => `/${AppModules.EMPRESAS}/${id}`,
   },
 
   [AppModules.UTILIZADORES]: {
@@ -45,6 +44,9 @@ export const APIRoutes = {
       list: `/${AppModules.CONTROLO_QUALIDADE}/resultados`,
       create: `/${AppModules.CONTROLO_QUALIDADE}/resultados`,
       getById: (id: number) => `/${AppModules.CONTROLO_QUALIDADE}/resultados/${id}`,
+    },
+    Planeamento: {
+      list: `/${AppModules.CONTROLO_QUALIDADE}/planeamento`,
     },
     Normas: {
       lookup: `/${AppModules.CONTROLO_QUALIDADE}/normas/lookup`,
@@ -153,6 +155,11 @@ export const APIRoutes = {
 
   [AppModules.PRODUCAO.EXECUCAO]: {
     updateFaseById: (id: number) => `/${AppModules.PRODUCAO.EXECUCAO}/fase/${id}`,
+  },
+
+  [AppModules.EXPEDICOES]: {
+    list: `/${AppModules.EXPEDICOES}`,
+    confirmarSaida: `/${AppModules.EXPEDICOES}/confirmar-saida`,
   },
 
   [AppModules.PRODUCAO.PLANEAMENTO]: {

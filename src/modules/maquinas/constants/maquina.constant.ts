@@ -1,7 +1,9 @@
 import { MaquinaGrupo } from '../enums';
 
 const MAQUINA_GRUPO_ORDER: Record<MaquinaGrupo, number> = {
-  [MaquinaGrupo.CONTROLO_QUALIDADE]: 0, // Valor 0 por ser ignorada
+  // Valor 0 por ser ignorada
+  [MaquinaGrupo.CONTROLO_QUALIDADE]: 0,
+  [MaquinaGrupo.EXPEDICAO]: 0,
   [MaquinaGrupo.DESENROLAR]: 1,
   [MaquinaGrupo.ABRIR_MALHA]: 2,
   [MaquinaGrupo.FECHAR_MALHA]: 3,
