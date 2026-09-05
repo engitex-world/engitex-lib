@@ -25,11 +25,8 @@ export type Produto = {
   certificacoes?: Certificacao[];
   frasesSeguranca?: FrasesSeguranca[];
   fornecedores: ProdutoFornecedor[];
-  fichaTecnica?: string;
   fichaTecnicaData?: Date;
-  fichaSeguranca?: string;
   fichaSegurancaData?: Date;
-  cartaAprovacaoGots?: string;
   cartaAprovacaoGotsData?: Date;
 } & AuditEntity;
 
