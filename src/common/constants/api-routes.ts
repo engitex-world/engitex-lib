@@ -98,6 +98,11 @@ export const APIRoutes = {
     update: (id: number) => `/${AppModules.ARMAZEM.MALHA_CRU}/artigos/${id}`,
   },
 
+  [AppModules.ARMAZEM.EXPEDICOES]: {
+    list: `/${AppModules.ARMAZEM.EXPEDICOES}`,
+    expedir: `/${AppModules.ARMAZEM.EXPEDICOES}/expedir`,
+  },
+
   [AppModules.ORGANIZACAO]: {
     getConfig: `/${AppModules.ORGANIZACAO}`,
   },
@@ -155,11 +160,6 @@ export const APIRoutes = {
 
   [AppModules.PRODUCAO.EXECUCAO]: {
     updateFaseById: (id: number) => `/${AppModules.PRODUCAO.EXECUCAO}/fase/${id}`,
-  },
-
-  [AppModules.EXPEDICOES]: {
-    list: `/${AppModules.EXPEDICOES}`,
-    confirmarSaida: `/${AppModules.EXPEDICOES}/confirmar-saida`,
   },
 
   [AppModules.PRODUCAO.PLANEAMENTO]: {

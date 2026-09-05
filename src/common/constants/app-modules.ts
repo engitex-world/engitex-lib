@@ -6,9 +6,9 @@ export const AppModules = {
   DASHBOARDS: 'dashboards',
   EMPRESAS: 'empresas',
   ENCOMENDAS: 'encomendas',
-  EXPEDICOES: 'expedicoes',
   ARMAZEM: {
     MALHA_CRU: 'armazem/malha-em-cru',
+    EXPEDICOES: 'armazem/expedicoes',
   },
   LABORATORIO: {
     PEDIDOS_COR: 'laboratorio/pedidos-cor',

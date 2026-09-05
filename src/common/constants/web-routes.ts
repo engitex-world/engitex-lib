@@ -42,6 +42,10 @@ export const WebRoutes = {
       Create: `${AppRoutes.Armazem}/malha-em-cru/criar`,
       Edit: (id: number | string) => `${AppRoutes.Armazem}/malha-em-cru/${id}/editar`,
     },
+    Expedicoes: {
+      List: `${AppRoutes.Armazem}/expedicoes`,
+      Edit: (id: number | string) => `${AppRoutes.Armazem}/expedicoes/${id}/editar`,
+    },
   },
 
   Laboratorio: {
