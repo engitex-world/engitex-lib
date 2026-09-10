@@ -1,0 +1,9 @@
+export const ENCOMENDA_ARTIGO_DEFEITO_FOTO_TAMANHO_MAXIMO_BYTES = 5 * 1024 * 1024;
+
+export const ENCOMENDA_ARTIGO_DEFEITO_FOTOS_MAXIMO_POR_OCORRENCIA = 5;
+
+export const ENCOMENDA_ARTIGO_DEFEITO_FOTO_MIMETYPES_PERMITIDOS = [
+  'image/jpeg',
+  'image/png',
+  'image/webp',
+] as const;

@@ -87,6 +87,8 @@ export const APIRoutes = {
       `/${AppModules.ENCOMENDAS}/ordem-servico/${ordemServico}`,
     update: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
     delete: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+    createDefeito: (encomendaArtigoFaseId: number) =>
+      `/${AppModules.ENCOMENDAS}/fases/${encomendaArtigoFaseId}/defeitos`,
     getDefeitos: `/${AppModules.ENCOMENDAS}/defeitos`,
   },
 
@@ -161,7 +163,6 @@ export const APIRoutes = {
 
   [AppModules.PRODUCAO.EXECUCAO]: {
     updateFaseById: (id: number) => `/${AppModules.PRODUCAO.EXECUCAO}/fase/${id}`,
-    reportarDefeito: (faseId: number) => `/${AppModules.PRODUCAO.EXECUCAO}/fase/${faseId}/defeitos`,
   },
 
   [AppModules.PRODUCAO.PLANEAMENTO]: {
