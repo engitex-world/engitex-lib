@@ -1,4 +1,3 @@
-import { LookupOption } from '@lib/common/types';
 import { ArtigoEstrutura } from '@lib/modules/artigos/enums';
 import { ArtigoComposicao } from '@lib/modules/artigos/types';
 
@@ -7,4 +6,7 @@ export type LookupMalhasCruRequest = {
   composicao?: ArtigoComposicao[];
 };
 
-export type LookupMalhasCruResponse = LookupOption[];
+export type LookupMalhasCruResponse = Array<{
+  id: number;
+  nome: string;
+}>;

@@ -1,1 +1,1 @@
-export * from './cor.enum';
+export * from './cor-tom.enum';

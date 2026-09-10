@@ -1,6 +1,10 @@
-import { CorTom } from '../enums/cor.enum';
+import { CorTom } from '../enums';
 
 export const PANTONE_LENGTH = 11;
+
+export type CorTomCodigo = {
+  [K in CorTom]: Record<string, string>;
+};
 
 export const CorTomCodigo: CorTomCodigo = {
   [CorTom.VERMELHO]: { pt: 'VM', en: 'RD', es: 'RJ' },
@@ -16,8 +20,4 @@ export const CorTomCodigo: CorTomCodigo = {
   [CorTom.PRETO]: { pt: 'PR', en: 'BL', es: 'NG' },
   [CorTom.BRANCO]: { pt: 'BR', en: 'WH', es: 'BL' },
   [CorTom.CINZA]: { pt: 'CZ', en: 'GY', es: 'GR' },
-};
-
-type CorTomCodigo = {
-  [K in CorTom]: Record<string, string>;
 };

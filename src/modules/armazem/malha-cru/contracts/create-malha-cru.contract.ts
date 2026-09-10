@@ -1,4 +1,4 @@
-import { MalhaCru } from '@lib/modules/armazem/types';
+import { MalhaCru } from '@lib/modules/armazem/malha-cru/types';
 import { ArtigoUnidade } from '@lib/modules/artigos/enums';
 
 export type CreateMalhaCruRequest = {

@@ -1,4 +1,4 @@
-import { CorTom } from '@lib/modules/cores/enums/cor.enum';
+import { CorTom } from '@lib/modules/cores/enums';
 
 export type Cor = {
   id: number;
