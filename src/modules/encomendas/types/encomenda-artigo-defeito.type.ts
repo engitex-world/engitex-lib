@@ -5,7 +5,7 @@ import { EncomendaArtigoDefeitoTipo } from '../enums';
 export type EncomendaArtigoDefeito = {
   id: number;
   encomendaArtigoFaseId: number;
-  numeroRolo?: string;
+  numeroRolo: string;
   totalPontos: number;
   bloqueouFase: boolean;
   observacoes?: string;

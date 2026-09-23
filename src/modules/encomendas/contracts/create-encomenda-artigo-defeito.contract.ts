@@ -3,7 +3,7 @@ import { EncomendaArtigoDefeito } from '../types';
 
 export type CreateEncomendaArtigoDefeitoRequest = {
   encomendaArtigoFaseId: number;
-  numeroRolo?: string;
+  numeroRolo: string;
   bloquearFase: boolean;
   observacoes?: string;
   ocorrencias: CreateEncomendaArtigoDefeitoOcorrenciaRequest[];

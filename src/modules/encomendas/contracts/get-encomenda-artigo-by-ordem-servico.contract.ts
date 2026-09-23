@@ -1,10 +1,10 @@
 import { ControloQualidadeResultadoResumo } from '@lib/modules/controlo-qualidade/types';
 
-import { EncomendaArtigo, EncomendaArtigoDefeitoResumo, EncomendaArtigoFase } from '../types';
+import { EncomendaArtigo, EncomendaArtigoDefeito, EncomendaArtigoFase } from '../types';
 
 export type EncomendaArtigoFaseOrdemServicoResponse = EncomendaArtigoFase & {
   controloQualidadeResultado?: ControloQualidadeResultadoResumo;
-  defeitos: EncomendaArtigoDefeitoResumo[];
+  defeitos: EncomendaArtigoDefeito[];
 };
 
 export type EncomendaArtigoOrdemServicoResponse = Omit<EncomendaArtigo, 'fases'> & {
