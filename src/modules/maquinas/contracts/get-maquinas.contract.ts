@@ -1,7 +1,6 @@
 import { Paginated } from '@lib/common/types';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
-
-import { Maquina } from '../types';
+import { Maquina } from '@lib/modules/maquinas/types';
 
 export type GetMaquinasRequest = {
   pesquisa?: string;

@@ -29,7 +29,6 @@ export const APIRoutes = {
     create: `/${AppModules.UTILIZADORES}`,
     update: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
     updatePassword: (id: number) => `/${AppModules.UTILIZADORES}/${id}/password`,
-    delete: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
   },
 
   [AppModules.CONTROLO_QUALIDADE]: {

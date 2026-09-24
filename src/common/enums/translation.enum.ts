@@ -26,6 +26,7 @@ export enum TranslatedEnums {
   MANUTENCAO_ESTADO = 'manutencao-estado-tipo',
   MANUTENCAO_PRIORIDADE = 'manutencao-prioridade-tipo',
   MANUTENCAO_TIPO = 'manutencao-tipo',
+  MAQUINA_ESTADO = 'maquina-estado-tipo',
   MAQUINA_GRUPO = 'maquina-grupo-tipo',
   PAIS = 'pais-tipo',
   PEDIDO_COR_ESTADO = 'pedido-cor-estado-tipo',
