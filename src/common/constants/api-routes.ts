@@ -88,7 +88,6 @@ export const APIRoutes = {
     delete: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
     createDefeito: (encomendaArtigoFaseId: number) =>
       `/${AppModules.ENCOMENDAS}/fases/${encomendaArtigoFaseId}/defeitos`,
-    getDefeitos: `/${AppModules.ENCOMENDAS}/defeitos`,
   },
 
   [AppModules.ARMAZEM.MALHA_CRU]: {
