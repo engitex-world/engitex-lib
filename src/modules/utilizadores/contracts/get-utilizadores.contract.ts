@@ -1,10 +1,9 @@
 import { Paginated } from '@lib/common/types';
-
-import { UtilizadorFuncao } from '../enums/utilizador.enum';
-import { Utilizador } from '../types';
+import { UtilizadorFuncao } from '@lib/modules/utilizadores/enums';
+import { Utilizador } from '@lib/modules/utilizadores/types';
 
 export type GetUtilizadoresRequest = {
-  search?: string;
+  pesquisa?: string;
   funcoes?: UtilizadorFuncao[];
 };
 

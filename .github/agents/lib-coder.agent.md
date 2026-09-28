@@ -97,7 +97,16 @@ Do not duplicate or override those instructions here unless explicitly stated.
 - Organize by domain: `src/modules/[domain]/contracts/`, `enums/`, `types/`
 - Use `src/common/` for cross-domain utilities (enums, constants, types)
 - One contract per file: `create-empresa.contract.ts`, `get-empresas.contract.ts`
-- Export via `index.ts` barrel files within each folder
+
+**Contract Truth:**
+
+A contract that doesn't match what crosses the wire is worse than no contract — it teaches consumers to trust a lie.
+
+- **Never declare credentials or secrets** in a shared type. A `password` field on a response type invites the frontend to read it, and the only thing preventing a leak is a runtime `@Exclude()` that any new endpoint can bypass.
+- **Don't declare fields the backend never sends.** `empresaId?: number` is a lie when the API returns an `empresa` relation.
+- **Don't invent response shapes.** `{ success: boolean }` is fiction if the use-case returns the entity or `void`.
+- **Delete ghost contracts.** A `Request` type with zero implementations is dead weight that makes the contract look richer than the system is.
+- Before adding an optional field, confirm a real producer and a real consumer exist.
 
 **Code Quality:**
 
@@ -133,3 +142,18 @@ This library is **Step 1** in the implementation workflow:
 Changes here affect both frontend and backend. Ensure backwards compatibility when modifying existing contracts.
 
 For changes that affect backend or frontend consumers, use the `sync-contract` skill to discover the full dependency chain and validate drift before handing off the implementation.
+
+## Propagating Changes to Consumers
+
+`engitex-be` and `engitex-fe` each embed this repository as a **real git submodule** and resolve their `@lib/*` aliases against that local copy — not against the main checkout. Editing only the main library changes nothing for them.
+
+Mandatory order after any change:
+
+1. Edit the contract/type/enum in the main `engitex-lib`.
+2. Run `yarn build` (it runs `tsup` **and** `tsc --emitDeclarationOnly`; note that `tsup` alone uses esbuild and does **not** type-check).
+3. Copy the changed files into `engitex-be/engitex-lib/` and `engitex-fe/engitex-lib/`.
+4. Only then run typecheck/build on backend and frontend.
+
+When a change includes a **rename or deletion**, sync the folder with `rsync -a --delete` rather than `cp`. A plain copy leaves the old file behind in the submodules, and both the old and new names resolve — the drift stays invisible until something breaks.
+
+Also note: a reverted edit in the main library does **not** propagate. After undoing something, re-check the submodules for orphans.

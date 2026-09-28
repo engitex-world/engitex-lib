@@ -1,7 +1,6 @@
 import { DiaSemana } from '@lib/common/enums';
 import { MaquinaGrupo } from '@lib/modules/maquinas/enums';
-import { Maquina } from '@lib/modules/maquinas/types';
-import { MaquinaEspecificacoes } from '@lib/modules/maquinas/types/maquina-especificacoes.type';
+import { Maquina, MaquinaEspecificacoes } from '@lib/modules/maquinas/types';
 
 export type CreateMaquinaRequest = {
   nome: string;

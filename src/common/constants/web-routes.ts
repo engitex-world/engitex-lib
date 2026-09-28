@@ -20,7 +20,13 @@ enum AppRoutes {
 export const WebRoutes = {
   Login: `${AppRoutes.Login}`,
 
-  Dashboard: `${AppRoutes.Dashboard}`,
+  Dashboard: {
+    Resumo: `${AppRoutes.Dashboard}/resumo`,
+    Laboratorio: `${AppRoutes.Dashboard}/laboratorio`,
+    Encomendas: `${AppRoutes.Dashboard}/encomendas`,
+    Producao: `${AppRoutes.Dashboard}/producao`,
+    Manutencao: `${AppRoutes.Dashboard}/manutencao`,
+  },
 
   Encomendas: {
     List: `${AppRoutes.Encomendas}`,
@@ -35,6 +41,10 @@ export const WebRoutes = {
       List: `${AppRoutes.Armazem}/malha-em-cru`,
       Create: `${AppRoutes.Armazem}/malha-em-cru/criar`,
       Edit: (id: number | string) => `${AppRoutes.Armazem}/malha-em-cru/${id}/editar`,
+    },
+    Expedicoes: {
+      List: `${AppRoutes.Armazem}/expedicoes`,
+      Edit: (id: number | string) => `${AppRoutes.Armazem}/expedicoes/${id}/editar`,
     },
   },
 

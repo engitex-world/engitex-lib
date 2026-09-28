@@ -20,7 +20,6 @@ export const APIRoutes = {
     getById: (id: number) => `/${AppModules.EMPRESAS}/${id}`,
     create: `/${AppModules.EMPRESAS}`,
     update: (id: number) => `/${AppModules.EMPRESAS}/${id}`,
-    delete: (id: number) => `/${AppModules.EMPRESAS}/${id}`,
   },
 
   [AppModules.UTILIZADORES]: {
@@ -29,7 +28,7 @@ export const APIRoutes = {
     getById: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
     create: `/${AppModules.UTILIZADORES}`,
     update: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
-    delete: (id: number) => `/${AppModules.UTILIZADORES}/${id}`,
+    updatePassword: (id: number) => `/${AppModules.UTILIZADORES}/${id}/password`,
   },
 
   [AppModules.CONTROLO_QUALIDADE]: {
@@ -44,6 +43,9 @@ export const APIRoutes = {
       list: `/${AppModules.CONTROLO_QUALIDADE}/resultados`,
       create: `/${AppModules.CONTROLO_QUALIDADE}/resultados`,
       getById: (id: number) => `/${AppModules.CONTROLO_QUALIDADE}/resultados/${id}`,
+    },
+    Planeamento: {
+      list: `/${AppModules.CONTROLO_QUALIDADE}/planeamento`,
     },
     Normas: {
       lookup: `/${AppModules.CONTROLO_QUALIDADE}/normas/lookup`,
@@ -84,6 +86,8 @@ export const APIRoutes = {
       `/${AppModules.ENCOMENDAS}/ordem-servico/${ordemServico}`,
     update: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
     delete: (id: number) => `/${AppModules.ENCOMENDAS}/${id}`,
+    createDefeito: (encomendaArtigoFaseId: number) =>
+      `/${AppModules.ENCOMENDAS}/fases/${encomendaArtigoFaseId}/defeitos`,
   },
 
   [AppModules.ARMAZEM.MALHA_CRU]: {
@@ -93,6 +97,11 @@ export const APIRoutes = {
     getById: (id: number) => `/${AppModules.ARMAZEM.MALHA_CRU}/${id}`,
     allocateEncomenda: (id: number) => `/${AppModules.ARMAZEM.MALHA_CRU}/artigos/${id}/associar`,
     update: (id: number) => `/${AppModules.ARMAZEM.MALHA_CRU}/artigos/${id}`,
+  },
+
+  [AppModules.ARMAZEM.EXPEDICOES]: {
+    list: `/${AppModules.ARMAZEM.EXPEDICOES}`,
+    expedir: `/${AppModules.ARMAZEM.EXPEDICOES}/expedir`,
   },
 
   [AppModules.ORGANIZACAO]: {

@@ -47,6 +47,7 @@ export type EncomendaArtigo = {
   quantidade: number;
   unidade: ArtigoUnidade;
   fases: EncomendaArtigoFase[];
+  dataEntrega?: Date;
 };
 
 export type EncomendaArtigoFase = {

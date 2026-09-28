@@ -110,6 +110,14 @@ Sempre que alterar `engitex-lib` principal:
 
 Nota: neste workspace, BE e FE usam os seus submodules locais de `engitex-lib`, nao apenas a lib principal.
 
+#### Mecanismo real do sync
+
+`engitex-be/engitex-lib` e `engitex-fe/engitex-lib` sao **git submodules reais** do mesmo repo
+(`github.com/engitex-world/engitex-lib`), cada um com o seu working tree.
+
+- **Renames e remocoes exigem `rsync -a --delete`**, nao `cp`. Um `cp` deixa o ficheiro antigo no submodule; o nome velho e o novo passam a resolver os dois e o drift fica invisivel ate rebentar. Exemplo: `rsync -a --delete engitex-lib/src/modules/X/ engitex-be/engitex-lib/src/modules/X/`
+- **Um undo do utilizador na lib principal nao propaga.** Depois de reverter algo, verificar se o valor ficou orfao nos submodules (`git -C <repo>/engitex-lib checkout -- <ficheiro>` limpa).
+
 ### 6. Validacao Obrigatoria
 
 Por defeito, antes de finalizar:
@@ -127,6 +135,7 @@ Se a mudanca tocar fluxo coberto por Playwright, recomendar ou executar E2E foca
 - Em regex Perl/sed, `\s` inclui newline. Para whitespace horizontal usar `[ \t]`.
 - `request.user` e `user-agent` sao nomes externos/framework; nao traduzir.
 - No FE, `searchValue`/`searchParams` podem ser conceitos genericos de UI/browser, nao necessariamente contrato de dominio. Traduzir so quando for campo de request/domain, como `GetProdutosRequest.pesquisa`.
+- **Um mesmo ficheiro pode ser editado por fora entre turnos.** Reler antes de editar e reconfirmar que guards e correcoes anteriores continuam la.
 
 ## Output Esperado
 

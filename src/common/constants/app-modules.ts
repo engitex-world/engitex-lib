@@ -8,6 +8,7 @@ export const AppModules = {
   ENCOMENDAS: 'encomendas',
   ARMAZEM: {
     MALHA_CRU: 'armazem/malha-em-cru',
+    EXPEDICOES: 'armazem/expedicoes',
   },
   LABORATORIO: {
     PEDIDOS_COR: 'laboratorio/pedidos-cor',

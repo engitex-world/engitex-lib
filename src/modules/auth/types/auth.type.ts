@@ -22,7 +22,6 @@ export type AuthSession = {
   sub: number;
   iat: number;
   exp: number;
-  token: string;
 };
 
 export type JwtAuthPayload = {

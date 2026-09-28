@@ -1,9 +1,7 @@
-import { AuditEntity } from '@lib/common/types/audit-entity.type';
-import { EmpresaRelacao } from '@lib/modules/empresas/enums/empresa.enum';
-import { Pais } from '@lib/modules/organizacao/enums/pais.enum';
-import { UtilizadorFuncao } from '@lib/modules/utilizadores/enums/utilizador.enum';
-
-import { Utilizador } from '../../utilizadores/types';
+import { AuditEntity } from '@lib/common/types';
+import { EmpresaRelacao } from '@lib/modules/empresas/enums';
+import { Pais } from '@lib/modules/organizacao/enums';
+import { UtilizadorFuncao } from '@lib/modules/utilizadores/enums';
 
 export type Empresa = {
   id: number;
@@ -15,7 +13,6 @@ export type Empresa = {
   morada: string;
   cidade: string;
   nif: string;
-  gestor?: Utilizador;
   contactos: EmpresaContacto[];
 } & AuditEntity;
 
