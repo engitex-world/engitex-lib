@@ -26,6 +26,7 @@ export const WebRoutes = {
     Encomendas: `${AppRoutes.Dashboard}/encomendas`,
     Producao: `${AppRoutes.Dashboard}/producao`,
     Manutencao: `${AppRoutes.Dashboard}/manutencao`,
+    ProdutosQuimicos: `${AppRoutes.Dashboard}/produtos-quimicos`,
   },
 
   Encomendas: {
